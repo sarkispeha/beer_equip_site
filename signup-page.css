@@ -1,0 +1,29 @@
+.signup-out {
+	width: 100%;
+	margin: 1em;
+
+}
+
+.signup-out label{
+	margin: 1em;
+	display: inline-block;
+	width: 35%;
+	text-align: right;
+}
+
+.signup-out input{
+	width: 30%;
+	border-radius: 5px;
+	border-style: inset;
+}
+
+input:focus:invalid {
+	box-shadow: 0 0 7px #f33;
+}
+
+/*Trying to get the blue box-shadow on selected input 
+box to turn different color or not be any color at all*/
+input:active {
+	
+
+}
