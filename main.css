@@ -1,3 +1,7 @@
+body {
+	background-image: url("beer_carbonation1.jpg");
+}
+
 .main-block {
 	max-width: 960px;
 }
@@ -48,6 +52,7 @@
 
 p {
 	max-width: 100%;
+	color: floralwhite;
 }
 
 .lrg-img-container {
