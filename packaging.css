@@ -1,0 +1,11 @@
+table, th, td {
+    border: 1px solid black;
+}
+
+.tbody-orig {
+
+}
+
+.tbody-hover {
+	background-color: azure;
+}
