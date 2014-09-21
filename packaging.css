@@ -9,3 +9,8 @@ table, th, td {
 .tbody-hover {
 	background-color: azure;
 }
+
+#map-canvas {
+	width: 400px;
+	height: 400px;
+}
