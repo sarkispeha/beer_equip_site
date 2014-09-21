@@ -3,7 +3,8 @@ body {
 }
 
 .main-block {
-	max-width: 960px;
+	/*max-width: 960px;*/
+	margin: 1%;
 }
 
 @media screen and (max-width:960px) {
@@ -13,14 +14,23 @@ body {
 	}
 }
 
+header {
+	background-image: url("beer_head2.jpg");
+	border-radius: 20px;
+	padding: 3%;
+}
+
 .nav-container {
 	display: inline-block;
-	background-color: #34495E;
 	height: 1em;
-	width: 100%;
+	width: 98%;
 	padding: .5em;
-	border-bottom: .2em solid #2C3E50;
+	border-radius: 0px 0px 5px 5px;
 	text-transform: uppercase;
+}
+
+.nav-container nav {
+	padding-top: 10%;
 }
 
 .nav-container li{
@@ -37,7 +47,7 @@ body {
 }
 
 .nav-container a{
-	color:white;
+	color:black;
 }
 
 @media screen and (max-width: 635px) {
@@ -53,6 +63,7 @@ body {
 p {
 	max-width: 100%;
 	color: floralwhite;
+	background: rgba(0, 0, 0, 0.6);
 }
 
 .lrg-img-container {
