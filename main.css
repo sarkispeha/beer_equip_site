@@ -78,7 +78,7 @@ p {
 .image-gallery ul{
 	display: inline-block;
 	width: 100%;
-	margin-left: 25%;
+	margin: 0 25%;
 	padding: 0;
 }
 
@@ -87,14 +87,20 @@ p {
 	padding-left: 1em;
 }
 
+@media screen and (min-width: 651px) and (max-width: 800px) {
+	.image-gallery ul{
+		margin: 0 15%;
+	}
+}
+
 @media screen and (min-width: 550px) and (max-width: 650px) {
 	.image-gallery ul{
-		margin-left: 10%;
+		margin: 0 10%;
 	}
 }
 @media screen and (min-width: 200px) and (max-width: 549px) {
 	.image-gallery ul{
-		margin-left: 5%;
+		margin: 0 5%;
 	}
 }
 
