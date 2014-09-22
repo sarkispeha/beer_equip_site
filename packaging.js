@@ -9,8 +9,8 @@ $('.tbody-orig tr').hover(function() {
 	}
 );
 
-$('.tbody-orig tbody').on('click', 'td', function() {
-
+$('tbody').on('click', 'td', function() {
+	console.log('works');
 } )
 // click on row to go to details
 
@@ -19,10 +19,10 @@ $('.tbody-orig tbody').on('click', 'td', function() {
 function initialize() {
 		var mapCanvas = document.getElementById('map-canvas');
 		var mapOptions = {
-      	center: new google.maps.LatLng(44.5403, -78.5463),
-     	zoom: 8,
+      	center: new google.maps.LatLng(40.03, -105.25),
+     	zoom: 12,
       	mapTypeId: google.maps.MapTypeId.ROADMAP
     	}
 		var map = new google.maps.Map(mapCanvas, mapOptions);
 	}
-	google.maps.event.addDomListener(window, 'load', initialize);
+google.maps.event.addDomListener(window, 'load', initialize);
