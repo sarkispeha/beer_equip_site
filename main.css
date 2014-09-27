@@ -1,5 +1,5 @@
 body {
-	background-image: url("beer_carbonation1.jpg");
+	background-image: url("copper.jpg");
 }
 
 .main-block {
@@ -78,7 +78,7 @@ p {
 .image-gallery ul{
 	display: inline-block;
 	width: 100%;
-	margin: 0 25%;
+	margin: 0 22%;
 	padding: 0;
 }
 
