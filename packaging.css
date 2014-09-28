@@ -44,7 +44,25 @@ tbody td{
 	background-color: azure;
 }
 
+.map-lightbox{
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.7);
+}
+
+.map-lightbox button{
+	left: 25%;
+	top: 22%;
+	position: fixed;
+}
+
 #map-canvas {
+	top: 25%;
+	left: 25%;
 	width: 400px;
 	height: 400px;
 }

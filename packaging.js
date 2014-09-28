@@ -3,13 +3,13 @@ $(document).on('ready',function(){
 
 
 // make hovered row highlighted
-$('.tbody-orig tr').hover(function() {
-	$(this).removeClass('tbody-orig').addClass('tbody-hover');
-	}
-, function(){
-	$(this).removeClass('tbody-hover').addClass('tbody-orig');
-	}
-);
+// $('.tbody-orig tr').hover(function() {
+// 	$(this).removeClass('tbody-orig').addClass('tbody-hover');
+// 	}
+// , function(){
+// 	$(this).removeClass('tbody-hover').addClass('tbody-orig');
+// 	}
+// );
 
 
 // click on row to go to details
@@ -47,9 +47,22 @@ var codeAddress = function() {
 // google.maps.event.addDomListener(window, 'load', codeAddress);
 
 $('td').on('click', 'button', function() {
-	console.log('works');
+	// console.log('works');
+	$('.map-lightbox').show(200);
 	initialize();
 	codeAddress();
 } )
+
+$('.map-lightbox').on('click', 'button', function() {
+	console.log('works');
+	$('.map-lightbox').hide();
+});
+
+console.log($(this).closest('.location'));
+
+
+
+
+
 
 });
