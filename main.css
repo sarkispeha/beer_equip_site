@@ -15,9 +15,10 @@ body {
 }
 
 header {
-	background-image: url("beer_head2.jpg");
+	background-image: url("beer_head3.jpg");
 	border-radius: 20px;
 	padding: 3%;
+	max-width: 945px;
 }
 
 .nav-container {

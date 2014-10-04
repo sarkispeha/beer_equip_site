@@ -1,0 +1,28 @@
+header{
+	background-image: url("beer_head3.jpg");
+	height: 800px;
+	width: 100%;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+header h1{
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	padding: 5% 5% 0%;
+	font-family: "Raleway";
+
+}
+
+header blockquote{
+	border-left: none;
+	position: relative;
+	top: 70%;
+	text-align: center;
+}
+
+body .main-block{
+	background-image: url("copper.jpg");
+	height: 100em;
+	width: 100%;
+}
