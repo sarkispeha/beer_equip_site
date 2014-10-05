@@ -88,9 +88,13 @@ header h1{
 	color: white;
 }
 
+.products {
+	background:black;
+}
+
 .tanks {
 	background: black;
-	background-position: right;
+	/*background-position: right;
 	background-image: -webkit-linear-gradient(top, 
     rgba(0,0,0,0.9) 0%, 
     rgba(0,0,0,0) 20%,
@@ -103,11 +107,30 @@ header h1{
     rgba(0,0,0,0) 80%,
     rgba(0,0,0,0.9) 100%
   ), url("ferment_tanks.jpg");
-	background-repeat: no-repeat;
+	background-repeat: no-repeat;*/
 	height: 200px;
 
 
 	/*width: 100%;*/
+}
+
+.tanks-container {
+	position: relative;
+}
+
+.tanks h3 {
+	margin: 0;
+	color: white;
+}
+
+.tanks-hidden {
+	display: none;
+	position: absolute;
+	color: white;
+}
+
+.packaging-container {
+	position: relative;
 }
 
 .packaging {
@@ -116,6 +139,12 @@ header h1{
 	background-position: right;
 	background-repeat: no-repeat;
 	height: 200px;
+}
+
+.packaging-hidden {
+	display: none;
+	position: absolute;
+	color: white;
 }
 
 .scientific {
