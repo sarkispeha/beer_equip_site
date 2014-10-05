@@ -9,20 +9,141 @@ header{
 header h1{
 	-webkit-margin-before: 0;
 	-webkit-margin-after: 0;
-	padding: 5% 5% 0%;
+	padding: 15% 5% 0%;
 	font-family: "Raleway";
 
 }
 
-header blockquote{
+.ben-quote{
 	border-left: none;
 	position: relative;
 	top: 70%;
 	text-align: center;
 }
 
-body .main-block{
-	background-image: url("copper.jpg");
-	height: 100em;
-	width: 100%;
+@media screen and (min-height: 0px) and (max-height: 399px) {
+	.ben-quote {
+		top:33%;
+	}
 }
+
+
+@media screen and (min-height: 400px) and (max-height: 475px) {
+	.ben-quote {
+		top:48%;
+	}
+}
+
+@media screen and (min-height: 476px) and (max-height: 525px) {
+	.ben-quote {
+		top:58%;
+	}
+}
+@media screen and (min-height: 526px) and (max-height: 599px) {
+	.ben-quote {
+		top:65%;
+	}
+}
+@media screen and (min-height: 600px) {
+	.ben-quote {
+		top:70%;
+	}
+	header {
+		height: 900px;
+	}
+}
+
+.explanation{
+	background-color: black;
+	background-image: -webkit-linear-gradient(top, 
+		rgba(0,0,0,0.8) 0%, 
+		rgba(0,0,0,0) 0%, 
+		rgba(0,0,0,0) 50%, 
+		rgba(0,0,0,0.9) 100% ), 
+		-webkit-linear-gradient(left, 
+		rgba(0,0,0,0.2) 0%, 
+		rgba(0,0,0,0) 20%, 
+		rgba(0,0,0,0) 50%, 
+		rgba(0,0,0,0.7) 100% ), 
+		url("copper.jpg");
+	background-repeat: no-repeat;
+	height: 100%;
+	/*background-attachment: fixed;*/
+	background-size: cover;
+}
+
+.explanation dl {
+	margin-bottom: 0;
+	padding-bottom: 3em;
+}
+.explanation dt{
+	font-size: 36;
+	padding: 2% 10%;
+	color: white;
+}
+
+.explanation dd{
+	font-size: 24;
+	padding: 0% 5%;
+	color: white;
+}
+
+.tanks {
+	background: black;
+	background-position: right;
+	background-image: -webkit-linear-gradient(top, 
+    rgba(0,0,0,0.9) 0%, 
+    rgba(0,0,0,0) 20%,
+    rgba(0,0,0,0) 80%,
+    rgba(0,0,0,0.9) 100%
+  ),
+  -webkit-linear-gradient(left, 
+    rgba(0,0,0,0.9) 0%, 
+    rgba(0,0,0,0) 20%,
+    rgba(0,0,0,0) 80%,
+    rgba(0,0,0,0.9) 100%
+  ), url("ferment_tanks.jpg");
+	background-repeat: no-repeat;
+	height: 200px;
+
+
+	/*width: 100%;*/
+}
+
+.packaging {
+	background: black;
+	background-image: url("brown_glass_bottle.jpg");
+	background-position: right;
+	background-repeat: no-repeat;
+	height: 200px;
+}
+
+.scientific {
+	background: black;
+}
+
+.scientific h3 {
+	color: white;
+}
+
+.accessories {
+	background: black;
+}
+
+.accessories h3 {
+	color: white;
+}
+
+.inspection {
+	background: black;
+}
+
+.inspection h3 {
+	color:white;
+}
+
+
+
+
+
+
