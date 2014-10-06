@@ -28,9 +28,9 @@ var map;
     map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
   }
 
-var codeAddress = function() {
+var codeAddress = function(addy) {
     geocoder = new google.maps.Geocoder();
-    var address = $('#addy').text(); //$("#addy").text();
+    var address = addy; //$("#addy").text();
     geocoder.geocode( { 'address': address}, function(results, status) {
       if (status == google.maps.GeocoderStatus.OK) {
         map.setCenter(results[0].geometry.location);
@@ -47,19 +47,20 @@ var codeAddress = function() {
 // google.maps.event.addDomListener(window, 'load', initialize);
 // google.maps.event.addDomListener(window, 'load', codeAddress);
 
-$('td').on('click', 'button', function() {
-	// console.log('works');
+$(document).on('click', '.location button', function() {
+  console.log(this);
+  console.log($(this).closest('.location').text());
+  var searchAddress = $(this).closest('.location').text();
 	$('.map-lightbox').show(200);
 	initialize();
-	codeAddress();
+	codeAddress(searchAddress);
 } )
 
 $('.map-lightbox').on('click', 'button', function() {
-	console.log('works');
 	$('.map-lightbox').hide();
 });
 
-console.log($(this).closest('.location'));
+
 
 
 
