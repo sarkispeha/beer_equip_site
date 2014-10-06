@@ -16,6 +16,10 @@ $(document).on('mouseout', '.tbody-orig tr',function(){
 // click on row to go to details
 
 
+
+
+
+//googleMap product locator
 var geocoder;
 var map;
 
@@ -47,6 +51,7 @@ var codeAddress = function(addy) {
 // google.maps.event.addDomListener(window, 'load', initialize);
 // google.maps.event.addDomListener(window, 'load', codeAddress);
 
+//googleMap event handler
 $(document).on('click', '.location button', function() {
   console.log(this);
   console.log($(this).closest('.location').text());

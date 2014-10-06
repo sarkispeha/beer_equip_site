@@ -1,0 +1,19 @@
+header {
+	border-bottom: 1px solid darkgrey;
+}
+
+header h3 {
+	font-size: 2em;
+	background-color: #DFDDDD;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	padding: 1% 3%;
+}
+
+.seller {
+	margin-top: 10%;
+}
+
+.seller-hidden {
+	display: none;
+}
