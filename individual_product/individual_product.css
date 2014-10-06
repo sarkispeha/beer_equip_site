@@ -2,8 +2,16 @@ header {
 	border-bottom: 1px solid darkgrey;
 }
 
+header i {
+	color:black;
+}
+
+header i:hover{
+	transition: transform 0.2s;
+	transform: scale(2);
+}
+
 header h3 {
-	font-size: 2em;
 	background-color: #DFDDDD;
 	-webkit-margin-before: 0;
 	-webkit-margin-after: 0;
