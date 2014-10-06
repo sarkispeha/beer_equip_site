@@ -19,7 +19,16 @@
 		<input id="searchbtn" type="submit" value="search">
 		price:<input name="minAsk" size="5" placeholder="min" value>
 		<input name="maxAsk" size="5" placeholder="max" value><br>
-		<button id="packing-type" class="multi_pick" type="button" value>packing type</button>
+		<div class="btn-group">
+		  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+		    Packing Type <span class="caret"></span>
+		  </button>
+	  		<ul class="dropdown-menu" role="menu">
+			    <li><a href="#">Bottling</a></li>
+			    <li><a href="#">Canning</a></li>
+	  		</ul>
+		</div>
+		<!-- <button id="packing-type" class="multi_pick" type="button" value>packing type</button> -->
 	
 	</fieldset>
 
@@ -70,6 +79,8 @@
 
 </table>
 
+
+
 <div class="map-lightbox">
 	<div id="map-canvas"></div>
 	<button type="button">Close</button>
@@ -79,6 +90,7 @@
 
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 	<script src="packaging.js"></script>
 
 </body>

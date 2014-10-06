@@ -1,5 +1,6 @@
 $(document).on('ready',function(){
 
+//dropdown for package type
 
 
 // make hovered row highlighted
