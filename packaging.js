@@ -1,6 +1,13 @@
 $(document).on('ready',function(){
 
 //dropdown for package type
+$('.packing-type').change( function() {
+  var option = $(this).find('option:selected');
+  console.log(option);
+  console.log(this);
+  });
+
+console.log($('.packing-type li'))
 
 
 // make hovered row highlighted
@@ -8,17 +15,9 @@ $(document).on('mouseover','.tbody-orig tr', function() {
 	$(this).removeClass('tbody-orig').addClass('tbody-hover');
 	});
 
-
 $(document).on('mouseout', '.tbody-orig tr',function(){
 	$(this).removeClass('tbody-hover').addClass('tbody-orig');
 	});
-
-
-// click on row to go to details
-
-
-
-
 
 //googleMap product locator
 var geocoder;
@@ -48,9 +47,6 @@ var codeAddress = function(addy) {
       }
     });
   }
-
-// google.maps.event.addDomListener(window, 'load', initialize);
-// google.maps.event.addDomListener(window, 'load', codeAddress);
 
 //googleMap event handler
 $(document).on('click', '.location button', function() {
