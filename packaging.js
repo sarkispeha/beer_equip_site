@@ -1,13 +1,10 @@
 $(document).on('ready',function(){
 
 //dropdown for package type
-$('.packing-type').change( function() {
-  var option = $(this).find('option:selected');
-  console.log(option);
-  console.log(this);
-  });
-
-console.log($('.packing-type li'))
+$(document).on('click','.dropdown-menu a', function() {
+  var dropText = ($(this).text());
+  $(this).closest('.btn-group').find('.btn-text').text(dropText);
+})
 
 
 // make hovered row highlighted
