@@ -23,8 +23,10 @@ $(document).on('click', '.btn', function(e){
 $('#toggler input[value="packaging"]').on('click', function(){
 		var value = $(this).val();
 		console.log(value);
-		console.log(this);
 		$(this).closest('#toggler').addClass('packaging');
+		console.log($('.radio').siblings().find('.radio2'));
+		$(this).closest('#toggler').siblings(".radio2").removeClass('tank');
+
 		// console.log($(this).closest('.packaging').find('#toggler'));
 		// if (this.element) return this.element;
 		// var subPackaging = ('<div class="subPackaging"><label>bottler<input type="radio" name="bottleOrCan" id="bottle" value="bottle"></label><label>canner<input type="radio" name="bottleOrCan" id="can" value="canner"></label></div>');
@@ -32,10 +34,11 @@ $('#toggler input[value="packaging"]').on('click', function(){
 		// $(this).closest('.radio').after(subPackaging);
 });
 
-$('.radioz input[value="tank"]').on('click', function(){
+$('#toggler input[value="tank"]').on('click', function(){
 		var value = $(this).val();
 		console.log(value);
 		$(this).closest('#toggler').addClass('tank');
+		$(this).closest('#toggler').siblings(".radio1").removeClass('packaging');
 		// ('<div class="subTank"><label>Fermenter<input type="radio" name="fermentOrMash" id="ferment" value="ferment"></label><label>Mash Tank<input type="radio" name="fermentOrMash" id="mash" value="mash"></label></div>');
 });
 
