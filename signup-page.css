@@ -9,3 +9,19 @@ form {
 .singleInput {
 	width: 100%;
 }
+
+#toggler .packaging{
+	display: none;
+}
+
+#toggler.packaging .packaging{
+	display: block;
+}
+
+#toggler .tank{
+	display: none;
+}
+
+#toggler.tank .tank{
+	display: block;
+}
