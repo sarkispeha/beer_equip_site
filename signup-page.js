@@ -8,14 +8,17 @@ $(document).on('click', '.btn', function(e){
 	}
 })
 
+//radio button values
 $('.radioz input[value="packaging"]').on('click', function(){
 		var value = $(this).val();
 		console.log(value);
+		$(this).closest('.radio').after('<div class="subPackaging"><label>bottler<input type="radio" name="bottleOrCan" id="bottle" value="bottle"></label><label>canner<input type="radio" name="bottleOrCan" id="can" value="canner"></label></div>');
 });
 
 $('.radioz input[value="tank"]').on('click', function(){
 		var value = $(this).val();
 		console.log(value);
+		$(this).closest('.radio').after('<div class="subTank"><label>Fermenter<input type="radio" name="fermentOrMash" id="ferment" value="ferment"></label><label>Mash Tank<input type="radio" name="fermentOrMash" id="mash" value="mash"></label></div>');
 });
 
 //store values in localStorage
