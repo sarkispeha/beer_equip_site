@@ -3,24 +3,42 @@
 <head>
   <meta charset="utf-8">
   <title>beer_equip_site</title>
-  <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+  <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="signup-page.css">
 </head>
 <body>
-This is where you sign up.
 
-	<form class="signup-out">
-			<label>Brewery Name </label>
-				<input type="text" name="Brewery Name"><br>
-			<label>Brewmaster</label>
-				<input type="text" name="Brewmaster"><br>
-			<label>email</label>
-				<input type="email" name="email" placeholder="example@mail.com"><br>
-			<label>Phone Number</label>
-				<input type="tel" name="Phone Number" placeholder="xxx-xxx-xxxx"><br>
-			<button>Submit</button>
+<h2>Sign in and start selling</h2>
 
-	</form>
+<form role="form">
+	<div class="form-group singleInput">
+	    <label>Brewery Name</label>
+	    <input type="text" class="form-control" placeholder="ex:Quaffable Quaff Brewing">
+	</div>
+	<div class="form-group singleInput">
+	    <label>Email address</label>
+	    <input type="email" class="form-control" placeholder="emaily@email.com">
+	</div>
+	<div class="form-group singleInput">
+	    <label>Password</label>
+	    <input type="password" class="form-control" placeholder="Password">
+	</div>
+	<div class="form-group singleInput">
+	    <label>Product</label>
+	    <input type="text" class="form-control" placeholder="bottling system">
+	</div>
+	<div class="form-group">
+	  <label>Product Description</label>
+	  <textarea class="form-control" rows="3"></textarea>
+	</div>
+	<div class="form-group singleInput">
+	    <label>Location</label>
+	    <input type="text" class="form-control" placeholder="Boulder, CO">
+	</div>
+	<div class="form-group singleInput">
+	</div>
+	  <button type="submit" class="btn btn-default">Submit</button>
+</form>
 
 
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
