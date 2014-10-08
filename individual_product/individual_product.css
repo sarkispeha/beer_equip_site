@@ -18,6 +18,14 @@ header h3 {
 	padding: 1% 3%;
 }
 
+.shipCalcAddress {
+
+}
+
+.priceCalculated {
+	display: none;
+}
+
 .seller {
 	margin-top: 10%;
 }
