@@ -144,16 +144,29 @@ header h1{
 
 .packaging {
 	background: black;
-	background-image: url("brown_glass_bottle.jpg");
 	background-position: right;
 	background-repeat: no-repeat;
 	height: 200px;
 }
 
-.packaging-hidden {
+.packaging h3 {
+	color: white;
+}
+
+.packaging-hidden p {
 	display: none;
 	position: absolute;
 	color: white;
+	top: 30;
+	left: -250px;
+}
+
+.packaging-hidden img {
+	display: none;
+	position: absolute;
+	color: white;
+	top: 30;
+	right: -250px;
 }
 
 .scientific {
