@@ -1,3 +1,8 @@
+body {
+	width: 100%;
+	overflow: hidden;
+}
+
 header{
 	position: relative;
 	background-image: url("beer_head3.jpg");
@@ -129,6 +134,7 @@ header h1{
 
 .tanks h3 {
 	margin: 0;
+	text-align: center;
 	color: white;
 }
 
@@ -150,6 +156,7 @@ header h1{
 }
 
 .packaging h3 {
+	text-align: center;
 	color: white;
 }
 
