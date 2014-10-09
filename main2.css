@@ -139,6 +139,8 @@ header h1{
 	margin: 0;
 	text-align: center;
 	color: white;
+	font-family: "Raleway";
+	color: burlywood;
 }
 
 .tanks-hidden.noBShidden p {
@@ -173,6 +175,8 @@ header h1{
 .packaging h3 {
 	text-align: center;
 	color: white;
+	font-family: "Raleway";
+	color: burlywood;
 }
 
 .packaging-hidden.noBShidden p {
@@ -203,6 +207,8 @@ header h1{
 
 .scientific h3 {
 	color: white;
+	font-family: "Raleway";
+	color: burlywood;
 }
 
 .scientific-hidden.noBShidden p {
@@ -233,6 +239,8 @@ header h1{
 
 .accessories h3 {
 	color: white;
+	font-family: "Raleway";
+	color: burlywood;
 }
 
 .accessories-hidden.noBShidden p {
@@ -263,6 +271,8 @@ header h1{
 
 .inspection h3 {
 	color:white;
+	font-family: "Raleway";
+	color: burlywood;
 }
 
 .inspection-hidden.noBShidden p {

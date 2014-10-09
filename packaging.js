@@ -29,12 +29,35 @@ $(document).on('click', '#searchbtn', function(){
   searchValue = $('#query').val();
   priceMin = $('#minAsk').val();
   priceMax = $('#maxAsk').val();
-  console.log(searchValue);
+  dropText = dropText.toLowerCase();
+  // console.log(searchValue);
   console.log(dropText);
-  console.log(priceMin);
-  console.log(priceMax);
-  searchArray.push(searchValue, dropText, priceMin, priceMax)
-  console.log(searchArray);
+  // console.log(priceMin);
+  // console.log(priceMax);
+  // searchArray.push(searchValue, dropText, priceMin, priceMax)
+  // console.log(searchArray);
+
+  // var currentBotOrCanClass = $(this).closest('body').find('tbody').find('tr').attr('class'); //finds bottler or canner
+
+  
+  // console.log($(this).closest('body').find('tbody').find('.price td').text()); // finds price
+
+   var result = $('tr').filter(function(){
+    var isMatch = true;
+
+      if( !$(this).hasClass(dropText) ){
+        isMatch = false;
+        }
+    console.log(this);
+
+      if(isMatch === false){
+        $(this).hide();
+      }
+
+    return isMatch;
+   })
+
+
   
 })
 
