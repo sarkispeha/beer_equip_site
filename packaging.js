@@ -4,8 +4,6 @@ $(document).on('ready',function(){
 var searchValue = '';
 var canOrBottle = '';
 var dropText = '';
-var priceMin = 0;
-var priceMax = 0;
 var searchArray = [];
 
 
@@ -27,35 +25,48 @@ $(document).on('mouseout', '.tbody-orig tr',function(){
 //search value, price set, and actual search
 $(document).on('click', '#searchbtn', function(){
   searchValue = $('#query').val();
-  priceMin = $('#minAsk').val();
-  priceMax = $('#maxAsk').val();
+
+  var priceMin = 0;
+  var priceMax = Infinity;
+  if ($('#minAsk').val() !== '') {
+    priceMin = $('#minAsk').val();
+  }
+  if($('#maxAsk').val() !== ''){
+    priceMax = $('#maxAsk').val();
+  }
+    
   dropText = dropText.toLowerCase();
   // console.log(searchValue);
-  console.log(dropText);
-  // console.log(priceMin);
-  // console.log(priceMax);
+  // console.log(dropText);
+  console.log(priceMin);
+  console.log(priceMax);
   // searchArray.push(searchValue, dropText, priceMin, priceMax)
   // console.log(searchArray);
 
   // var currentBotOrCanClass = $(this).closest('body').find('tbody').find('tr').attr('class'); //finds bottler or canner
 
   
-  // console.log($(this).closest('body').find('tbody').find('.price td').text()); // finds price
+  // console.log($('tr').find('.price').text()); // finds price
 
-   var result = $('tr').filter(function(){
+   var result = $('tbody tr').hide().filter(function(){
+    var currentPrice = $(this).find('.price').text();
+    currentPrice = parseInt(currentPrice);
     var isMatch = true;
 
-      if( !$(this).hasClass(dropText) ){
+      if( !$(this).hasClass(dropText) ){ //dropbox filter
         isMatch = false;
         }
-    console.log(this);
+        console.log(isMatch);
 
-      if(isMatch === false){
-        $(this).hide();
-      }
+      if( currentPrice < priceMin || currentPrice > priceMax) {
+        isMatch = false;
+        }
+        console.log(currentPrice, priceMax);
 
+      if($(this).text().toUpperCase().indexOf(searchValue.toUpperCase()) > -1);
+      // console.log(isMatch);
     return isMatch;
-   })
+   }).show();
 
 
   
