@@ -108,6 +108,10 @@ header h1{
 	overflow: hidden;
 }
 
+.tanks-container {
+	position: relative;
+}
+
 .tanks {
 	background: black;
 	/*background-position: right;
@@ -130,9 +134,6 @@ header h1{
 	/*width: 100%;*/
 }
 
-.tanks-container {
-	position: relative;
-}
 
 .tanks h3 {
 	margin: 0;
@@ -140,10 +141,24 @@ header h1{
 	color: white;
 }
 
-.tanks-hidden {
+.tanks-hidden.noBShidden p {
+	display: none;
+	position: absolute;
+	top: 30;
+	left: -250px;
+	color: burlywood;
+	width: 40%;
+	
+}
+
+.tanks-hidden.noBShidden img {
 	display: none;
 	position: absolute;
 	color: white;
+	top: 30;
+	right: -250px;
+	height: 200px;
+	width: 200px;
 }
 
 .packaging-container {
@@ -152,8 +167,6 @@ header h1{
 
 .packaging {
 	background: black;
-	background-position: right;
-	background-repeat: no-repeat;
 	height: 200px;
 }
 
@@ -162,15 +175,16 @@ header h1{
 	color: white;
 }
 
-.packaging-hidden p {
+.packaging-hidden.noBShidden p {
 	display: none;
 	position: absolute;
-	color: white;
+	color: burlywood;
 	top: 30;
 	left: -250px;
+	width: 40%;
 }
 
-.packaging-hidden img {
+.packaging-hidden.noBShidden img {
 	display: none;
 	position: absolute;
 	color: white;
@@ -178,28 +192,94 @@ header h1{
 	right: -250px;
 }
 
+.scientific-container {
+	position: relative;
+}
+
 .scientific {
 	background: black;
+  	height: 200px;
 }
 
 .scientific h3 {
 	color: white;
 }
 
+.scientific-hidden.noBShidden p {
+	display: none;
+	position: absolute;
+	color: burlywood;
+	top: 30;
+	left: -250px;
+	width: 40%;
+}
+
+.scientific-hidden.noBShidden img {
+	display: none;
+	position: absolute;
+	color: white;
+	top: 30;
+	right: -250px;
+}
+
+.accessories-container {
+	position: relative;
+}
+
 .accessories {
 	background: black;
+  	height: 200px;
 }
 
 .accessories h3 {
 	color: white;
 }
 
+.accessories-hidden.noBShidden p {
+	display: none;
+	position: absolute;
+	color: burlywood;
+	top: 30;
+	left: -250px;
+	width: 40%;
+}
+
+.accessories-hidden.noBShidden img {
+	display: none;
+	position: absolute;
+	color: white;
+	top: 30;
+	right: -250px;
+}
+
+.inspection-container{
+	position: relative;
+}
+
 .inspection {
 	background: black;
+  	height: 200px;
 }
 
 .inspection h3 {
 	color:white;
+}
+
+.inspection-hidden.noBShidden p {
+	display: none;
+	position: absolute;
+	color: burlywood;
+	top: 30;
+	left: -250px;
+	width: 40%;
+}
+
+.inspection-hidden.noBShidden img {
+	display: none;
+	position: absolute;
+	color: white;
+	top: 30;
+	right: -250px;
 }
 
 

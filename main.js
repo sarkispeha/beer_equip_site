@@ -1,20 +1,37 @@
 $(document).on('ready',function(){
 
 
-$(document).on('mouseover','.packaging-container', function() {
-	console.log('work');
-	$('.packaging-hidden').find('p')
-		.show(400)
+$(document).on('mouseover','.slider', function() {
+	// console.log('work');
+	// console.log(this);
+	// console.log($(this).find('.myhidden'));
+	$(this).find('.noBShidden').find('p')
+		.show()
 		.animate({
-			left:'200px',
-			});
-	$('.packaging-hidden').find('img')
-		.show(400)
+			left:'20%',
+			}, 300, 'linear');
+	$(this).find('.noBShidden').find('img')
+		.show()
 		.animate({
 			right:'200px',
-			});
+			}, 300, 'linear');
 })
 
+$(document).on('mouseout','.noBShidden', function() {
+	// console.log('work');
+	// console.log(this);
+	// console.log($(this).find('.myhidden'));
+	$(this).find('p')
+		.hide()
+		.animate({
+			left: '-250px',
+			}, 300, 'linear');
+	$(this).find('img')
+		.hide()
+		.animate({
+			right:'-200px',
+			}, 300, 'linear');
+})
 
 
 
