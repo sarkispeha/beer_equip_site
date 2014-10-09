@@ -17,7 +17,7 @@ $(document).on('mouseover','.slider', function() {
 			}, 300, 'linear');
 })
 
-$(document).on('mouseout','.noBShidden', function() {
+$(document).on('mouseout','.slider', function() {
 	// console.log('work');
 	// console.log(this);
 	// console.log($(this).find('.myhidden'));

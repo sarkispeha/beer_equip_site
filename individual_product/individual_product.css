@@ -30,8 +30,17 @@ header h3 {
 	margin-top: 10%;
 }
 
+.brewery-specs {
+	width: 80%;
+}
+
 .seller-contact-container {
 	position: relative;
+}
+
+.seller-contact{
+	font-size: 2em;
+	text-align: center;
 }
 
 .seller-hidden {

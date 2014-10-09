@@ -1,11 +1,8 @@
 $(document).on('ready',function(){
 
 //declare variables
-var searchValue = '';
 var canOrBottle = '';
 var dropText = '';
-var searchArray = [];
-
 
 //dropdown for package type
 $(document).on('click','.dropdown-menu a', function() {
@@ -17,14 +14,13 @@ $(document).on('click','.dropdown-menu a', function() {
 $(document).on('mouseover','.tbody-orig tr', function() {
 	$(this).removeClass('tbody-orig').addClass('tbody-hover');
 	});
-
 $(document).on('mouseout', '.tbody-orig tr',function(){
 	$(this).removeClass('tbody-hover').addClass('tbody-orig');
 	});
 
 //search value, price set, and actual search
 $(document).on('click', '#searchbtn', function(){
-  searchValue = $('#query').val();
+  var searchValue = $('#query').val();
 
   var priceMin = 0;
   var priceMax = Infinity;
@@ -38,18 +34,10 @@ $(document).on('click', '#searchbtn', function(){
   dropText = dropText.toLowerCase();
   // console.log(searchValue);
   // console.log(dropText);
-  console.log(priceMin);
-  console.log(priceMax);
-  // searchArray.push(searchValue, dropText, priceMin, priceMax)
-  // console.log(searchArray);
-
-  // var currentBotOrCanClass = $(this).closest('body').find('tbody').find('tr').attr('class'); //finds bottler or canner
-
-  
-  // console.log($('tr').find('.price').text()); // finds price
-
+  // console.log(priceMin);
+  // console.log(priceMax);
    var result = $('tbody tr').hide().filter(function(){
-    var currentPrice = $(this).find('.price').text();
+    var currentPrice = $(this).find('.price').text(); // finds price
     currentPrice = parseInt(currentPrice);
     var isMatch = true;
 
@@ -61,10 +49,10 @@ $(document).on('click', '#searchbtn', function(){
       if( currentPrice < priceMin || currentPrice > priceMax) {
         isMatch = false;
         }
-        console.log(currentPrice, priceMax);
 
       if($(this).text().toUpperCase().indexOf(searchValue.toUpperCase()) > -1);
-      // console.log(isMatch);
+      console.log(searchValue);
+      console.log(isMatch);
     return isMatch;
    }).show();
 
