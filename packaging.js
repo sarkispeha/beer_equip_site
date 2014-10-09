@@ -1,11 +1,19 @@
 $(document).on('ready',function(){
 
+//declare variables
+var searchValue = '';
+var canOrBottle = '';
+var dropText = '';
+var priceMin = 0;
+var priceMax = 0;
+var searchArray = [];
+
+
 //dropdown for package type
 $(document).on('click','.dropdown-menu a', function() {
-  var dropText = ($(this).text());
+  dropText = ($(this).text());
   $(this).closest('.btn-group').find('.btn-text').text(dropText);
 })
-
 
 // make hovered row highlighted
 $(document).on('mouseover','.tbody-orig tr', function() {
@@ -15,6 +23,21 @@ $(document).on('mouseover','.tbody-orig tr', function() {
 $(document).on('mouseout', '.tbody-orig tr',function(){
 	$(this).removeClass('tbody-hover').addClass('tbody-orig');
 	});
+
+//search value, price set, and actual search
+$(document).on('click', '#searchbtn', function(){
+  searchValue = $('#query').val();
+  priceMin = $('#minAsk').val();
+  priceMax = $('#maxAsk').val();
+  console.log(searchValue);
+  console.log(dropText);
+  console.log(priceMin);
+  console.log(priceMax);
+  searchArray.push(searchValue, dropText, priceMin, priceMax)
+  console.log(searchArray);
+  
+})
+
 
 //googleMap product locator
 var geocoder;
