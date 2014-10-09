@@ -226,6 +226,8 @@ header h1{
 	color: white;
 	top: 30;
 	right: -250px;
+	height: 200px;
+	width: 200px;
 }
 
 .accessories-container {
@@ -258,6 +260,7 @@ header h1{
 	color: white;
 	top: 30;
 	right: -250px;
+	
 }
 
 .inspection-container{

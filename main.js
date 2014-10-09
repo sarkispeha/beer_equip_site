@@ -1,35 +1,37 @@
 $(document).on('ready',function(){
 
 
-$(document).on('mouseover','.slider', function() {
-	// console.log('work');
+$('.slider').on('mouseenter', function() {
+	console.log('over');
 	// console.log(this);
 	// console.log($(this).find('.myhidden'));
 	$(this).find('.noBShidden').find('p')
 		.show()
+		// .stop()
 		.animate({
 			left:'20%',
 			}, 300, 'linear');
 	$(this).find('.noBShidden').find('img')
 		.show()
+		// .stop()
 		.animate({
 			right:'200px',
 			}, 300, 'linear');
 })
 
-$(document).on('mouseout','.slider', function() {
-	// console.log('work');
+$('.slider').on('mouseleave', function() {
+	console.log('out');
 	// console.log(this);
 	// console.log($(this).find('.myhidden'));
 	$(this).find('p')
-		.hide()
+		// .stop()
 		.animate({
-			left: '-250px',
+			left: '-550px',
 			}, 300, 'linear');
 	$(this).find('img')
-		.hide()
+		// .stop()
 		.animate({
-			right:'-200px',
+			right:'-500px',
 			}, 300, 'linear');
 })
 
