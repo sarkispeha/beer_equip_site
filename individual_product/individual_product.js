@@ -1,11 +1,16 @@
 $(document).on('ready', function() {
 
 //verification for shipping button  
-$(document).on('click', '.shippingBtn', function() {
+$(document).on('click', '.shippingBtn', function(e) {
+	e.preventDefault();
+	var arr = ['$450','$605','$125','$322','$237','$499','$123','$234','$255','$563','$652','$730','$463'];
+	var i = Math.floor((Math.random() * 12) + 1);
 	// if(#streetInput === '') {
 	// 	alert()
 	// }
-	$('.priceCalculated').show();
+	console.log(i);
+	console.log(arr[i]);
+	$('.priceCalculated').text(arr[i]).show();
 	})
 
 

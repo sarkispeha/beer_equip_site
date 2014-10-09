@@ -84,6 +84,7 @@ header h1{
 	height: 100%;
 	/*background-attachment: fixed;*/
 	background-size: cover;
+	font-family: 'Arvo';
 }
 
 .explanation dl {
@@ -106,6 +107,7 @@ header h1{
 	background:black;
 	width: 100%;
 	overflow: hidden;
+	font-family: 'Arvo';
 }
 
 .tanks-container {
@@ -206,6 +208,7 @@ header h1{
 }
 
 .scientific h3 {
+	text-align: center;
 	color: white;
 	font-family: "Raleway";
 	color: burlywood;
@@ -227,7 +230,7 @@ header h1{
 	top: 30;
 	right: -250px;
 	height: 200px;
-	width: 200px;
+	width: 300px;
 }
 
 .accessories-container {
@@ -240,6 +243,7 @@ header h1{
 }
 
 .accessories h3 {
+	text-align: center;
 	color: white;
 	font-family: "Raleway";
 	color: burlywood;
@@ -260,7 +264,7 @@ header h1{
 	color: white;
 	top: 30;
 	right: -250px;
-	
+
 }
 
 .inspection-container{
@@ -273,6 +277,7 @@ header h1{
 }
 
 .inspection h3 {
+	text-align: center;
 	color:white;
 	font-family: "Raleway";
 	color: burlywood;
