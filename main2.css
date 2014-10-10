@@ -69,17 +69,17 @@ header h1{
 
 .explanation{
 	background-color: black;
-	background-image: -webkit-linear-gradient(top, 
-		rgba(0,0,0,0.8) 0%, 
-		rgba(0,0,0,0) 0%, 
-		rgba(0,0,0,0) 50%, 
-		rgba(0,0,0,0.9) 100% ), 
-		-webkit-linear-gradient(left, 
-		rgba(0,0,0,0.2) 0%, 
-		rgba(0,0,0,0) 20%, 
-		rgba(0,0,0,0) 50%, 
-		rgba(0,0,0,0.7) 100% ), 
-		url("copper.jpg");
+	background-image: -webkit-linear-gradient(top,
+	rgba(0,0,0,0.8) 0%,
+	rgba(0,0,0,0) 0%,
+	rgba(0,0,0,0) 60%,
+	rgba(0,0,0,1) 100% ),
+	-webkit-linear-gradient(left,
+	rgba(0,0,0,0.2) 0%,
+	rgba(0,0,0,0) 20%,
+	rgba(0,0,0,0) 50%,
+	rgba(0,0,0,0.7) 100% ),
+	url("copper.jpg");
 	background-repeat: no-repeat;
 	height: 100%;
 	/*background-attachment: fixed;*/
@@ -138,11 +138,12 @@ header h1{
 
 
 .tanks h3 {
-	margin: 0;
+	margin: 5% 0%;
 	text-align: center;
 	color: white;
 	font-family: "Raleway";
 	color: burlywood;
+
 }
 
 .tanks-hidden.noBShidden p {
@@ -302,6 +303,13 @@ header h1{
 
 .signup {
 	background: black;
+}
+
+.signup h3 {
+	margin: 0;
+	padding: 7% 0 7% 0;
+	text-align: center;
+	color: burlywood;
 }
 
 
