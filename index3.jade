@@ -1,3 +1,4 @@
+doctype html
 html(lang='en')
 head
     meta(charset='utf-8')
@@ -53,4 +54,29 @@ body
          		a(href='scientific.html')
          			p
          			| Click here if you are looking for products related to brewing science.
-         
+        div.accessories-container.slider
+        	div.accessories
+        		h3 Accessories
+        	div.accessories-hidden.noBShidden
+        		a(href='packaging.html')
+        			img(src='beer_here.jpg')
+        		a(href='packaging.html')
+        			p
+        			| Click here if you are looking for accessories to your brewery.
+        div.inspection-container.slider
+        	div.inspection
+        		h3 Inspection
+        	div.inspection-hidden.noBShidden
+        		a(href='packaging.html')
+        			img(src='tank_inspection.jpg')
+        		a(href='packaging.html')
+        			p
+        			| Click here if you are looking for products related to packaging.
+    div.signup
+    	a(href='signup-page.html')
+    		h3 Register your brewery!
+
+   	script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+   	script(src='scroll.js')
+   	script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js')
+   	script(src='main.js')
