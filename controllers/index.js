@@ -1,6 +1,6 @@
 var indexController = {
-	index: function(req, res) {
-		res.render('index');
+	index3: function(req, res) {
+		res.render('index3');
 	}
 };
 
