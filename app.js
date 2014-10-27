@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 
 //controllers
 var indexController = require('./controllers/index.js');
-var apiController = require('./controllers.api.js');
+var apiController = require('./controllers/api.js');
 
 //connect to database
 mongoose.connect('mongodb://localhost/brewEquipdb');

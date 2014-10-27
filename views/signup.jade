@@ -1,0 +1,63 @@
+doctype html
+html(lang='en')
+head
+	meta(charset='utf-8')
+	title signup
+	link(href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css')
+	link(rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css")
+	link(rel="stylesheet" type="text/css" href="signup-page.css")
+body
+	h2 Sign in and start selling
+	form.form-container(role='form')
+		div.form-group.singleInput.breweryName
+			label Brewery Name
+			input.form-control(type='text', placeholder='ex:Quaffable Quaff Brewing')
+		div.form-group.singleInput.emailAddy
+			label Email Address
+			input.form-control(type='email', placeholder='emaily@email.com')
+		div.form-group.singleInput.productName
+			label Password
+			input.form-control(type='text', placeholder='LB2 bottler')
+		div.radioz
+			div.radio.radio1#toggler
+				label#pack(type='radio', name='packOrTank', value='packaging')
+					| Packaging
+				section.packaging
+					label
+						input#bottle(type='radio', name='bottleOrCan', value='bottle')
+							| bottler
+					label
+						input#can(type='radio', name='bottleOrCan', value='canner')
+							| canner
+			div.radio.radio2#toggler
+				label
+					input#tank(type='radio', name='packOrTank', value='tank')
+						| Tank
+				section.tank
+					label
+						input#fermentor(type='radio', name='fermOrMash', value='fermentor')
+							| Fermentor
+					label
+						input#mash(type='radio', name='fermOrMash', value='mash')
+							| Mash Tank
+		div.row
+			div.form-group.col-md-3.productName
+				label Height
+				input.form-control(type='text', placeholder='feet')
+			div.form-group.col-md-3.productName
+				label Length
+				input.form-control(type='text', placeholder='feet')
+			div.form-group.col-md-3.productName
+				label Width
+				input.form-control(type='text', placeholder='feet')
+			div.form-group.col-md-3.productName
+				label Weight
+				input.form-control(type='text', placeholder='pounds')
+		div.form-group.productDescription
+			label Product Description
+			textarea.form-control(rows='3')
+		div.form-group.singleInput
+			label Location
+			input.form-control.location(type='text', placeholder='Boulder, CO')
+	script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+	script(src='signup-page.js')
