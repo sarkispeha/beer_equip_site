@@ -5,7 +5,7 @@ head
 	title signup
 	link(href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css')
 	link(rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css")
-	link(rel="stylesheet" type="text/css" href="signup-page.css")
+	link(rel="stylesheet" type="text/css" href="stylesheets/signup-page.css")
 body
 	h2 Sign in and start selling
 	form.form-container(role='form')
@@ -20,26 +20,21 @@ body
 			input.form-control(type='text', placeholder='LB2 bottler')
 		div.radioz
 			div.radio.radio1#toggler
-				label#pack(type='radio', name='packOrTank', value='packaging')
-					| Packaging
+				label Packaging
+					input#pack(type='radio', name='packOrTank', value='packaging')
 				section.packaging
-					label
+					label bottler
 						input#bottle(type='radio', name='bottleOrCan', value='bottle')
-							| bottler
-					label
+					label canner
 						input#can(type='radio', name='bottleOrCan', value='canner')
-							| canner
 			div.radio.radio2#toggler
-				label
+				label Tank
 					input#tank(type='radio', name='packOrTank', value='tank')
-						| Tank
 				section.tank
-					label
+					label Fermentor
 						input#fermentor(type='radio', name='fermOrMash', value='fermentor')
-							| Fermentor
-					label
+					label Mash Tank
 						input#mash(type='radio', name='fermOrMash', value='mash')
-							| Mash Tank
 		div.row
 			div.form-group.col-md-3.productName
 				label Height
@@ -60,4 +55,4 @@ body
 			label Location
 			input.form-control.location(type='text', placeholder='Boulder, CO')
 	script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js')
-	script(src='signup-page.js')
+	script(src='javascripts/signup-page.js')

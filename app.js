@@ -17,6 +17,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 //views
 app.get('/', indexController.index3);
+app.get('/signup', indexController.signup)
 
 //API routes
 app.post('/api/addBrewery', apiController.addBrewery);
