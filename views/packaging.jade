@@ -1,0 +1,20 @@
+extends tabular-layout
+
+block content
+	header
+		a(href='index2.html')
+			i.fa.fa-hand-o-left
+		h3= Packaging
+
+	blockquote
+		fieldset.searchfield
+			legend= Legend
+			input#query(placeholder='search')
+			input#searchbtn(type='submit')
+			input#minAsk(size='5', placeholder='min')
+				| price:
+			input#maxAsk(size='5', placeholder='max')
+			label Packing Type
+			select(name="answer")
+				option(value="Bottler") Bottler
+				option(value="Canner") Canner
