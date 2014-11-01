@@ -20,21 +20,22 @@ body
 			input.form-control(type='text', placeholder='LB2 bottler')
 		div.radioz
 			div.radio.radio1#toggler
+				input#pack(type='radio', name='packOrTank', value='packaging')
 				label Packaging
-					input#pack(type='radio', name='packOrTank', value='packaging')
+				
 				section.packaging
+					input#bottle(type='radio', name='subset', value='bottle')
 					label bottler
-						input#bottle(type='radio', name='bottleOrCan', value='bottle')
+					input#can(type='radio', name='subset', value='canner')
 					label canner
-						input#can(type='radio', name='bottleOrCan', value='canner')
 			div.radio.radio2#toggler
+				input#tank(type='radio', name='packOrTank', value='tank')
 				label Tank
-					input#tank(type='radio', name='packOrTank', value='tank')
 				section.tank
+					input#fermentor(type='radio', name='subset', value='fermentor')
 					label Fermentor
-						input#fermentor(type='radio', name='fermOrMash', value='fermentor')
+					input#mash(type='radio', name='subset', value='mash')
 					label Mash Tank
-						input#mash(type='radio', name='fermOrMash', value='mash')
 		div.row
 			div.form-group.col-md-3.productName
 				label Height
@@ -54,5 +55,7 @@ body
 		div.form-group.singleInput
 			label Location
 			input.form-control.location(type='text', placeholder='Boulder, CO')
+		button.btn.btn-default(type='submit')
+			| Submit
 	script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js')
 	script(src='javascripts/signup-page.js')

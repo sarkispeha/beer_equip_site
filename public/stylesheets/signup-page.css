@@ -25,6 +25,10 @@ h2 {
 	width: 100%;
 }
 
+.radio input[type=radio] { /*gets all radio buttons*/ 
+	margin: 0;
+}
+
 #toggler .packaging{
 	display: none;
 }
