@@ -47,12 +47,16 @@ $(document).on('click', '.btn', function(e){
 	// console.log(breweryName);
 	var emailName = $('.emailAddy').find('input').val();
 	// console.log(emailName);
-	var passWrd = $('.passWrd').find('input').val();
+	// var passWrd = $('.passWrd').find('input').val();
 	// console.log(passWrd);
 	var productName = $('.productName').find('input').val();
 	// console.log(productName);
 	var productDescription = $('.productDescription').find('textarea').val();
-	console.log(productDescription);
+	// console.log(productDescription);
+	var height = $('#height').val();
+	var length = $('#length').val();
+	var width = $('#width').val();
+	var weight = $('#weight').val();
 	var location = $('.location').find('input').val();
 	// console.log(location);
 
@@ -83,8 +87,8 @@ $(document).on('click', '.btn', function(e){
 
 	var isTank = function() {
 		if (document.getElementById('tank').checked){
-			document.getElementById('can').checked = false;
-			document.getElementById('bottle').checked = false;
+			// document.getElementById('can').checked = false;  attempts to set checked values to false but ended up giving all radios same name value 
+			// document.getElementById('bottle').checked = false;
 			return true;
 		} else {
 			return false;
@@ -118,13 +122,11 @@ $(document).on('click', '.btn', function(e){
 	if (($('.singleInput input').val()) === '') {
 		alert('Enter something!');
 	}
-	
-	//save to database
-	// $.post('/api/addBrewery', {
+	//details for database entry
 	var details = {
 		name: breweryName,
 		email: emailName,
-		password: passWrd,
+		// password: passWrd,
 		product: productName,
 		productType: {
 			isPackaging: isPackaging() ,
@@ -133,9 +135,18 @@ $(document).on('click', '.btn', function(e){
 			isTank: isTank(),
 			isFermentor: isFermentor(),
 			isMash: isMash()
-		}
-
+		},
+		height: height,
+		length: length,
+		width: width,
+		weight: weight,
+		product_description: productDescription,
+		location: location
 	};
+	//save to database
+	$.post('/api/addBrewery', details, function(resultData){
+
+	});
 
 	console.log(details);
 
