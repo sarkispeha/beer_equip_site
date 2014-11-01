@@ -1,5 +1,14 @@
 $(document).on('ready',function(){
 
+//on page load pull list of packaging items
+$(function(){
+    $.get('/api/packagingController', {}, function(responseData){
+
+      $('.main-table').append(responseData);
+    })
+})
+
+
 //declare variables
 var canOrBottle = '';
 var dropText = '';

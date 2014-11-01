@@ -17,10 +17,13 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 //views
 app.get('/', indexController.index3);
-app.get('/signup', indexController.signup)
+app.get('/signup', indexController.signup);
+app.get('/packaging', indexController.packaging);
 
 //API routes
 app.post('/api/addBrewery', apiController.addBrewery);
+app.get('/api/packagingController', apiController.packagingController)
+
 
 var server = app.listen(7554, function() {
 	console.log('Express server listening on port ' + server.address().port);

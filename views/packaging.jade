@@ -12,9 +12,13 @@ block content
 			input#query(placeholder='search')
 			input#searchbtn(type='submit')
 			input#minAsk(size='5', placeholder='min')
-				| price:
 			input#maxAsk(size='5', placeholder='max')
 			label Packing Type
 			select(name="answer")
 				option(value="Bottler") Bottler
 				option(value="Canner") Canner
+
+	table.main-table
+
+	script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js')		
+	script(src='javascripts/packaging.js')

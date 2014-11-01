@@ -12,6 +12,11 @@ var api = {
 			console.log(result);
 			res.send(result);
 		});
+	},
+	packagingController: function(req, res){
+		Brewery.find({}, function(err, results){
+			res.send(results);
+		});
 	}
 }
 module.exports = api;

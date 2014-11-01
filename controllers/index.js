@@ -4,6 +4,9 @@ var indexController = {
 	},
 	signup: function(req, res) {
 		res.render('signup');
+	},
+	packaging: function(req, res){
+		res.render('packaging');
 	}
 };
 
