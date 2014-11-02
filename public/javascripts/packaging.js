@@ -6,19 +6,18 @@ $(document).on('ready',function(){
 
 // HTML content of template
 var templateSource = $('#startDataTable').html();
+console.log(templateSource);
 
 //compile source
 var templateFunc = Handlebars.compile(templateSource);
-
 
 //on page load pull list of packaging items
 $(function(){
     $.get('/api/packagingController', {}, function(responseData){
       console.log(responseData);
-      var productName = '';
 
       for(var i = 0; i < responseData.length; i++){
-        productName = responseData[i];
+        var productName = responseData[i];
         console.log(productName);
         var tableHTML = templateFunc(productName);
         $('.main-table').append(tableHTML);

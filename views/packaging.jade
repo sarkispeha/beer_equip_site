@@ -27,4 +27,21 @@ block content
 		//- TEMPLATE
 	script#startDataTable(type='text-handlebars-template')
 
-		p{{product}} this is where the product name should be
+		table
+			thead
+				tr
+					th Name
+					th Description
+					th Location
+					th Price
+			tbody.tbody-orig
+				tr
+					td {{product}}
+					td {{product_description}}
+					td {{location}}
+					td {{price}}
+
+
+
+
+
