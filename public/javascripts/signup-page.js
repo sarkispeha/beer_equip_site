@@ -59,6 +59,7 @@ $(document).on('click', '.btn', function(e){
 	var weight = $('#weight').val();
 	var location = $('.location').find('input').val();
 	// console.log(location);
+	var price = $('.price').find('input').val();
 
 	//radio button values
 	var isPackaging = function() {
@@ -129,7 +130,7 @@ $(document).on('click', '.btn', function(e){
 		// password: passWrd,
 		product: productName,
 		productType: {
-			isPackaging: isPackaging() ,
+			isPackaging: isPackaging(),
 			isBottler: isBottler(),
 			isCanner: isCanner(),
 			isTank: isTank(),
@@ -141,7 +142,8 @@ $(document).on('click', '.btn', function(e){
 		width: width,
 		weight: weight,
 		product_description: productDescription,
-		location: location
+		location: location,
+		price: price
 	};
 	//save to database
 	$.post('/api/addBrewery', details, function(resultData){

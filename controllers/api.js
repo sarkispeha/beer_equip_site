@@ -6,6 +6,7 @@ var api = {
 		console.log(breweryData);
 
 		var newBrewery = new Brewery(breweryData);
+		console.log(newBrewery);
 
 		//new document of a brewery created with body of post
 		newBrewery.save(function(err,result){

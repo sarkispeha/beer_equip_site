@@ -19,7 +19,8 @@ var brewerySchema = mongoose.Schema({
 		width: Number,
 		weight: Number,
 		product_description: String,
-		location: String
+		location: String,
+		price: Number
 });
 
 module.exports = mongoose.model('brewery', brewerySchema);
