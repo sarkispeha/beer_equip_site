@@ -19,25 +19,25 @@ block content
 				option(value="Canner") Canner
 
 	table.main-table
+		thead
+			tr
+				th Name
+				th Description
+				th Location
+				th Price
+		tbody.tbody-orig
 
 	script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js')		
 	script(src='javascripts/packaging.js')
 	script(src='http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js')
 
-		//- TEMPLATE
+		//- TEMPLATE for packaging table data
 	script#startDataTable(type='text-handlebars-template')
 
-		table
-			thead
 				tr
-					th Name
-					th Description
-					th Location
-					th Price
-			tbody.tbody-orig
-				tr
-					td {{product}}
-					td {{product_description}}
+					a(href='/individual_product')
+						td {{product}}
+						td {{product_description}}
 					td {{location}}
 					td {{price}}
 

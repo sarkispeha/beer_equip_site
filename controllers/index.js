@@ -7,6 +7,9 @@ var indexController = {
 	},
 	packaging: function(req, res){
 		res.render('packaging');
+	},
+	individual_product: function(req, res){
+		res.render('individual_product');
 	}
 };
 

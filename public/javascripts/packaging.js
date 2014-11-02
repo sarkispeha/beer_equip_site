@@ -6,7 +6,7 @@ $(document).on('ready',function(){
 
 // HTML content of template
 var templateSource = $('#startDataTable').html();
-console.log(templateSource);
+// console.log(templateSource);
 
 //compile source
 var templateFunc = Handlebars.compile(templateSource);
@@ -14,16 +14,16 @@ var templateFunc = Handlebars.compile(templateSource);
 //on page load pull list of packaging items
 $(function(){
     $.get('/api/packagingController', {}, function(responseData){
-      console.log(responseData);
+      // console.log(responseData);
 
       for(var i = 0; i < responseData.length; i++){
         var productName = responseData[i];
-        console.log(productName);
+        // console.log(productName);
         var tableHTML = templateFunc(productName);
-        $('.main-table').append(tableHTML);
+        //new HTML content from responseData
+        $('.tbody-orig').append(tableHTML);
       }
-      //new HTML content from responseData
-      console.log(tableHTML);
+      // console.log(tableHTML);
       
     })
 })
