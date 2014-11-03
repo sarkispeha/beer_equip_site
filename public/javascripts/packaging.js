@@ -18,7 +18,7 @@ $(function(){
 
       for(var i = 0; i < responseData.length; i++){
         var productName = responseData[i];
-        console.log(productName);
+        // console.log(productName);
         var tableHTML = templateFunc(productName);
         //new HTML content from responseData
         $('.tbody-orig').append(tableHTML);
