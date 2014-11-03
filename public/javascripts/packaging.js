@@ -18,17 +18,12 @@ $(function(){
 
       for(var i = 0; i < responseData.length; i++){
         var productName = responseData[i];
-        // console.log(productName);
         var tableHTML = templateFunc(productName);
         //new HTML content from responseData
         $('.tbody-orig').append(tableHTML);
       }
-      // console.log(tableHTML);
-      
     })
 })
-
-
 
 //declare variables
 var canOrBottle = '';
@@ -84,11 +79,13 @@ $(document).on('click', '#searchbtn', function(){
       console.log(searchValue);
       console.log(isMatch);
     return isMatch;
-   }).show();
+   }).show();  
+});//end search handler
 
-
-  
-})
+//link to product page
+// $('tbody').on('click', 'tr', function(){
+//   window.location = '/individual_product';
+// });
 
 
 //googleMap product locator

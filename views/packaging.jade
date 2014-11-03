@@ -35,9 +35,10 @@ block content
 	script#startDataTable(type='text-handlebars-template')
 
 				tr
-					a(href='/individual_product')
-						td {{product}}
-						td {{product_description}}
+					td 
+						a(href='/individual_product'){{product}}
+					td 
+						a(href='/individual_product'){{product_description}}
 					td {{location}}
 						button(type='button') Map
 					td {{price}}
