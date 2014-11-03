@@ -20,7 +20,7 @@ $(function(){
         var productName = responseData[i];
         console.log(productName);
         var tableHTML = templateFunc(productName);
-        new HTML content from responseData
+        //new HTML content from responseData
         $('.tbody-orig').append(tableHTML);
       }
       // console.log(tableHTML);

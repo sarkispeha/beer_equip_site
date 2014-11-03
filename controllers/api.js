@@ -17,9 +17,14 @@ var api = {
 		});
 	},
 	packagingController: function(req, res){
-		Brewery.find({}, function(err, results){
+		Brewery.find({'productType.isPackaging': true}
+			, function(err, results){
 			res.send(results);
 		});
 	}
+	// ,
+	// getProduct: function(req, res){
+
+	// }
 }
 module.exports = api;

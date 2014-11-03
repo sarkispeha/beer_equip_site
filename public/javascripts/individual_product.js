@@ -11,7 +11,11 @@ var templateSource = $('#productInto').html();
 var templateFunc = Handlebars.compile(templateSource);
 
 //on page load pull info of individual item
-$(function(){}
+// $(function(){
+// 	$.get('/api/productController', {}, function(responseData){
+
+// 	})
+// });
 
 //verification for shipping button  
 $(document).on('click', '.shippingBtn', function(e) {

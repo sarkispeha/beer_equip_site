@@ -14,7 +14,7 @@ app.set('view engine', 'jade');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 // app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true})); //makes things more complicated but works!
+app.use(bodyParser.urlencoded({extended: true})); //makes things more complicated initially but works for arrays and objects 
 
 //views
 app.get('/', indexController.index3);
