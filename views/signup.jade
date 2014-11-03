@@ -39,16 +39,16 @@ body
 		div.row
 			div.form-group.col-md-3.productName
 				label Height
-				input.form-control#height(type='text', placeholder='feet')
+				input.form-control#height(type='number', placeholder='feet')
 			div.form-group.col-md-3.productName
 				label Length
-				input.form-control#length(type='text', placeholder='feet')
+				input.form-control#length(type='number', placeholder='feet')
 			div.form-group.col-md-3.productName
 				label Width
-				input.form-control#width(type='text', placeholder='feet')
+				input.form-control#width(type='number', placeholder='feet')
 			div.form-group.col-md-3.productName
 				label Weight
-				input.form-control#weight(type='text', placeholder='pounds')
+				input.form-control#weight(type='number', placeholder='pounds')
 		div.form-group.productDescription
 			label Product Description
 			textarea.form-control(rows='3')
@@ -57,8 +57,7 @@ body
 			input.form-control(type='text', placeholder='Boulder, CO')
 		div.form-group.singleInput.price
 			label Price
-			input.form-control(type='text', placeholder='10000')
-		button.btn.btn-default(type='submit')
-			| Submit
+			input.form-control(type='number', placeholder='10000')
+		input.btn.btn-default(type='submit')
 	script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js')
 	script(src='javascripts/signup-page.js')

@@ -1,5 +1,18 @@
 $(document).on('ready', function() {
 
+////////////////////
+//handlebars stuff//
+////////////////////
+
+// HTML content of template
+var templateSource = $('#productInto').html();
+
+//compile source
+var templateFunc = Handlebars.compile(templateSource);
+
+//on page load pull info of individual item
+$(function(){}
+
 //verification for shipping button  
 $(document).on('click', '.shippingBtn', function(e) {
 	e.preventDefault();
