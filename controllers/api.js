@@ -21,10 +21,12 @@ var api = {
 			, function(err, results){
 			res.send(results);
 		});
-	}
-	// ,
-	// getProduct: function(req, res){
-
-	// }
+	},
+	viewProduct: function(req, res){
+		var id = req.params.id;
+		Brewery.findOne({_id: id}, function(err, result){
+			res.render('individual_product');
+			});
+		}
 }
 module.exports = api;

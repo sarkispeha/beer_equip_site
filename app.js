@@ -25,6 +25,7 @@ app.get('/individual_product', indexController.individual_product);
 //API routes
 app.post('/api/addBrewery', apiController.addBrewery);
 app.get('/api/packagingController', apiController.packagingController);
+app.get('/api/viewProduct/:id', apiController.viewProduct);
 
 
 var server = app.listen(7554, function() {

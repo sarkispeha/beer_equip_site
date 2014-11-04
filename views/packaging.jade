@@ -36,9 +36,9 @@ block content
 
 				tr
 					td 
-						a(href='/individual_product'){{product}}
+						a(href='/api/viewProduct/' + '{{_id}}' ) {{product}} 
 					td 
-						a(href='/individual_product'){{product_description}}
+						a(href='/api/viewProduct/' + '{{_id}}' ) {{product_description}}
 					td {{location}}
 						button(type='button') Map
 					td {{price}}

@@ -11,6 +11,6 @@ var indexController = {
 	individual_product: function(req, res){
 		res.render('individual_product');
 	}
-};
+}
 
 module.exports = indexController;
