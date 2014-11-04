@@ -5,17 +5,18 @@ $(document).on('ready', function() {
 ////////////////////
 
 // HTML content of template
-var templateSource = $('#productInto').html();
+var templateSource = $('#productInfo').html();
 
 //compile source
 var templateFunc = Handlebars.compile(templateSource);
 
 //on page load pull info of individual item
-// $(function(){
-// 	$.get('/api/productController', {}, function(responseData){
-
-// 	})
-// });
+$(function(){
+	$.get('/api/viewProduct', {}, function(responseData){
+		console.log(responseData);
+		$('.product_title').append(responseData);
+	});
+});
 
 //verification for shipping button  
 $(document).on('click', '.shippingBtn', function(e) {
@@ -30,7 +31,7 @@ $(document).on('click', '.shippingBtn', function(e) {
 	$('.priceCalculated').text(arr[i]).show();
 	})
 
-
+//seller contact mail form appears
 $(document).on('click', '.seller-contact', function() {
 	$(this).remove().addClass('seller-hidden');
 	$('.seller-hidden').show(500);

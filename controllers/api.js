@@ -27,6 +27,6 @@ var api = {
 		Brewery.findOne({_id: id}, function(err, result){
 			res.render('individual_product');
 			});
-		}
+	}
 }
 module.exports = api;

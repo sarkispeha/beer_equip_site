@@ -82,7 +82,7 @@ block content
 					div.priceCalculated
 						p $450
 			div.col-sm-6.col-xs-12
-				img(src='images/bottle_filler.jpg')
+				img(src='/images/bottle_filler.jpg')
 	div.row.seller
 		div.col-sm-6.col-xs-12.seller-specs
 			div.panel.panel-default.brewery-specs
@@ -113,9 +113,13 @@ block content
 					input.form-control(type='text')
 				div.form-group
 					button.btn.btn-default(type='submit') Send
+
+	block scripts
 	script(src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js")
-	script(src="javascripts/individual_product.js")
 	script(src='http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js')
 
 		//- TEMPLATE for 
 	script#productInfo(type='text-handlebars-template')
+
+		h3 {{product}}
+		p {{product_description}}
