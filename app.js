@@ -9,6 +9,9 @@ var apiController = require('./controllers/api.js');
 //connect to database
 mongoose.connect('mongodb://localhost/brewEquipdb');
 
+//seed data
+require('./models/seeds/productSeed.js')
+
 var app = express();
 app.set('view engine', 'jade');
 app.set('views', __dirname + '/views');
