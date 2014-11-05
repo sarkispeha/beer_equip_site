@@ -1,5 +1,7 @@
 $(document).on('ready', function() {
 
+
+
 ////////////////////
 //handlebars stuff//
 ////////////////////
@@ -11,12 +13,12 @@ var templateSource = $('#productInfo').html();
 var templateFunc = Handlebars.compile(templateSource);
 
 //on page load pull info of individual item
-$(function(){
-	$.get('/api/viewProduct', {}, function(responseData){
-		console.log(responseData);
-		$('.product_title').append(responseData);
-	});
-});
+// $(function(){
+// 	$.get('/api/viewProduct/id', {}, function(responseData){
+// 		console.log(responseData);
+// 		$('.product_title').append(responseData);
+// 	});
+// });
 
 //verification for shipping button  
 $(document).on('click', '.shippingBtn', function(e) {

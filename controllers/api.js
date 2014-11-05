@@ -21,12 +21,17 @@ var api = {
 			, function(err, results){
 			res.send(results);
 		});
-	},
-	viewProduct: function(req, res){
-		var id = req.params.id;
-		Brewery.findOne({_id: id}, function(err, result){
-			res.render('individual_product');
-			});
 	}
+	// ,
+	// viewProduct: function(req, res){
+	// 	// console.log('reached point');
+
+	// 	var id = req.params.id;
+	// 	// console.log('This is the id: ', id);
+	// 	Brewery.findOne({_id: id}, function(err, result){
+			
+	// 		res.send(result);
+	// 		});
 }
+
 module.exports = api;
