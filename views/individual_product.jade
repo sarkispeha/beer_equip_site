@@ -6,10 +6,9 @@ block content
 	div.container
 		div.row.specifications
 			div.product_title
-				h3 beezel-bottl Inc. inline bottler
-				//- h3 #{product.name}
+				h3 #{product.product}
 			div.col-sm-6.col-xs-12
-				p Black Sabbath Black Sabbath Black Sabbath Ozzy Black Sabbath Iron Maiden Black Sabbath Black Sabbath Ronnie James Dio Black Sabbath White Zombie Black Sabbath Black Sabbath Black Sabbath Black Sabbath Black Sabbath Manowar Black Sabbath Black Sabbath Black Sabbath Black Sabbath Metallica Black Sabbath Black Sabbath and a headless bat.
+				p #{product.product_description}
 				form.form-horizontal.shipCalcAddress(role='form')
 					div.form-group
 						label.col-sm-2.control-label Street
@@ -81,7 +80,7 @@ block content
 						div.col-sm-offset-2.col-sm-10
 							button.btn.btn-default.shippingBtn(type='submit') Calculate Shipping
 					div.priceCalculated
-						p $450
+						p #{product.price}
 			div.col-sm-6.col-xs-12
 				img(src='/images/bottle_filler.jpg')
 	div.row.seller
@@ -90,15 +89,15 @@ block content
 				div.panel-heading
 					h5.panel-title Brewery
 				div.panel-body
-					| This is where the product description goes
+					| #{product.name}
 				div.panel-heading
 					h5.panel-title Location
 				div.panel-body
-					p 9th circle
+					p #{product.location}
 				div.panel-heading
 					h5.panel-title Verification Level
 				div.panel-body
-					p verified mostly
+					p Verified
 		div.col-sm-6.col-xs-12.seller-contact-container
 			div.seller-contact
 				p Click here to contact seller
