@@ -13,15 +13,15 @@ block content
 					div.form-group
 						label.col-sm-2.control-label Street
 						div.col-sm-10
-							input.form-control#streetInput(type='text', placholder='55 Sesame Street', required)
+							input.form-control#streetInput(type='text', placholder='55 Sesame Street', name='street', required)
 					div.form-group
-						label.col-sm-2.control-label Apt
+						label.col-sm-2.control-label City
 						div.col-sm-10
-							input.form-control#cityInput(type='text', placholder='Gotham', required)
+							input.form-control#cityInput(type='text', placholder='Gotham', name='city', required)
 					div.form-group
 						label.col-sm-2.control-label State
 						div.col-sm-3
-							select.form-control
+							select.form-control.state_selector
 								option(value="AL") AL
 								option(value="AK") AK
 								option(value="AZ") AZ
@@ -75,7 +75,7 @@ block content
 								option(value="WY") WY
 						label.col-sm-1.control-label Zip
 						div.col-sm-4
-							input.form-control#zipInput(type='text', placholder='80302' required)
+							input.form-control#zipInput(type='text', placholder='80302', name='zip', required)
 					div.form-group
 						div.col-sm-offset-2.col-sm-10
 							button.btn.btn-default.shippingBtn(type='submit') Calculate Shipping

@@ -25,12 +25,10 @@ Brewery.find({}, function(err, results){
 				zip: 59801
 			},
 			price: 8950
-		})
-	}
+		});
+		bruceBrew.save();
 
-	bruceBrew.save();
-
-var blackMambaBrew = new Brewery({
+		var blackMambaBrew = new Brewery({
 			name: "Black Mamba Brewing Co.",
 			email: "mambabrew@email.com",
 			product: "Can-Can Canner",
@@ -52,10 +50,10 @@ var blackMambaBrew = new Brewery({
 				zip: 98101
 			},
 			price: 12950
-		})
-	blackMambaBrew.save();
+		});
+		blackMambaBrew.save();
 
-var yoMamaBrew = new Brewery({
+		var yoMamaBrew = new Brewery({
 			name: "Yo Mama Brewing",
 			email: "mamabrewin@email.com",
 			product: "Primary Fermentor Tank",
@@ -77,10 +75,10 @@ var yoMamaBrew = new Brewery({
 				zip: 55401
 			},
 			price: 18950
-		})
-	yoMamaBrew.save();
+		});
+		yoMamaBrew.save();
 
-var brewceWillisBrew = new Brewery({
+		var brewceWillisBrew = new Brewery({
 			name: "Brewce Willis Brews",
 			email: "brucebrew@email.com",
 			product: "Masherific Mash tank",
@@ -102,6 +100,7 @@ var brewceWillisBrew = new Brewery({
 				zip: 80123
 			},
 			price: 4950
-		})
-	brewceWillisBrew.save();
+		});
+		brewceWillisBrew.save();
+	}
 });

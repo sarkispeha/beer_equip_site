@@ -1,4 +1,5 @@
 var Brewery = require('../models/brewery_register_model.js');
+var upsAPI = require('shipping-ups');
 
 var api = {
 	addBrewery: function(req, res){
@@ -22,6 +23,97 @@ var api = {
 			res.send(results);
 		});
 	}
+	// shipCost: function(req, res){
+	// 	var ups = new upsAPI({
+	// 		environment: 'sandbox',
+	// 		username: 'Sark',
+	// 		password: 'upsputoL030',
+	// 		access_key: '9CE033ADFFF5D9C5',
+	// 		imperial: true
+	// 	});
+	// 	var realWeight = ups.dimensionalWeight(weight, length, width, height);
+
+	// 	data = {
+ //    		pickup_type: 'daily_pickup', // optional, can be: 'daily_pickup', 'customer_counter', 'one_time_pickup', 'on_call_air', 'suggested_retail_rates', 'letter_center', 'air_service_center'
+ //    		pickup_type_code: '02', // optional, overwrites pickup_type
+ //    		customer_classification: '00', // optional, need more details about what this does
+	// 	    shipper: {
+	// 	      name: 'Type Foo',
+	// 	      shipper_number: 'SHIPPER_NUMBER', // optional, but recommended for accurate rating
+	// 	      phone_number: '', // optional
+	// 	      tax_identification_number: '', // optional
+	// 	      address: {
+	// 	        address_line_1: '123 Fake Address',
+	// 	        city: 'Dover',
+	// 	        state_code: 'OH',
+	// 	        country_code: 'US',
+	// 	        postal_code: '44622'
+	// 	      }
+	// 	    },
+	// 	    ship_to: {
+	// 	      company_name: 'Company Name', // or person's name
+	// 	      attention_name: '', // optional
+	// 	      phone_number: '', // optional
+	// 	      tax_identification_number: '', // optional
+	// 	      location_id: '', //optional, for specific locations
+	// 	      address: {
+	// 	        address_line_1: '3456 Fake Address', // optional
+	// 	        city: 'Charlotte', // optional
+	// 	        state_code: 'NC', // optional, required for negotiated rates
+	// 	        country_code: 'US',
+	// 	        postal_code: '28205',
+	// 	        residential: true // optional, can be useful for accurate rating
+	// 	      }
+	// 	    },
+	// 	    ship_from: { // optional, use if different from shipper address
+	// 	      company_name: 'Company Name', // or person's name
+	// 	      attention_name: 'Attention Name',
+	// 	      phone_number: '', // optional
+	// 	      tax_identification_number: '', // optional
+	// 	      address: {
+	// 	        address_line_1: '123 Fake Address',
+	// 	        city: 'Dover',
+	// 	        state_code: 'OH',
+	// 	        country_code: 'US',
+	// 	        postal_code: '44622'
+	// 	      }
+	// 	    },
+	// 	    sold_to: { // optional, The person or company who imports and pays any duties due on the current shipment, required if Invoice of NAFTA CO is requested
+	// 	      option: '01', // optional, applies to NAFTA CO form
+	// 	      company_name: 'Company Name', // or person's name
+	// 	      attention_name: 'Attention Name',
+	// 	      phone_number: '', // optional
+	// 	      tax_identification_number: '', // optional
+	// 	      address: {
+	// 	        address_line_1: '123 Fake Address',
+	// 	        city: 'Dover',
+	// 	        state_code: 'OH',
+	// 	        country_code: 'US',
+	// 	        postal_code: '44622'
+	// 	      }
+	// 	    },
+	// 	    service: '03' // optional, will rate this specific service.
+	// 	    services: [ // optional, you can specify which rates to look for -- performs multiple requests, so be careful not to do too many
+	// 	      '03'
+	// 	    ],
+	// 	    return_service: '9', // optional, will provide a UPS Return Service specification
+	// 	    packages: [
+	// 	      {
+	// 	        packaging_type: '02', // optional, packaging type code
+	// 	        weight: 10,
+	// 	        description: 'My Package', // optional
+	// 	        delivery_confirmation_type: 2, // optional, 1 or 2
+	// 	        insured_value: 1000.00, // optional, 2 decimals
+	// 	        dimensions: { // optional, integers: 0-108 for imperial, 0-270 for metric
+	// 	          length: 12,
+	// 	          width: 12,
+	// 	          height: 24
+	// 	        }
+	// 	      }
+	// 	    ]
+	// 	  }
+
+	// }//end of shipCost
 	// ,
 	// viewProduct: function(req, res){
 	// 	// console.log('reached point');

@@ -23,15 +23,23 @@ var templateFunc = Handlebars.compile(templateSource);
 //verification for shipping button  
 $(document).on('click', '.shippingBtn', function(e) {
 	e.preventDefault();
-	var arr = ['$450','$605','$125','$322','$237','$499','$123','$234','$255','$563','$652','$730','$463'];
-	var i = Math.floor((Math.random() * 12) + 1);
-	// if(#streetInput === '') {
-	// 	alert()
-	// }
-	console.log(i);
-	console.log(arr[i]);
-	$('.priceCalculated').text(arr[i]).show();
-	})
+
+	//grab values from form
+	var address_line_1 = $(this).closest('form').find('[name=street]').val();
+	console.log(address_line_1);
+	var city = $(this).closest('form').find('[name=city]').val();
+	console.log(city);
+	var state_code = $('.state_selector').val();
+	console.log(state_code);
+	var postal_code = $(this).closest('form').find('[name=zip]').val();
+	console.log(postal_code);
+
+	// $.get('/api/shipCost', {}, function(resultData){
+	// 	$('priceCalculated').text(resultData).show();
+	// });
+	
+	
+});
 
 //seller contact mail form appears
 $(document).on('click', '.seller-contact', function() {

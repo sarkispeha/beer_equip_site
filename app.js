@@ -10,7 +10,7 @@ var apiController = require('./controllers/api.js');
 mongoose.connect('mongodb://localhost/brewEquipdb');
 
 //seed data
-require('./models/seeds/productSeed.js')
+require('./models/seeds/productSeed.js');
 
 var app = express();
 app.set('view engine', 'jade');
@@ -28,6 +28,7 @@ app.get('/individual_product/:id', indexController.individual_product);
 //API routes
 app.post('/api/addBrewery', apiController.addBrewery);
 app.get('/api/packagingController', apiController.packagingController);
+// app.post('api/shipCost', apiController.shipCost);
 // app.get('/api/viewProduct/:id', apiController.viewProduct);
 
 
