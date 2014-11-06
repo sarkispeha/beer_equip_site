@@ -61,7 +61,7 @@ var api = {
 		    },
 		    packages: [
 		      {
-		        weight: 100,
+		        weight: shipData.weight,
 		        description: 'My Package', // optional
 		        dimensions: { // optional, integers: 0-108 for imperial, 0-270 for metric
 		          length: shipData.length,

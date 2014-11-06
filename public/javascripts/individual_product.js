@@ -24,6 +24,9 @@ $(document).on('ready', function() {
 $(document).on('click', '.shippingBtn', function(e) {
 	e.preventDefault();
 
+	//reset price
+	$('.priceCalculated').text('');
+
 	//grab values from form
 	var to_address_line_1 = $(this).closest('form').find('[name=street]').val();
 	var to_city = $(this).closest('form').find('[name=city]').val();
@@ -34,7 +37,20 @@ $(document).on('click', '.shippingBtn', function(e) {
 	var from_city = product.location.city;
 	var from_state_code = product.location.state;
 	var from_postal_code = product.location.zip;
-	var weight = product.weight;
+	var weightScaler = function(weight){
+		if(weight > 150){
+			weight = weight / 10;
+			return weight;
+		} else if(weight > 1500){
+			weight = weight / 15;
+			return weight;
+		} else{
+			return weight;
+		}
+		};
+
+	};
+	var weight = weightScaler(product.weight);
 	var length = product.length;
 	var width = product.width;
 	var height = product.height;
@@ -53,8 +69,8 @@ $(document).on('click', '.shippingBtn', function(e) {
 							height: height
 							},
 							function(resultData){
-		console.log(resultData);
-		// $('priceCalculated').text(resultData).show();
+		var UPSprice = resultData.RatedShipment[4].TotalCharges.MonetaryValue;
+		$('.priceCalculated').text(UPSprice).show();
 	});
 	
 	
