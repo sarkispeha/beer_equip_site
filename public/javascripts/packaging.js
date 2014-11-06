@@ -119,9 +119,10 @@ var codeAddress = function(addy) {
 
 //googleMap event handler
 $(document).on('click', '.location button', function() {
-  console.log(this);
-  console.log($(this).closest('.location').text());
   var searchAddress = $(this).closest('.location').text();
+  var stringLength = searchAddress.length;
+  searchAddress = searchAddress.substring(0,stringLength-3);
+  console.log(searchAddress);
 	$('.map-lightbox').show(200);
 	initialize();
 	codeAddress(searchAddress);
