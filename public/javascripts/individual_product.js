@@ -39,7 +39,7 @@ $(document).on('click', '.shippingBtn', function(e) {
 	var width = product.width;
 	var height = product.height;
 
-	$.get('/api/shipCost', {to_address_line_1: to_address_line_1,
+	$.post('/api/shipCost', {to_address_line_1: to_address_line_1,
 							to_city: to_city,
 							to_state_code: to_state_code,
 							to_postal_code: to_postal_code,

@@ -28,7 +28,7 @@ app.get('/individual_product/:id', indexController.individual_product);
 //API routes
 app.post('/api/addBrewery', apiController.addBrewery);
 app.get('/api/packagingController', apiController.packagingController);
-app.get('/api/shipCost', apiController.shipCost);
+app.post('/api/shipCost', apiController.shipCost);
 // app.get('/api/viewProduct/:id', apiController.viewProduct);
 
 
