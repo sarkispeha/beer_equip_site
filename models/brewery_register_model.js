@@ -20,6 +20,7 @@ var brewerySchema = mongoose.Schema({
 		weight: Number,
 		product_description: String,
 		location: {
+			address: String,
 			city: String,
 			state: String,
 			zip: Number

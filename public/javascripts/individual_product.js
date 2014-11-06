@@ -7,10 +7,10 @@ $(document).on('ready', function() {
 ////////////////////
 
 // HTML content of template
-var templateSource = $('#productInfo').html();
+// var templateSource = $('#productInfo').html();
 
-//compile source
-var templateFunc = Handlebars.compile(templateSource);
+// //compile source
+// var templateFunc = Handlebars.compile(templateSource);
 
 //on page load pull info of individual item
 // $(function(){
@@ -25,18 +25,37 @@ $(document).on('click', '.shippingBtn', function(e) {
 	e.preventDefault();
 
 	//grab values from form
-	var address_line_1 = $(this).closest('form').find('[name=street]').val();
-	console.log(address_line_1);
-	var city = $(this).closest('form').find('[name=city]').val();
-	console.log(city);
-	var state_code = $('.state_selector').val();
-	console.log(state_code);
-	var postal_code = $(this).closest('form').find('[name=zip]').val();
-	console.log(postal_code);
+	var to_address_line_1 = $(this).closest('form').find('[name=street]').val();
+	var to_city = $(this).closest('form').find('[name=city]').val();
+	var to_state_code = $('.state_selector').val();
+	var to_postal_code = $(this).closest('form').find('[name=zip]').val();
+	//...and from db
+	var from_address_line_1 = product.location.address;
+	var from_city = product.location.city;
+	var from_state_code = product.location.state;
+	var from_postal_code = product.location.zip;
+	var weight = product.weight;
+	var length = product.length;
+	var width = product.width;
+	var height = product.height;
 
-	// $.get('/api/shipCost', {}, function(resultData){
-	// 	$('priceCalculated').text(resultData).show();
-	// });
+	$.get('/api/shipCost', {to_address_line_1: to_address_line_1,
+							to_city: to_city,
+							to_state_code: to_state_code,
+							to_postal_code: to_postal_code,
+							from_address_line_1: from_address_line_1,
+							from_city: from_city,
+							from_state_code: from_state_code,
+							from_postal_code: from_postal_code,
+							weight: weight,
+							length: length,
+							width: width,
+							height: height
+							},
+							function(resultData){
+		console.log(resultData);
+		// $('priceCalculated').text(resultData).show();
+	});
 	
 	
 });
