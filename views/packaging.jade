@@ -15,6 +15,7 @@ block content
 			input#maxAsk(size='5', placeholder='max')
 			label Packing Type
 			select(name="answer")
+				option(value="select-type") Select Type
 				option(value="Bottler") Bottler
 				option(value="Canner") Canner
 
@@ -27,9 +28,14 @@ block content
 				th Price
 		tbody.tbody-orig
 
+	div.map-lightbox
+		div#map-canvas
+		button(type="button") Close
+
 	script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js')		
 	script(src='javascripts/packaging.js')
 	script(src='http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js')
+	script(src="https://maps.googleapis.com/maps/api/js?v=3.exp")
 
 		//- TEMPLATE for packaging table data
 	script#startDataTable(type='text-handlebars-template')
@@ -39,7 +45,7 @@ block content
 						a(href='/individual_product/' + '{{_id}}' ) {{product}} 
 					td 
 						a(href='/individual_product/' + '{{_id}}' ) {{product_description}}
-					td {{location}}
+					td.location {{location.city}}, {{location.state}}
 						button(type='button') Map
 					td {{price}}
 
