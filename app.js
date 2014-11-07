@@ -29,6 +29,7 @@ app.get('/individual_product/:id', indexController.individual_product);
 app.post('/api/addBrewery', apiController.addBrewery);
 app.get('/api/packagingController', apiController.packagingController);
 app.post('/api/shipCost', apiController.shipCost);
+// app.post('/api/searchProducts', apiController.searchProducts);
 // app.get('/api/viewProduct/:id', apiController.viewProduct);
 
 

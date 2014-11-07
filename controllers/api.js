@@ -35,7 +35,6 @@ var api = {
 			imperial: true,
 			currency: 'USD'
 		});
-		// var realWeight = ups.dimensionalWeight(weight, length, width, height);
 		
 		data = {
 		    shipper: {
@@ -89,6 +88,24 @@ var api = {
 			res.send(result);
 			});
 	}
+	// ,
+	// searchProducts: function(req, res){
+	// 	var searchData = req.body;
+	// 	console.log(searchData);
+	// 	var query = searchData.query;
+	// 	var minAsk = searchData.minAsk;
+	// 	var maxAsk = searchData.maxAsk;
+	// 	var packingType = searchData.packingType;
+		
+	// 	Brewery.find({
+	// 				product: query,
+	// 				{price: {$gt: minAsk, $lt: maxAsk},
+	// 				'productType.isBottler': packagingType
+	// 				}
+	// 		, function(err, results){
+	// 		res.send(results);
+	// 	)};
+	// }//end searchProducts
 }
 
 module.exports = api;

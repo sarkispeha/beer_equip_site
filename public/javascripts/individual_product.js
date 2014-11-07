@@ -49,7 +49,6 @@ $(document).on('click', '.shippingBtn', function(e) {
 		}
 		};
 
-	};
 	var weight = weightScaler(product.weight);
 	var length = product.length;
 	var width = product.width;

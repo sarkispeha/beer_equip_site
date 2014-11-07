@@ -43,44 +43,74 @@ $(document).on('mouseout', '.tbody-orig tr',function(){
 	$(this).removeClass('tbody-hover').addClass('tbody-orig');
 	});
 
-//search value, price set, and actual search
+
+/////////////////////
+//Search handler!!!//
+/////////////////////
+
 $(document).on('click', '#searchbtn', function(){
   var searchValue = $('#query').val();
-
   var priceMin = 0;
   var priceMax = Infinity;
+  var packingType = $('.type-selector').val();
+
   if ($('#minAsk').val() !== '') {
     priceMin = $('#minAsk').val();
   }
   if($('#maxAsk').val() !== ''){
     priceMax = $('#maxAsk').val();
   }
-    
+
   dropText = dropText.toLowerCase();
-  // console.log(searchValue);
-  // console.log(dropText);
-  // console.log(priceMin);
-  // console.log(priceMax);
-   var result = $('tbody tr').hide().filter(function(){
-    var currentPrice = $(this).find('.price').text(); // finds price
-    currentPrice = parseInt(currentPrice);
-    var isMatch = true;
+  $.post('/api/searchProducts', {
+    query: searchValue,
+    minAsk: priceMin,
+    maxAsk: priceMax,
+    packingType: packingType
+    },
+    function(resultData){
+      console.log(resultData);
+    });//end of ajax
+})
 
-      if( !$(this).hasClass(dropText) ){ //dropbox filter
-        isMatch = false;
-        }
-        console.log(isMatch);
+//search value, price set, and actual search
+// $(document).on('click', '#searchbtn', function(){
+//   var searchValue = $('#query').val();
 
-      if( currentPrice < priceMin || currentPrice > priceMax) {
-        isMatch = false;
-        }
+//   var priceMin = 0;
+//   var priceMax = Infinity;
+//   if ($('#minAsk').val() !== '') {
+//     priceMin = $('#minAsk').val();
+//   }
+//   if($('#maxAsk').val() !== ''){
+//     priceMax = $('#maxAsk').val();
+//   }
+    
+//   dropText = dropText.toLowerCase();
+//   // console.log(searchValue);
+//   // console.log(dropText);
+//   // console.log(priceMin);
+//   // console.log(priceMax);
+//    var result = $('tbody tr').hide().filter(function(){
+//     var currentPrice = $(this).find('.price').text(); // finds price
+//     currentPrice = parseInt(currentPrice);
+//     var isMatch = true;
 
-      if($(this).text().toUpperCase().indexOf(searchValue.toUpperCase()) > -1);
-      console.log(searchValue);
-      console.log(isMatch);
-    return isMatch;
-   }).show();  
-});//end search handler
+//       if( !$(this).hasClass(dropText) ){ //dropbox filter
+//         isMatch = false;
+//         }
+//         console.log(isMatch);
+
+//       if( currentPrice < priceMin || currentPrice > priceMax) {
+//         isMatch = false;
+//         }
+
+//       if($(this).text().toUpperCase().indexOf(searchValue.toUpperCase()) > -1);
+//       console.log(searchValue);
+//       console.log(isMatch);
+//     return isMatch;
+//    }).show();  
+// });//end search handler
 
 //link to product page
 // $('tbody').on('click', 'tr', function(){
@@ -122,12 +152,12 @@ $(document).on('click', '.location button', function() {
   var searchAddress = $(this).closest('.location').text();
   var stringLength = searchAddress.length;
   searchAddress = searchAddress.substring(0,stringLength-3);
-  console.log(searchAddress);
 	$('.map-lightbox').show(200);
 	initialize();
 	codeAddress(searchAddress);
-} )
+});
 
+//close button for map lightbox
 $('.map-lightbox').on('click', 'button', function() {
 	$('.map-lightbox').hide();
 });
@@ -139,4 +169,4 @@ $('.map-lightbox').on('click', 'button', function() {
 
 
 
-});
+});//end of jQuery

@@ -8,11 +8,9 @@ var brewerySchema = mongoose.Schema({
 		product: String,
 		productType: {
 			isPackaging: Boolean,
-			isBottler: Boolean,
-			isCanner: Boolean,
+			packingType: String,
 			isTank: Boolean,
-			isFermentor: Boolean,
-			isMash: Boolean
+			tankType: String
 		},
 		height: Number,
 		length: Number,

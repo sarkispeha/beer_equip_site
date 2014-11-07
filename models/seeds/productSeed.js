@@ -9,11 +9,9 @@ Brewery.find({}, function(err, results){
 			product: "MaxCap bottler",
 			productType: {
 				isPackaging: true,
-				isBottler: true,
-				isCanner: false,
+				packingType: 'Bottler',
 				isTank: false,
-				isFermentor: false,
-				isMash: false
+				tankType: ''
 			},
 			height: 8,
 			length: 9,
@@ -36,11 +34,9 @@ Brewery.find({}, function(err, results){
 			product: "Can-Can Canner",
 			productType: {
 				isPackaging: true,
-				isBottler: false,
-				isCanner: true,
+				packingType: 'Canner',
 				isTank: false,
-				isFermentor: false,
-				isMash: false
+				tankType: ''
 			},
 			height: 6,
 			length: 6,
@@ -63,11 +59,9 @@ Brewery.find({}, function(err, results){
 			product: "Primary Fermentor Tank",
 			productType: {
 				isPackaging: false,
-				isBottler: false,
-				isCanner: false,
+				packingType: '',
 				isTank: true,
-				isFermentor: true,
-				isMash: false
+				tankType: 'Fermentor'
 			},
 			height:15,
 			length: 9,
@@ -90,11 +84,9 @@ Brewery.find({}, function(err, results){
 			product: "Masherific Mash tank",
 			productType: {
 				isPackaging: false,
-				isBottler: false,
-				isCanner: false,
+				packingType: '',
 				isTank: true,
-				isFermentor: false,
-				isMash: true
+				tankType: 'Fermentor'
 			},
 			height: 5,
 			length: 5,
