@@ -1,3 +1,5 @@
+var responseData = {}; // set this globally so that we can access object(s) for other functionality, namely googlemap ref
+
 $(document).on('ready',function(){
 
 ////////////////////
@@ -13,18 +15,18 @@ var templateFunc = Handlebars.compile(templateSource);
 
 //on page load pull list of packaging items
 $(function(){
-    $.get('/api/packagingController', {}, function(responseData){
-      // console.log(responseData);
+    $.get('/api/packagingController', {}, function(_responseData){
+      responseData = _responseData;
 
       for(var i = 0; i < responseData.length; i++){
         var productName = responseData[i];
+        productName.index = i;
         var tableHTML = templateFunc(productName);
         //new HTML content from responseData
         $('.tbody-orig').append(tableHTML);
       }
     })
 })
-
 //declare variables
 var canOrBottle = '';
 var dropText = '';
@@ -73,9 +75,10 @@ $(document).on('click', '#searchbtn', function(){
     maxAsk: priceMax,
     packingType: packingType
     },
-    function(resultData){
-      for(var i = 0; i < resultData.length; i++){
-        var searchProductInfo = resultData[i];
+    function(_resultData){
+      responseData = _resultData;
+      for(var i = 0; i < responseData.length; i++){
+        var searchProductInfo = responseData[i];
         var searchHTML = templateFunc(searchProductInfo);
       $('.tbody-orig').append(searchHTML);
       }
@@ -158,24 +161,22 @@ var codeAddress = function(addy) {
 
 //googleMap event handler
 $(document).on('click', '.location button', function() {
-  var searchAddress = $(this).closest('.location').text();
-  var stringLength = searchAddress.length;
-  searchAddress = searchAddress.substring(0,stringLength-3);
+  // console.log(responseData[0].location.address + responseData[0].location.city + responseData[0].location.state);
+  var currentRow = responseData[$(this).closest('tr').data('index')];
+ 
+  var searchAddress = currentRow.location.address + ' ' + currentRow.location.city + ', ' + currentRow.location.state;
+
+  // var searchAddress = $(this).closest('.location').text();
+  // var stringLength = searchAddress.length;
+  // searchAddress = searchAddress.substring(0,stringLength-3);
 	$('.map-lightbox').show(200);
 	initialize();
-	codeAddress(searchAddress);
+	codeAddress(searchAddress);//the parameter will go to the codeAddress function
 });
 
 //close button for map lightbox
 $('.map-lightbox').on('click', 'button', function() {
 	$('.map-lightbox').hide();
 });
-
-
-
-
-
-
-
 
 });//end of jQuery

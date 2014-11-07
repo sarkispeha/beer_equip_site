@@ -18,6 +18,7 @@ block content
 				option(value="select-type") Select Type
 				option(value="Bottler") Bottler
 				option(value="Canner") Canner
+			button#closeToBtn(value='Products close to me')
 
 	table.main-table
 		thead
@@ -40,7 +41,7 @@ block content
 		//- TEMPLATE for packaging table data
 	script#startDataTable(type='text-handlebars-template')
 
-				tr.added_rows
+				tr.added_rows(data-index='{{index}}')
 					td 
 						a(href='/individual_product/' + '{{_id}}' ) {{product}} 
 					td 
