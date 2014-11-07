@@ -88,24 +88,20 @@ var api = {
 			res.send(result);
 			});
 	}
-	// ,
-	// searchProducts: function(req, res){
-	// 	var searchData = req.body;
-	// 	console.log(searchData);
-	// 	var query = searchData.query;
-	// 	var minAsk = searchData.minAsk;
-	// 	var maxAsk = searchData.maxAsk;
-	// 	var packingType = searchData.packingType;
+	,
+	searchProducts: function(req, res){
+		var searchData = req.body;
+		console.log(searchData);
+		var query = searchData.query;
+		var minAsk = searchData.minAsk;
+		var maxAsk = searchData.maxAsk;
+		var packingType = searchData.packingType;
 		
-	// 	Brewery.find({
-	// 				product: query,
-	// 				{price: {$gt: minAsk, $lt: maxAsk},
-	// 				'productType.isBottler': packagingType
-	// 				}
-	// 		, function(err, results){
-	// 		res.send(results);
-	// 	)};
-	// }//end searchProducts
+		Brewery.find({price: {$gt: minAsk, $lt: maxAsk} , 'productType.packingType': packingType , product: {$regex: query, $options: 'i'} }
+			, function(err, results){
+			res.send(results);
+		});
+	}//end searchProducts
 }
 
 module.exports = api;

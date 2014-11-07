@@ -49,6 +49,11 @@ $(document).on('mouseout', '.tbody-orig tr',function(){
 /////////////////////
 
 $(document).on('click', '#searchbtn', function(){
+  
+  //remove table elements
+  $('.added_rows').remove();
+
+  //grab info from form
   var searchValue = $('#query').val();
   var priceMin = 0;
   var priceMax = Infinity;
@@ -61,7 +66,7 @@ $(document).on('click', '#searchbtn', function(){
     priceMax = $('#maxAsk').val();
   }
 
-  dropText = dropText.toLowerCase();
+  //ajax request
   $.post('/api/searchProducts', {
     query: searchValue,
     minAsk: priceMin,
@@ -69,9 +74,13 @@ $(document).on('click', '#searchbtn', function(){
     packingType: packingType
     },
     function(resultData){
-      console.log(resultData);
+      for(var i = 0; i < resultData.length; i++){
+        var searchProductInfo = resultData[i];
+        var searchHTML = templateFunc(searchProductInfo);
+      $('.tbody-orig').append(searchHTML);
+      }
     });//end of ajax
-})
+});
 
 //search value, price set, and actual search
 // $(document).on('click', '#searchbtn', function(){
