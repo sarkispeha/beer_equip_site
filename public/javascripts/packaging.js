@@ -176,10 +176,12 @@ $(document).on('click', '.location button', function() {
 //place current position on map
 $(document).on('click', '#closeToBtn', function(){
 var map;
+var latitude = 0;
+var longitude = 0;
 
   function initialize() {
     var mapOptions = {
-      zoom: 6
+      zoom: 9
     };
     map = new google.maps.Map(document.getElementById('map-near-me-canvas'),
         mapOptions);
@@ -189,7 +191,10 @@ var map;
       navigator.geolocation.getCurrentPosition(function(position) {
         var pos = new google.maps.LatLng(position.coords.latitude,
                                          position.coords.longitude);
-
+        
+        latitude = position.coords.latitude;
+        longitude = position.coords.longitude;
+        
         var infowindow = new google.maps.InfoWindow({
           map: map,
           position: pos,

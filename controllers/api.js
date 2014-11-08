@@ -4,11 +4,12 @@ var upsAPI = require('shipping-ups');
 var api = {
 	addBrewery: function(req, res){
 		var breweryData = req.body;
-		console.log('req.body: ', breweryData);
-		console.log(breweryData.productType);
+		// console.log('req.body: ', breweryData);
+		// console.log(breweryData.productType);
+		console.log(breweryData.location.address);
 
 		var newBrewery = new Brewery(breweryData);
-		console.log('New Brewery: ', newBrewery);
+		// console.log('New Brewery: ', newBrewery);
 
 		//new document of a brewery created with body of post
 		newBrewery.save(function(err,result){

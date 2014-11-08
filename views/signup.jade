@@ -32,8 +32,8 @@ body
 				input#tank(type='radio', name='packOrTank', value='tank')
 				label Tank
 				section.tank
-					input#fermentor(type='radio', name='subset', value='fermentor')
-					label Fermentor
+					input#fermenter(type='radio', name='subset', value='fermenter')
+					label Fermenter
 					input#mash(type='radio', name='subset', value='mash')
 					label Mash Tank
 		div.row
@@ -52,9 +52,19 @@ body
 		div.form-group.productDescription
 			label Product Description
 			textarea.form-control(rows='3')
-		div.form-group.singleInput.location
-			label Location
-			input.form-control(type='text', placeholder='Boulder, CO')
+		div.form-group.singleInput.location Location
+		div.form-group.singleInput.streetAddress
+			label Street Address
+			input.form-control(type='text', placeholder='101 1st Street')
+		div.form-group.singleInput.cityID
+			label City
+			input.form-control(type='text', placeholder='Boulder')
+		div.form-group.singleInput.stateID
+			label State
+			input.form-control(type='text', placeholder='CO')
+		div.form-group.singleInput.zipID
+			label ZIP code
+			input.form-control(type='number', placeholder='80302')
 		div.form-group.singleInput.price
 			label Price
 			input.form-control(type='number', placeholder='10000')

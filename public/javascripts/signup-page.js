@@ -25,11 +25,6 @@ $('#toggler input[value="packaging"]').on('click', function(){
 		$(this).closest('#toggler').addClass('packaging');
 		$(this).closest('#toggler').siblings(".radio2").removeClass('tank');
 
-		// console.log($(this).closest('.packaging').find('#toggler'));
-		// if (this.element) return this.element;
-		// var subPackaging = ('<div class="subPackaging"><label>bottler<input type="radio" name="bottleOrCan" id="bottle" value="bottle"></label><label>canner<input type="radio" name="bottleOrCan" id="can" value="canner"></label></div>');
-		// // // if ('.subPackaging') return .subPackaging;
-		// $(this).closest('.radio').after(subPackaging);
 });
 
 $('#toggler input[value="tank"]').on('click', function(){
@@ -57,9 +52,11 @@ $(document).on('click', '.btn', function(e){
 	var length = $('#length').val();
 	var width = $('#width').val();
 	var weight = $('#weight').val();
-	var location = $('.location').find('input').val();
-	// console.log(location);
+	var streetAddress = $('.streetAddress').find('input').val();
+	var city = $('.cityID').find('input').val();
+	var state = $('.stateID').find('input').val();
 	var price = $('.price').find('input').val();
+	var zip = $('.zipID').find('input').val();
 
 	//radio button values
 	var isPackaging = function() {
@@ -70,47 +67,65 @@ $(document).on('click', '.btn', function(e){
 		}
 	};
 
-	var isBottler = function() {
+	var packingType = function(){
 		if(document.getElementById('bottle').checked){
-			return true;
-		} else {
-			return false;
+			return 'Bottler';
+		} else if(document.getElementById('can').checked){
+			return 'Canner';
+		} else{
+			return '';
 		}
 	};
 
-	var isCanner = function() {
-		if(document.getElementById('can').checked){
-			return true;
-		} else {
-			return false;
-		}
-	}
+
+	// var isBottler = function() {
+	// 	if(document.getElementById('bottle').checked){
+	// 		return true;
+	// 	} else {
+	// 		return false;
+	// 	}
+	// };
+
+	// var isCanner = function() {
+	// 	if(document.getElementById('can').checked){
+	// 		return true;
+	// 	} else {
+	// 		return false;
+	// 	}
+	// }
 
 	var isTank = function() {
 		if (document.getElementById('tank').checked){
-			// document.getElementById('can').checked = false;  attempts to set checked values to false but ended up giving all radios same name value 
-			// document.getElementById('bottle').checked = false;
 			return true;
 		} else {
 			return false;
 		}
 	};
 
-	var isFermentor = function() {
-		if (document.getElementById('fermentor').checked){
-			return true;
-		} else {
-			return false;
+	var tankType = function(){
+		if(document.getElementById('fermenter').checked){
+			return 'Fermenter';
+		} else if(document.getElementById('mash').checked){
+			return 'Mash';
+		} else{
+			return '';
 		}
 	};
+	// var isFermentor = function() {
+	// 	if (document.getElementById('fermentor').checked){
+	// 		return true;
+	// 	} else {
+	// 		return false;
+	// 	}
+	// };
 
-	var isMash = function() {
-		if (document.getElementById('mash').checked){
-			return true;
-		} else {
-			return false;
-		}
-	};
+	// var isMash = function() {
+	// 	if (document.getElementById('mash').checked){
+	// 		return true;
+	// 	} else {
+	// 		return false;
+	// 	}
+	// };
 
 	// console.log('isPackaging: ' + isPackaging());
 	// console.log('isBottler: ' + isBottler());
@@ -161,18 +176,25 @@ $(document).on('click', '.btn', function(e){
 			product: productName,
 			productType: {
 				isPackaging: isPackaging(),
-				isBottler: isBottler(),
-				isCanner: isCanner(),
+				packingType: packingType(),
+				// isBottler: isBottler(),
+				// isCanner: isCanner(),
 				isTank: isTank(),
-				isFermentor: isFermentor(),
-				isMash: isMash()
+				tankType: tankType()
+				// isFermentor: isFermentor(),
+				// isMash: isMash()
 			},
 			height: height,
 			length: length,
 			width: width,
 			weight: weight,
 			product_description: productDescription,
-			location: location,
+			location: {
+				address: streetAddress,
+				city: city,
+				state: state,
+				zip: zip
+			},
 			price: price
 		},
 		// dataType: 'json',
