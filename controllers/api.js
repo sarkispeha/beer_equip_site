@@ -16,10 +16,14 @@ var api = {
 		// }
 		console.log(placeInfo);
 		geocoder.geocode(placeInfo,function(err, data){
-			console.log('this is the geocode err: ', err);
-			console.log('this is the callback data: ', data);
-			console.log(data.results[0].geometry.location.lat);
-			console.log(data.results[0].geometry.location.lng);
+			// console.log('this is the geocode err: ', err);
+			// console.log('this is the callback data: ', data);
+			// console.log(data.results[0].geometry.location.lat);
+			// console.log(data.results[0].geometry.location.lng);
+			var lat = data.results[0].geometry.location.lat;
+			var lng = data.results[0].geometry.location.lng;
+		breweryData.location.latitude = lat;
+		breweryData.location.longitude = lng;
 
 		var newBrewery = new Brewery(breweryData);
 		// console.log('New Brewery: ', newBrewery);
