@@ -1,20 +1,25 @@
 var Brewery = require('../models/brewery_register_model.js');
 var upsAPI = require('shipping-ups');
+var geocoder = require('geocoder')
 
 var api = {
 	addBrewery: function(req, res){
 		var breweryData = req.body;
 		// console.log('req.body: ', breweryData);
 		// console.log(breweryData.productType);
-		// var address = breweryData.location.address;
-		// var city = breweryData.location.city;
-		// var state = breweryData.location.state;
-		// console.log('GEOCODE SHIT: ', breweryData.location.address + ' ' + breweryData.location.city + ' ' + breweryData.location.state);
+		var address = breweryData.location.address;
+		var city = breweryData.location.city;
+		var state = breweryData.location.state;
+		var placeInfo = address + ' ' + city + ' ' + state;
 		// app.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + address + ' ' + city + ' ' + state, function(req, res){
 		// 	var object = res.body;
-			
 		// }
-
+		console.log(placeInfo);
+		geocoder.geocode(placeInfo,function(err, data){
+			console.log('this is the geocode err: ', err);
+			console.log('this is the callback data: ', data);
+			console.log(data.results[0].geometry.location.lat);
+			console.log(data.results[0].geometry.location.lng);
 
 		var newBrewery = new Brewery(breweryData);
 		// console.log('New Brewery: ', newBrewery);
@@ -22,9 +27,12 @@ var api = {
 		//new document of a brewery created with body of post
 		newBrewery.save(function(err,result){
 			// console.log('result: ', result);
-			console.log(err);
+			console.log('this is the save to db err: ', err);
 			res.send(result);
-		});
+		});//end brewery.save function
+		});//end geocoder function
+
+
 	},
 	packagingController: function(req, res){
 		Brewery.find({'productType.isPackaging': true}
