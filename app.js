@@ -31,6 +31,10 @@ app.get('/api/packagingController', apiController.packagingController);
 app.post('/api/shipCost', apiController.shipCost);
 app.post('/api/searchProducts', apiController.searchProducts);
 // app.get('/api/viewProduct/:id', apiController.viewProduct);
+var thing = http.get('wwww.https://maps.googleapis.com/maps/api/geocode/json?address=2100%2022nd%20st%20boulder%20co', function(res){
+	console.log(res);
+});
+console.log(thing);
 
 
 var server = app.listen(7554, function() {

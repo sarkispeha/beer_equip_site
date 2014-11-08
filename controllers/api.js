@@ -6,14 +6,22 @@ var api = {
 		var breweryData = req.body;
 		// console.log('req.body: ', breweryData);
 		// console.log(breweryData.productType);
-		console.log(breweryData.location.address);
+		// var address = breweryData.location.address;
+		// var city = breweryData.location.city;
+		// var state = breweryData.location.state;
+		// console.log('GEOCODE SHIT: ', breweryData.location.address + ' ' + breweryData.location.city + ' ' + breweryData.location.state);
+		// app.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + address + ' ' + city + ' ' + state, function(req, res){
+		// 	var object = res.body;
+			
+		// }
+
 
 		var newBrewery = new Brewery(breweryData);
 		// console.log('New Brewery: ', newBrewery);
 
 		//new document of a brewery created with body of post
 		newBrewery.save(function(err,result){
-			console.log('result: ', result);
+			// console.log('result: ', result);
 			console.log(err);
 			res.send(result);
 		});
