@@ -138,32 +138,6 @@ $(document).on('click', '.btn', function(e){
 	if (($('.singleInput input').val()) === '') {
 		alert('Enter something!');
 	}
-	//details for database entry
-	// var details = {
-	// 	name: breweryName,
-	// 	email: emailName,
-	// 	// password: passWrd,
-	// 	product: productName,
-	// 	productType: {
-	// 		isPackaging: isPackaging(),
-	// 		// isBottler: isBottler(),
-	// 		// isCanner: isCanner(),
-	// 		// isTank: isTank(),
-	// 		// isFermentor: isFermentor(),
-	// 		// isMash: isMash()
-	// 	},
-	// 	height: height,
-	// 	length: length,
-	// 	width: width,
-	// 	weight: weight,
-	// 	product_description: productDescription,
-	// 	location: location,
-	// 	price: price
-	// };
-	//save to database
-	// $.post('/api/addBrewery', details, function(resultData){
-
-	// });
 
 	$.ajax({
 		url: '/api/addBrewery',

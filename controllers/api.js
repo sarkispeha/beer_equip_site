@@ -29,11 +29,11 @@ var api = {
 		// console.log('New Brewery: ', newBrewery);
 
 		//new document of a brewery created with body of post
-		newBrewery.save(function(err,result){
+			newBrewery.save(function(err,result){
 			// console.log('result: ', result);
-			console.log('this is the save to db err: ', err);
-			res.send(result);
-		});//end brewery.save function
+				console.log('this is the save to db err: ', err);
+				res.send(result);
+			});//end brewery.save function
 		});//end geocoder function
 
 
