@@ -18,7 +18,9 @@ block content
 				option(value="select-type") Select Type
 				option(value="Bottler") Bottler
 				option(value="Canner") Canner
-			button#closeToBtn(value='Products close to me')
+			button#closeToBtn() Products close to me
+
+	div#map-near-me-canvas
 
 	table.main-table
 		thead
@@ -37,6 +39,7 @@ block content
 	script(src='javascripts/packaging.js')
 	script(src='http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js')
 	script(src="https://maps.googleapis.com/maps/api/js?v=3.exp")
+	script(type="text/javascript" src="http://www.google.com/jsapi")
 
 		//- TEMPLATE for packaging table data
 	script#startDataTable(type='text-handlebars-template')
