@@ -22,8 +22,11 @@ var brewerySchema = mongoose.Schema({
 			city: String,
 			state: String,
 			zip: Number,
-			latitude: Number,
-			longitude: Number
+			coordinates: {
+				// "type" : "Point",
+				longitude: Number,
+				latitude: Number
+			}
 		},
 		price: Number
 });

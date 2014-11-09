@@ -1,6 +1,6 @@
 var Brewery = require('../models/brewery_register_model.js');
 var upsAPI = require('shipping-ups');
-var geocoder = require('geocoder')
+var geocoder = require('geocoder');
 
 var api = {
 	addBrewery: function(req, res){
@@ -14,7 +14,6 @@ var api = {
 		// app.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + address + ' ' + city + ' ' + state, function(req, res){
 		// 	var object = res.body;
 		// }
-		console.log(placeInfo);
 		geocoder.geocode(placeInfo,function(err, data){
 			// console.log('this is the geocode err: ', err);
 			// console.log('this is the callback data: ', data);
@@ -22,8 +21,11 @@ var api = {
 			// console.log(data.results[0].geometry.location.lng);
 			var lat = data.results[0].geometry.location.lat;
 			var lng = data.results[0].geometry.location.lng;
-		breweryData.location.latitude = lat;
-		breweryData.location.longitude = lng;
+			var coord = lng + ', ' + lat;
+		console.log(coord);
+		breweryData.location.coordinates.latitude = lat;
+		breweryData.location.coordinates.longitude = lng;
+		// breweryData.location.coordinates = coord;
 
 		var newBrewery = new Brewery(breweryData);
 		// console.log('New Brewery: ', newBrewery);
@@ -108,8 +110,7 @@ var api = {
 			
 			res.send(result);
 			});
-	}
-	,
+	},
 	searchProducts: function(req, res){
 		var searchData = req.body;
 		console.log(searchData);
@@ -122,7 +123,11 @@ var api = {
 			, function(err, results){
 			res.send(results);
 		});
-	}//end searchProducts
+	},//end searchProducts
+	productNear: function(req, res){
+		//req location of client
+		Brewery.find()
+	}//end productNear
 }
 
 module.exports = api;

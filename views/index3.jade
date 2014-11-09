@@ -28,50 +28,55 @@ body
 			dt Why should I buy used?
 			dd Breweries keep their equipment in good shape, lest the beer they produce become sub standard quality. Starting brewers will have cheaper overhead costs, the brewer can focus on what really matters- the beer.
 			br
-	div.products
-		div.tanks-container.slider
-			div.tanks
-				h3 Tanks
-			div.tanks-hidden.noBShidden
-				a(href='/tanks')
-					img(src='main_imgs/steel_tanks.jpg')
-				p
-				| Tank. Tank. Tank. Tank. Taaaaaaaaaaaaaaaaaannnnnnnnnnnnnnnnnnnnnnnnnnnnnnnkkkkkkkkkkk. Tank. Tank. Tank. Tank. Tank. Tank. Tank. Tank. Tank. Tank. Tank. Tank. Taaaaaaaaaaaaaaaaaaaaannnnnnnnnnnnnnnnnnnnnnkkkkkkkkkkkkkkkkk. Taaaaaaaaaaaaaaaaaaaaaaaannnnnnnnnnnnnnnnnnnnnnnkkkkkkkkkkkk.
-		div.packaging-container.slider
-			div.packaging
-				a(href='/packaging')
-					h3 Packaging
-			div.packaging-hidden.noBShidden
-				a(href='/packaging')
-					img(src='main_imgs/brown_glass_bottle.jpg')
-				a(href='/packaging')
-				p
-				| Packaging. Packaging. Packaging. Packaging. Packaging. Packaging. Packaging. Packaging. Packaging. Packaging. Packaging. Packaging. Packaging. Packaging. Packaging. Packaging. Packaging. Packaging. Packaging. Packaging. Paaaaaaaaaaaaaaaaccccccccccckkkkkkkaaaaagggggggiiiiiiinnnnnnggggggggg.
-		div.scientific-container.slider
-			div.scientific
-				h3 Scientific
-			div.scientific-hidden.noBShidden
-				a(href='/scientific')
-					p
-					| Click here if you are looking for products related to brewing science.
-		div.accessories-container.slider
-			div.accessories
-				h3 Accessories
-			div.accessories-hidden.noBShidden
-				a(href='/accessories')
-					img(src='main_imgs/beer_here.jpg')
-				a(href='/accessories')
-					p
-					| Click here if you are looking for accessories to your brewery.
-		div.inspection-container.slider
-			div.inspection
-				h3 Inspection
-			div.inspection-hidden.noBShidden
-				a(href='/inspection')
-					img(src='main_imgs/tank_inspection.jpg')
-				a(href='/inspection')
-					p
-					| Click here if you are looking for products related to packaging.
+	section.row-1
+		div.products
+			div.row
+				div.tanks-container.slider.col-sm-6
+					div.tanks
+						h3 Tanks
+						div.tanks-hidden.noBShidden
+							a(href='/tanks')
+								img(src='main_imgs/steel_tanks.jpg')
+							p
+							| Tank. Tank. Tank. Tank. Taaaaaaaaaaaaaaaaaannnnnnnnnnnnnnnnnnnnnnnnnnnnnnnkkkkkkkkkkk. Tank. Tank. Tank. Tank. Tank. Tank. Tank. Tank. Tank. Tank. Tank. Tank. Taaaaaaaaaaaaaaaaaaaaannnnnnnnnnnnnnnnnnnnnnkkkkkkkkkkkkkkkkk. Taaaaaaaaaaaaaaaaaaaaaaaannnnnnnnnnnnnnnnnnnnnnnkkkkkkkkkkkk.
+				div.packaging-container.slider.col-sm-6
+					div.packaging
+						a(href='/packaging')
+							h3 Packaging
+						div.packaging-hidden.noBShidden
+							a(href='/packaging')
+								img(src='main_imgs/brown_glass_bottle.jpg')
+							a(href='/packaging')
+							p
+							| Packaging. Packaging. Packaging. Packaging. Packaging. Packaging. Packaging. Packaging. Packaging. Packaging. Packaging. Packaging. Packaging. Packaging. Packaging. Packaging. Packaging. Packaging. Packaging. Packaging. Paaaaaaaaaaaaaaaaccccccccccckkkkkkkaaaaagggggggiiiiiiinnnnnnggggggggg.
+			div.row
+				div.scientific-container.slider.col-sm-6
+					div.scientific
+						h3 Scientific
+						div.scientific-hidden.noBShidden
+							a(href='/scientific')
+								img(src='main_imgs/yeast_starter.jpg')
+							a(href='/scientific')
+								p
+								| Click here if you are looking for products related to brewing science.
+				div.accessories-container.slider.col-sm-6
+					div.accessories
+						h3 Accessories
+						div.accessories-hidden.noBShidden
+							a(href='/accessories')
+								img(src='main_imgs/beer_here.jpg')
+							a(href='/accessories')
+								p
+								| Click here if you are looking for accessories to your brewery.
+			div.inspection-container.slider
+				div.inspection
+					h3 Inspection
+					div.inspection-hidden.noBShidden
+						a(href='/inspection')
+							img(src='main_imgs/tank_inspection.jpg')
+						a(href='/inspection')
+							p
+							| Click here if you are looking to have items professionally inspected before you buy.
 	div.signup
 		a(href='/signup')
 			h3 Register your brewery!

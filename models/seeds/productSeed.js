@@ -22,7 +22,11 @@ Brewery.find({}, function(err, results){
 				address: "1507 Montana St",
 				city: "Missoula",
 				state: "MT",
-				zip: 59801
+				zip: 59801,
+				coordinates: {
+					longitude: -114.0201994,
+					latitude: 46.8726077
+				}
 			},
 			price: 8950
 		});
@@ -47,7 +51,11 @@ Brewery.find({}, function(err, results){
 				address: "1221 E Pike St",
 				city: "Seattle",
 				state: "WA",
-				zip: 98101
+				zip: 98101,
+				coordinates: {
+					longitude: -122.3159648,
+					latitude: 47.6139451
+				}
 			},
 			price: 12950
 		});
@@ -72,7 +80,11 @@ Brewery.find({}, function(err, results){
 				address: "4811 Dusharme Dr",
 				city: "Minneapolis",
 				state: "MO",
-				zip: 55401
+				zip: 55401,
+				coordinates: {
+					longitude: -93.3244936,
+					latitude: 45.0429415
+				}
 			},
 			price: 18950
 		});
@@ -86,7 +98,7 @@ Brewery.find({}, function(err, results){
 				isPackaging: false,
 				packingType: '',
 				isTank: true,
-				tankType: 'Fermentor'
+				tankType: 'Mash'
 			},
 			height: 5,
 			length: 5,
@@ -97,7 +109,11 @@ Brewery.find({}, function(err, results){
 				address: "925 W 9th Ave",
 				city: "Denver",
 				state: "CO",
-				zip: 80204
+				zip: 80204,
+				coordinates: {
+					longitude: -104.9991947,
+					latitude: 39.7305225
+				}
 			},
 			price: 4950
 		});

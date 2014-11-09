@@ -131,8 +131,6 @@ header h1{
   ), url("ferment_tanks.jpg");
 	background-repeat: no-repeat;*/
 	height: 200px;
-
-
 	/*width: 100%;*/
 }
 
@@ -143,25 +141,19 @@ header h1{
 	color: white;
 	font-family: "Raleway";
 	color: burlywood;
-
 }
 
 .tanks-hidden.noBShidden p {
-	display: none;
 	position: absolute;
 	top: 30;
-	left: -250px;
 	color: burlywood;
-	width: 40%;
-	
+	width: 40%;	
 }
 
 .tanks-hidden.noBShidden img {
-	display: none;
 	position: absolute;
 	color: white;
 	top: 30;
-	right: -250px;
 	height: 200px;
 	width: 200px;
 }
@@ -183,20 +175,16 @@ header h1{
 }
 
 .packaging-hidden.noBShidden p {
-	display: none;
 	position: absolute;
 	color: burlywood;
 	top: 30;
-	left: -250px;
 	width: 40%;
 }
 
 .packaging-hidden.noBShidden img {
-	display: none;
 	position: absolute;
 	color: white;
 	top: 30;
-	right: -250px;
 }
 
 .scientific-container {
@@ -216,22 +204,18 @@ header h1{
 }
 
 .scientific-hidden.noBShidden p {
-	display: none;
 	position: absolute;
 	color: burlywood;
 	top: 30;
-	left: -250px;
 	width: 40%;
 }
 
 .scientific-hidden.noBShidden img {
-	display: none;
 	position: absolute;
 	color: white;
 	top: 30;
-	right: -250px;
 	height: 200px;
-	width: 300px;
+	width: 200px;
 }
 
 .accessories-container {
@@ -251,20 +235,18 @@ header h1{
 }
 
 .accessories-hidden.noBShidden p {
-	display: none;
 	position: absolute;
 	color: burlywood;
 	top: 30;
-	left: -250px;
 	width: 40%;
 }
 
 .accessories-hidden.noBShidden img {
-	display: none;
 	position: absolute;
 	color: white;
 	top: 30;
-	right: -250px;
+	height: 200px;
+	width: 200px;
 
 }
 
@@ -285,20 +267,16 @@ header h1{
 }
 
 .inspection-hidden.noBShidden p {
-	display: none;
 	position: absolute;
 	color: burlywood;
 	top: 30;
-	left: -250px;
 	width: 40%;
 }
 
 .inspection-hidden.noBShidden img {
-	display: none;
 	position: absolute;
 	color: white;
 	top: 30;
-	right: -250px;
 }
 
 .signup {
