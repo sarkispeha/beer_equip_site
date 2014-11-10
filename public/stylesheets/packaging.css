@@ -33,7 +33,7 @@ blockquote {
 	margin: .5em 0;
 }
 
-table, th, td {
+table, td {
     border: 1px solid black;
 }
 
@@ -46,6 +46,14 @@ table {
 	width: 90%;
 }
 
+.hidden_shadow {
+	transition: box-shadow .5s;
+}
+
+.hidden_shadow:hover {
+	box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
 tbody td{
 	padding: .5em;
 }
@@ -54,8 +62,8 @@ tbody td{
 	color: black;
 }
 
-.tbody-hover {
-	background-color: #9B9B9B;
+.added_rows {
+
 }
 
 .map-lightbox{

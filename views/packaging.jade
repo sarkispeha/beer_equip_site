@@ -30,6 +30,7 @@ block content
 				th Location
 				th Price
 		tbody.tbody-orig
+	div.appended_rows
 
 	div.map-lightbox
 		div#map-canvas
@@ -44,14 +45,16 @@ block content
 		//- TEMPLATE for packaging table data
 	script#startDataTable(type='text-handlebars-template')
 
-				tr.added_rows(data-index='{{index}}')
-					td 
-						a(href='/individual_product/' + '{{_id}}' ) {{product}} 
-					td 
-						a(href='/individual_product/' + '{{_id}}' ) {{product_description}}
-					td.location {{location.city}}, {{location.state}}
-						button(type='button') Map
-					td {{price}}
+			div.added_div(data-index='{{index}}')
+				table.hidden_shadow
+					tr.added_rows
+						td 
+							a(href='/individual_product/' + '{{_id}}' ) {{product}} 
+						td 
+							a(href='/individual_product/' + '{{_id}}' ) {{product_description}}
+						td.location {{location.city}}, {{location.state}}
+							button(type='button') Map
+						td {{price}}
 
 
 

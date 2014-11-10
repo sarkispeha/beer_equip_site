@@ -23,7 +23,7 @@ $(function(){
         productName.index = i;
         var tableHTML = templateFunc(productName);
         //new HTML content from responseData
-        $('.tbody-orig').append(tableHTML);
+        $('.appended_rows').append(tableHTML);
       }
     })
 })
@@ -37,15 +37,6 @@ $(document).on('click','.dropdown-menu a', function() {
   $(this).closest('.btn-group').find('.btn-text').text(dropText);
 })
 
-// make hovered row highlighted
-$(document).on('mouseover','.tbody-orig tr', function() {
-	$(this).removeClass('tbody-orig').addClass('tbody-hover');
-	});
-$(document).on('mouseout', '.tbody-orig tr',function(){
-	$(this).removeClass('tbody-hover').addClass('tbody-orig');
-	});
-
-
 /////////////////////
 //Search handler!!!//
 /////////////////////
@@ -53,7 +44,7 @@ $(document).on('mouseout', '.tbody-orig tr',function(){
 $(document).on('click', '#searchbtn', function(){
   
   //remove table elements
-  $('.added_rows').remove();
+  $('.added_div').remove();
 
   //grab info from form
   var searchValue = $('#query').val();
@@ -68,6 +59,20 @@ $(document).on('click', '#searchbtn', function(){
     priceMax = $('#maxAsk').val();
   }
 
+  if(packingType === 'select-type'){
+    return $.get('/api/packagingController', {}, function(_responseData){
+      responseData = _responseData;
+
+      for(var i = 0; i < responseData.length; i++){
+        var productName = responseData[i];
+        productName.index = i;
+        var tableHTML = templateFunc(productName);
+        //new HTML content from responseData
+        $('.appended_rows').append(tableHTML);
+      }
+    })
+  } 
+
   //ajax request
   $.post('/api/searchProducts', {
     query: searchValue,
@@ -79,8 +84,9 @@ $(document).on('click', '#searchbtn', function(){
       responseData = _resultData;
       for(var i = 0; i < responseData.length; i++){
         var searchProductInfo = responseData[i];
+        searchProductInfo.index = i;
         var searchHTML = templateFunc(searchProductInfo);
-      $('.tbody-orig').append(searchHTML);
+      $('.appended_rows').append(searchHTML);
       }
     });//end of ajax
 });
