@@ -1,9 +1,20 @@
 var mongoose = require('mongoose');
 
+var pointObj = mongoose.Schema({
+
+		'type':	{
+					type: String,
+					default: 'Point'
+				},
+		coordinates: [Number]
+		});
+
+
 //schema for registering breweries
 var brewerySchema = mongoose.Schema({
 		name: String,
 		email: String,
+		image: String,
 		// password: String,
 		product: String,
 		productType: {
@@ -22,10 +33,12 @@ var brewerySchema = mongoose.Schema({
 			city: String,
 			state: String,
 			zip: Number,
-			coordinates: {
-				// "type" : "Point",
-				longitude: Number,
-				latitude: Number
+			geo: {
+				'type':	{
+					type: String,
+					default: 'Point'
+				},
+				coordinates: [Number]
 			}
 		},
 		price: Number

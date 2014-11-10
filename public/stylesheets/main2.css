@@ -313,6 +313,7 @@ header h1{
 
 .fadeInUp {
 	-webkit-animation-name: fadeInUp;
+	-webkit-animation-fill-mode: both;
 	duration: 2s;
 }
 
