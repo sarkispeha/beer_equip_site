@@ -134,8 +134,9 @@ $(document).on('click', '#searchbtn', function(){
 //   window.location = '/individual_product';
 // });
 
-
-//googleMap product locator
+/////////////////////////////
+//googleMap product locator//
+/////////////////////////////
 var geocoder;
 var map;
 
@@ -169,7 +170,7 @@ var codeAddress = function(addy) {
 ////////////////////
 //googleMap event handler for location of product
 $(document).on('click', '.location button', function() {
-  var currentRow = responseData[$(this).closest('tr').data('index')];
+  var currentRow = responseData[$(this).closest('div').data('index')];
  
   var searchAddress = currentRow.location.address + ' ' + currentRow.location.city + ', ' + currentRow.location.state;
   $('.map-lightbox').show(200);
