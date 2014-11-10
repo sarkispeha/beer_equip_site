@@ -118,6 +118,21 @@ header h1{
 	padding-top: 9%;
 }
 
+.half-block p{
+	width: 100%;
+}
+
+.half-block-buttons {
+	padding: 10px 20px;
+	border: 2px solid white;
+	border-radius: 0px;
+	transition: .5s;
+}
+
+.half-block-buttons:hover {
+	background-color: white;
+}
+
 .tanks-container {
 	position: relative;
 	background-image: url('/main_imgs/steel_tanks.jpg');
@@ -154,8 +169,7 @@ header h1{
 .tanks-hidden.noBShidden p {
 	position: absolute;
 	top: 30;
-	color: burlywood;
-	width: 40%;	
+	color: burlywood;	
 }
 
 .tanks-hidden.noBShidden img {
