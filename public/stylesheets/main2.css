@@ -201,7 +201,6 @@ header h1{
 	position: absolute;
 	color: burlywood;
 	top: 30;
-	width: 40%;
 }
 
 .packaging-hidden.noBShidden img {
@@ -230,7 +229,6 @@ header h1{
 	position: absolute;
 	color: burlywood;
 	top: 30;
-	width: 40%;
 }
 
 .scientific-hidden.noBShidden img {
@@ -262,7 +260,6 @@ header h1{
 	position: absolute;
 	color: burlywood;
 	top: 30;
-	width: 40%;
 }
 
 .accessories-hidden.noBShidden img {
@@ -295,7 +292,6 @@ header h1{
 	position: absolute;
 	color: burlywood;
 	top: 30;
-	width: 40%;
 }
 
 .inspection-hidden.noBShidden img {
@@ -313,6 +309,11 @@ header h1{
 	padding: 7% 0 7% 0;
 	text-align: center;
 	color: burlywood;
+}
+
+.fadeInUp {
+	-webkit-animation-name: fadeInUp;
+	duration: 2s;
 }
 
 
