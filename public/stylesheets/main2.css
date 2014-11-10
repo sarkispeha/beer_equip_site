@@ -112,10 +112,10 @@ header h1{
 
 .tanks-container {
 	position: relative;
+	background-image: url('/main_imgs/steel_tanks.jpg');
 }
 
 .tanks {
-	background: black;
 	/*background-position: right;
 	background-image: -webkit-linear-gradient(top, 
     rgba(0,0,0,0.9) 0%, 
@@ -160,10 +160,11 @@ header h1{
 
 .packaging-container {
 	position: relative;
+	background-image: url('/main_imgs/brown_glass_bottle.jpg');
+	background-size: cover;
 }
 
 .packaging {
-	background: black;
 	height: 200px;
 }
 
@@ -189,10 +190,10 @@ header h1{
 
 .scientific-container {
 	position: relative;
+	background-image: url('/main_imgs/yeast_starter.jpg');
 }
 
 .scientific {
-	background: black;
   	height: 200px;
 }
 
@@ -220,10 +221,11 @@ header h1{
 
 .accessories-container {
 	position: relative;
+	background-image: url('/main_imgs/beer_here.jpg');
+	background-size: cover;
 }
 
 .accessories {
-	background: black;
   	height: 200px;
 }
 
@@ -252,10 +254,11 @@ header h1{
 
 .inspection-container{
 	position: relative;
+	background-image: url('/main_imgs/tank_inspection.jpg');
+	background-size: cover;
 }
 
 .inspection {
-	background: black;
   	height: 200px;
 }
 

@@ -67,7 +67,6 @@ $(document).on('click', '#searchbtn', function(){
         var productName = responseData[i];
         productName.index = i;
         var tableHTML = templateFunc(productName);
-        //new HTML content from responseData
         $('.appended_rows').append(tableHTML);
       }
     })
