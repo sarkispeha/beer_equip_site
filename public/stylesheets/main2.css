@@ -110,6 +110,14 @@ header h1{
 	font-family: 'Arvo';
 }
 
+.half-block {
+	text-align: center;
+}
+
+.half-block h3 {
+	padding-top: 9%;
+}
+
 .tanks-container {
 	position: relative;
 	background-image: url('/main_imgs/steel_tanks.jpg');
