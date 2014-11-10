@@ -50,13 +50,14 @@ block content
 				table.hidden_shadow
 					tr.added_rows
 						td
-							img.thumbnail(href='{{image}}')
-						td 
-							a(href='/individual_product/' + '{{_id}}' ) {{product}} 
-							a(href='/individual_product/' + '{{_id}}' ) {{product_description}}
+							img.thumbnail(src='{{image}}')
+						td
+							a(href='/individual_product/' + '{{_id}}' )  
+								h4 {{product}}
+							p {{product_description}}
 						td.location {{location.city}}, {{location.state}}
 							button(type='button') Map
-						td {{price}}
+						td ${{price}}
 
 
 

@@ -66,6 +66,11 @@ tbody td{
 
 }
 
+.thumbnail {
+	height: 100px;
+	width: 100px;
+}
+
 .map-lightbox{
 	display: none;
 	position: fixed;

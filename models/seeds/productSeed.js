@@ -35,7 +35,7 @@ var Brewery = require('../brewery_register_model.js');
 		_id: mongoose.Types.ObjectId("5460f193c12f0b97b8edee4a"),
 		name: "Black Mamba Brewing Co.",
 		email: "mambabrew@email.com",
-		image: '',
+		image: '/images/canner_machine.jpg',
 		product: "Can-Can Canner",
 		productType: {
 			isPackaging: true,
@@ -65,7 +65,7 @@ var Brewery = require('../brewery_register_model.js');
 		_id: mongoose.Types.ObjectId("5460f1c9c12f0b97b8edee4b"),
 		name: "Yo Mama Brewing",
 		email: "mamabrewin@email.com",
-		image: '',
+		image: '/images/tank-fermentor.jpg',
 		product: "Primary Fermentor Tank",
 		productType: {
 			isPackaging: false,
@@ -95,7 +95,7 @@ var Brewery = require('../brewery_register_model.js');
 		_id: mongoose.Types.ObjectId("5460f1e4c12f0b97b8edee4c"),
 		name: "Brewce Willis Brews",
 		email: "brucebrew@email.com",
-		image: '',
+		image: '/images/mash_tank.jpg',
 		product: "Masherific Mash tank",
 		productType: {
 			isPackaging: false,
