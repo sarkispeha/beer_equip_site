@@ -130,14 +130,23 @@ var api = {
 		//req location of client
 		var geoData = req.body;
 		console.log(geoData);
+		console.log(geoData.lng);
+		console.log(geoData.lat);
+		console.log(geoData.maxDist);
+
 		Brewery.find(
 			{'location.geo.coordinates':
 				{$near:
 					{$geometry:
 						{type: "Point", coordinates: [geoData.lng, geoData.lat]},
-						$minDistance: 0, $maxDistance: geoData.maxDist}
-						}});
-
+						$minDistance: 0, $maxDistance: geoData.maxDist
+					}			
+				}
+			}
+			, function(err, results){
+				console.log(results);
+				res.send(results);
+			});
 	}//end productNear
 }
 

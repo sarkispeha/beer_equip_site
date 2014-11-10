@@ -18,7 +18,7 @@ block content
 				option(value="select-type") Select Type
 				option(value="Bottler") Bottler
 				option(value="Canner") Canner
-			input#maxDist(placeholder='100')
+			input#maxDist(type='number', placeholder='100')
 			button#closeToBtn() Products close to me
 
 	div#map-near-me-canvas
@@ -50,7 +50,7 @@ block content
 				table.hidden_shadow
 					tr.added_rows
 						td
-							img(src='{{image}}')
+							img.thumbnail(href='{{image}}')
 						td 
 							a(href='/individual_product/' + '{{_id}}' ) {{product}} 
 							a(href='/individual_product/' + '{{_id}}' ) {{product_description}}

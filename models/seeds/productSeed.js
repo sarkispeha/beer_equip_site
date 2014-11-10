@@ -5,7 +5,7 @@ var Brewery = require('../brewery_register_model.js');
 		_id: mongoose.Types.ObjectId("5460f0eec12f0b97b8edee49"),
 		name: "Bruce's Brewing",
 		email: "bruce@email.com",
-		image: '',
+		image: '/images/bottle_filler.jpg',
 		product: "MaxCap bottler",
 		productType: {
 			isPackaging: true,

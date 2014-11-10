@@ -172,9 +172,6 @@ $(document).on('click', '.location button', function() {
   var currentRow = responseData[$(this).closest('tr').data('index')];
  
   var searchAddress = currentRow.location.address + ' ' + currentRow.location.city + ', ' + currentRow.location.state;
-  // var searchAddress = $(this).closest('.location').text();
-  // var stringLength = searchAddress.length;
-  // searchAddress = searchAddress.substring(0,stringLength-3);
   $('.map-lightbox').show(200);
   initialize();
   codeAddress(searchAddress);//the parameter will go to the codeAddress function
@@ -190,36 +187,50 @@ $('.map-lightbox').on('click', 'button', function() {
 //////////////////////
 $(document).on('click', '#closeToBtn', function(){
 var map;
-var latitude = 0;
-var longitude = 0;
+var latitude = -105;
+var longitude = 40;
+
+  //remove table elements
+  $('.added_div').remove();
 
     // Try HTML5 geolocation
     if(navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
-          var pos = new google.maps.LatLng(position.coords.latitude,
+            var pos = new google.maps.LatLng(position.coords.latitude,
                                          position.coords.longitude);
         
           latitude = position.coords.latitude;
           longitude = position.coords.longitude;
-        } else {
-          alert('Location not found')
+          console.log(latitude);
+          console.log(longitude);
+          })
         }
-      };
-    //end of navigator doodlybob
-
+         else {
+          alert('Location not found')
+          }//end of navigator doodlybob
 
   console.log(latitude);
   console.log(longitude);
+  console.log(parseInt($('#maxDist').val()));
+  var maxDist = parseInt($('#maxDist').val());
 
+//ajax request
   $.post('/api/productNear', {
-      lng: longitude,
-      lat: latitude,
-      maxDist: $('#maxDist').val()
+      lng: -105,
+      lat: 40,
+      maxDist: maxDist*1000,
+      isPackaging: true
       }, function(geoResponse){
         console.log(geoResponse);
-      })
-});//end of close to me filter
-
+        responseData = geoResponse;
+        for(var i = 0; i < responseData.length; i++){
+          var searchProductInfo = responseData[i];
+          searchProductInfo.index = i;
+          var searchHTML = templateFunc(searchProductInfo);
+        $('.appended_rows').append(searchHTML);
+        }
+    });
+});//end of close to me search
 
 //place current position on map
 // $(document).on('click', '#closeToBtn', function(){
