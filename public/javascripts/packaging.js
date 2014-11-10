@@ -164,6 +164,9 @@ var codeAddress = function(addy) {
     });
   }
 
+////////////////////
+//Show map handler//
+////////////////////
 //googleMap event handler for location of product
 $(document).on('click', '.location button', function() {
   var currentRow = responseData[$(this).closest('tr').data('index')];
@@ -172,72 +175,56 @@ $(document).on('click', '.location button', function() {
   // var searchAddress = $(this).closest('.location').text();
   // var stringLength = searchAddress.length;
   // searchAddress = searchAddress.substring(0,stringLength-3);
-	$('.map-lightbox').show(200);
-	initialize();
-	codeAddress(searchAddress);//the parameter will go to the codeAddress function
-});
-
-
-//place current position on map
-$(document).on('click', '#closeToBtn', function(){
-var map;
-var latitude = 0;
-var longitude = 0;
-
-  function initialize() {
-    var mapOptions = {
-      zoom: 9
-    };
-    map = new google.maps.Map(document.getElementById('map-near-me-canvas'),
-        mapOptions);
-
-    // Try HTML5 geolocation
-    if(navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function(position) {
-        var pos = new google.maps.LatLng(position.coords.latitude,
-                                         position.coords.longitude);
-        
-        latitude = position.coords.latitude;
-        longitude = position.coords.longitude;
-        
-        var infowindow = new google.maps.InfoWindow({
-          map: map,
-          position: pos,
-          content: 'Location found using HTML5.'
-        });
-
-        map.setCenter(pos);
-      }, function() {
-        handleNoGeolocation(true);
-      });
-    } else {
-      // Browser doesn't support Geolocation
-      handleNoGeolocation(false);
-    }
-  }
-
-  function handleNoGeolocation(errorFlag) {
-    if (errorFlag) {
-      var content = 'Error: The Geolocation service failed.';
-    } else {
-      var content = 'Error: Your browser doesn\'t support geolocation.';
-    }
-
-    var options = {
-      map: map,
-      position: new google.maps.LatLng(60, 105),
-      content: content
-    };
-
-    var infowindow = new google.maps.InfoWindow(options);
-    map.setCenter(options.position);
-  }
+  $('.map-lightbox').show(200);
   initialize();
-});//end of closeToBtn
+  codeAddress(searchAddress);//the parameter will go to the codeAddress function
+});
 
 //close button for map lightbox
 $('.map-lightbox').on('click', 'button', function() {
 	$('.map-lightbox').hide();
 });
+
+//////////////////////
+//Close to me filter//
+//////////////////////
+$(document).on('click', '#closeToBtn', function(){
+var map;
+var latitude = 0;
+var longitude = 0;
+
+    // Try HTML5 geolocation
+    if(navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          var pos = new google.maps.LatLng(position.coords.latitude,
+                                         position.coords.longitude);
+        
+          latitude = position.coords.latitude;
+          longitude = position.coords.longitude;
+        } else {
+          alert('Location not found')
+        }
+      };
+    //end of navigator doodlybob
+
+
+  console.log(latitude);
+  console.log(longitude);
+
+  $.post('/api/productNear', {
+      lng: longitude,
+      lat: latitude,
+      maxDist: $('#maxDist').val()
+      }, function(geoResponse){
+        console.log(geoResponse);
+      })
+});//end of close to me filter
+
+
+//place current position on map
+// $(document).on('click', '#closeToBtn', function(){
+//   initialize();
+// });//end of closeToBtn
+
 
 });//end of jQuery

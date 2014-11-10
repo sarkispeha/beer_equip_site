@@ -22,10 +22,12 @@ var api = {
 			var lat = data.results[0].geometry.location.lat;
 			var lng = data.results[0].geometry.location.lng;
 			var coord = lng + ', ' + lat;
-		console.log(coord);
-		breweryData.location.coordinates.latitude = lat;
-		breweryData.location.coordinates.longitude = lng;
-		// breweryData.location.coordinates = coord;
+
+		breweryData.location.geo = {};
+		breweryData.location.geo.coordinates = [];
+		breweryData.location.geo.coordinates.push(lng);
+		breweryData.location.geo.coordinates.push(lat);
+		// console.log(breweryData.location.geo.coordinates);
 
 		var newBrewery = new Brewery(breweryData);
 		// console.log('New Brewery: ', newBrewery);
@@ -126,7 +128,16 @@ var api = {
 	},//end searchProducts
 	productNear: function(req, res){
 		//req location of client
-		Brewery.find()
+		var geoData = req.body;
+		console.log(geoData);
+		Brewery.find(
+			{'location.geo.coordinates':
+				{$near:
+					{$geometry:
+						{type: "Point", coordinates: [geoData.lng, geoData.lat]},
+						$minDistance: 0, $maxDistance: geoData.maxDist}
+						}});
+
 	}//end productNear
 }
 

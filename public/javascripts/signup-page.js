@@ -2,12 +2,12 @@ $(document).on('ready',function (){
 
 //base classes
 
-var Brewery = function(name, email, password, location){
-	name = name;
-	email = email;
-	password = password;
-	location = location;
-}
+// var Brewery = function(name, email, password, location){
+// 	name = name;
+// 	email = email;
+// 	password = password;
+// 	location = location;
+// }
 
 
 
