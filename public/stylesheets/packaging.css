@@ -4,6 +4,8 @@ body {
 
 header {
 	background-color: #E8E8E8;
+	border-bottom: 1px solid darkgrey;
+	height: 2em;
 }
 
 .fa {

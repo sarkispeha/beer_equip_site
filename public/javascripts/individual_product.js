@@ -81,6 +81,12 @@ $(document).on('click', '.seller-contact', function() {
 	$('.seller-hidden').show(500);
 	});
 
+//message sent
+$(document).on('click', '.seller-hidden button', function(){
+	$('.seller-hidden').remove();
+	$('.message_sent').show(1000);
+
+});
 
 
 

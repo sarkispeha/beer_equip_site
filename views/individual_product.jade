@@ -102,17 +102,19 @@ block content
 			div.seller-contact
 				p Click here to contact seller
 			div.form.seller-hidden
-				div.form-group
+				div.form-group#email_contact
 					label Email address
 					input.form-control(type='email', placholder='yourname@email.com')
-				div.form-group
+				div.form-group#subject_contact
 					label Subject
 					input.form-control(type='text', placholder='Re: Brewery Product for Sale')
-				div.form-group
+				div.form-group#message_contact
 					label Message
-					input.form-control(type='text')
-				div.form-group
+					textarea#text_contact.form-control(type='text')
+				div.form-group#send-btn
 					button.btn.btn-default(type='submit') Send
+		div.message_sent
+			h3 Message Sent!
 
 	block scripts
 	script(src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js")

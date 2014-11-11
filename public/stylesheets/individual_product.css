@@ -1,5 +1,7 @@
 header {
+	background-color: #E8E8E8;
 	border-bottom: 1px solid darkgrey;
+	height: 2em;
 }
 
 header i {
@@ -31,7 +33,8 @@ header h3 {
 }
 
 .brewery-specs {
-	width: 80%;
+	width: 60%;
+	margin: 0% 0% 5% 25%;
 }
 
 .seller-contact-container {
@@ -49,3 +52,23 @@ header h3 {
 	width: 100%;
 }
 
+#email_contact {
+	width: 50%;
+}
+
+#subject_contact {
+	width: 75%;
+}
+
+#message_contact {
+	width: 90%;
+	height: 90%;
+}
+
+#text-contact {
+	height: 7em;
+}
+
+.message_sent {
+	display: none;
+}
