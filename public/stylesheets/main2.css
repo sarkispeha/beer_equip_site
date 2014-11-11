@@ -5,7 +5,7 @@
 
 header{
 	position: relative;
-	background-image: url("../main_imgs/beer_head3.jpg");
+	background-image: url("../main_imgs/beer_closeup2.jpg");
 	height: 800px;
 	width: 100%;
 	background-attachment: fixed;
@@ -101,6 +101,12 @@ header h1{
 	font-size: 24;
 	padding: 0% 5%;
 	color: white;
+}
+
+.explanation-sub-container {
+/*	background-color: rgba(3, 3, 5, .45);*/
+	margin: 0% 10% 0% 25%;
+	padding: 5em 0em 2em 0;
 }
 
 .products {
@@ -307,13 +313,9 @@ header h1{
 	padding: 7% 0 7% 0;
 	text-align: center;
 	color: burlywood;
+	font-family: "Raleway";
 }
 
-.fadeInUp {
-	-webkit-animation-name: fadeInUp;
-	-webkit-animation-fill-mode: both;
-	duration: 2s;
-}
 
 
 

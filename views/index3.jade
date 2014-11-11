@@ -15,19 +15,20 @@ body
 				p Beer is proof that God loves us and wants us to be happy.
 				small Benjamin Franklin
 	div.explanation
-		dl
-			dt What is it?
-			dd We are a website focused solely on connecting up-and-coming breweries with quality, used equipment from larger establishments.
-			br
-			dt How does it work?
-			dd Larger capacity breweries looking to sell their old equipment will find young brewery buyers here.
-			br
-			dt Is it secure?
-			dd We provide a service that independently reviews the item for sale and vouches for its validity.
-			br
-			dt Why should I buy used?
-			dd Breweries keep their equipment in good shape, lest the beer they produce become sub standard quality. Starting brewers will have cheaper overhead costs, the brewer can focus on what really matters- the beer.
-			br
+		div.explanation-sub-container
+			dl
+				dt What is it?
+				dd We are a website focused solely on connecting up-and-coming breweries with quality, used equipment from larger establishments.
+				br
+				dt How does it work?
+				dd Larger capacity breweries looking to sell their old equipment will find young brewery buyers here.
+				br
+				dt Is it secure?
+				dd We provide a service that independently reviews the item for sale and vouches for its validity.
+				br
+				dt Why should I buy used?
+				dd Breweries keep their equipment in good shape, lest the beer they produce become sub standard quality. Starting brewers will have cheaper overhead costs, the brewer can focus on what really matters- the beer.
+				br
 	section.row-1
 		div.products
 			div.row
@@ -64,16 +65,16 @@ body
 						div.accessories-hidden.noBShidden
 							p
 								a.btn.btn-light.half-block-buttons(href='/accessories') CONTINUE
-			div.inspection-container
-				div.inspection
-					h3 INSPECTION
-						small Looking to have items professionally inspected before you buy?
-					div.inspection-hidden.noBShidden.half-block
-						p
-							a.btn.btn-light.half-block-buttons(href='/inspection') CONTINUE
+			//- div.inspection-container
+			//- 	div.inspection
+			//- 		h3 INSPECTION
+			//- 			small Looking to have items professionally inspected before you buy?
+			//- 		div.inspection-hidden.noBShidden.half-block
+			//- 			p
+			//- 				a.btn.btn-light.half-block-buttons(href='/inspection') CONTINUE
 	div.signup.fadeInUp
 		a(href='/signup')
-			h3 Sell your brewery old stuff!
+			h3 Sell your brewery's old stuff!
 
 	script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js')
 	script(src='scroll.js')

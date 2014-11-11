@@ -34,6 +34,7 @@ header h3 {
 	padding-top: 1%;
 	position: relative;
 	border-bottom: 3px solid burlywood;
+	box-shadow: 0px 10px 5px rgba(3, 3, 5, .35);
 }
 
 .searchfield {
@@ -42,10 +43,6 @@ header h3 {
 	display: block;
 	margin: 10%;
 	border: 3px solid burlywood;
-}
-
-.multi_pick {
-	margin: .5em 0;
 }
 
 #query {
@@ -60,6 +57,8 @@ header h3 {
 .type-selector {
 	display: block;
 	margin: 1% 5%;
+	background-color: rgba(216, 123, 16, 0.71);
+	border-radius: 5px;
 }
 
 #searchbtn {
@@ -69,7 +68,21 @@ header h3 {
 	width: 8em;
 	left: 60%;
 	margin: 2%;
+	background-color: rgba(216, 123, 16, 0.71);
+	border-radius: 5px;
 }
+
+.main-title {
+	text-align: center;
+	text-align: center;
+	font-size: 2em;
+	color: #1A96C3;
+	font-family: Raleway;
+	text-shadow: 0px 4px 4px rgba(3, 3, 5, .35);
+}
+
+
+
 
 .pack-label {
 	display: block;
@@ -80,7 +93,8 @@ header h3 {
 }
 
 #closeToBtn {
-
+	background-color: rgba(216, 123, 16, 0.71);
+	border-radius: 5px;
 }
 
 table, td {
