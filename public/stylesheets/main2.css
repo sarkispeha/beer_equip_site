@@ -135,7 +135,7 @@ header h1{
 
 .tanks-container {
 	position: relative;
-	background-image: url('/main_imgs/steel_tanks.jpg');
+	background-image: url('/images/ferment_tanks2.jpg');
 }
 
 .tanks {
@@ -182,7 +182,7 @@ header h1{
 
 .packaging-container {
 	position: relative;
-	background-image: url('/main_imgs/brown_glass_bottle.jpg');
+	background-image: url('/images/canning_machine.jpg');
 	background-size: cover;
 }
 
@@ -211,7 +211,7 @@ header h1{
 
 .scientific-container {
 	position: relative;
-	background-image: url('/main_imgs/yeast_starter.jpg');
+	background-image: url('/images/yeast_starter.jpg');
 }
 
 .scientific {
@@ -241,7 +241,7 @@ header h1{
 
 .accessories-container {
 	position: relative;
-	background-image: url('/main_imgs/beer_here.jpg');
+	background-image: url('/images/wine_barrels.jpg');
 	background-size: cover;
 }
 
@@ -273,7 +273,7 @@ header h1{
 
 .inspection-container{
 	position: relative;
-	background-image: url('/main_imgs/tank_inspection.jpg');
+	background-image: url('/images/tank_inspection.jpg');
 	background-size: cover;
 }
 
