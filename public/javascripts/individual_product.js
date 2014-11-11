@@ -14,7 +14,7 @@ $(document).on('ready', function() {
 
 //on page load pull info of individual item
 // $(function(){
-// 	$.get('/api/viewProduct/id', {}, function(responseData){
+// 	$.get('/api/loadMap', {}, function(responseData){
 // 		console.log(responseData);
 // 		$('.product_title').append(responseData);
 // 	});
@@ -79,6 +79,7 @@ $(document).on('click', '.shippingBtn', function(e) {
 //seller contact mail form appears
 $(document).on('click', '.seller-contact', function() {
 	$(this).remove().addClass('seller-hidden');
+	$('#map-canvas').hide(500);
 	$('.seller-hidden').show(500);
 	});
 
@@ -88,6 +89,27 @@ $(document).on('click', '.seller-hidden button', function(){
 	$('.message_sent').show(1000);
 
 });
+
+/////////////////////////
+//googleMap product map//
+/////////////////////////
+
+
+ 	function initialize() {
+	 	var latitude = product.location.geo.coordinates[1];
+	 	var longitude = product.location.geo.coordinates[0];
+	 	console.log(latitude);
+	 	console.log(longitude);
+
+        var mapCanvas = document.getElementById('map-canvas');
+        var mapOptions = {
+          center: new google.maps.LatLng(latitude, longitude),
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
 
 
 

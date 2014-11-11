@@ -114,11 +114,13 @@ block content
 					textarea#text_contact.form-control(type='text')
 				div.form-group#send-btn
 					button.btn.btn-default(type='submit') Send
+		div#map-canvas
 		div.message_sent
 			h3 Message Sent!
 
 	block scripts
 	script(src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js")
+	script(src="https://maps.googleapis.com/maps/api/js")
 	
 	script.
 		var product=!{JSON.stringify(product)};

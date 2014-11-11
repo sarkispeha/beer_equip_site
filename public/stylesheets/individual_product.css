@@ -63,6 +63,8 @@ header h3 {
 .seller-contact{
 	font-size: 2em;
 	text-align: center;
+	border: 1px solid gray;
+	border-radius: 2px;
 }
 
 .seller-hidden {
@@ -91,4 +93,9 @@ header h3 {
 .message_sent {
 	display: none;
 	text-align: center;
+}
+
+#map-canvas {
+	height: 200px;
+	width: 200px;
 }
