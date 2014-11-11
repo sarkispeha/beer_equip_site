@@ -24,8 +24,27 @@ header h3 {
 
 }
 
+.state_selector {
+	width: 55px;
+}
+
+#zipInput {
+	width: 105px;
+}
+
 .priceCalculated {
 	display: none;
+}
+
+.shippingBtn{
+	display: inline;
+}
+
+#ups-freight {
+	display: inline;
+	height: 55px;
+	width: 100px;
+	margin-left: 10px;
 }
 
 .seller {
@@ -71,4 +90,5 @@ header h3 {
 
 .message_sent {
 	display: none;
+	text-align: center;
 }

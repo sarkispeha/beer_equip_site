@@ -68,8 +68,10 @@ $(document).on('click', '.shippingBtn', function(e) {
 							height: height
 							},
 							function(resultData){
-		var UPSprice = resultData.RatedShipment[4].TotalCharges.MonetaryValue;
-		$('.priceCalculated').text(UPSprice).show();
+		var UPSprice = resultData.RatedShipment[4].TotalCharges.MonetaryValue + 800;
+		UPSprice = parseInt(UPSprice);
+		console.log(typeof(UPSprice));
+		$('.priceCalculated').text('$'+UPSprice).show();
 	});
 	
 	
