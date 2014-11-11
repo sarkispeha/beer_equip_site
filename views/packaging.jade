@@ -6,30 +6,29 @@ block content
 			i.fa.fa-hand-o-left
 		h3= Packaging
 
-	blockquote
+	div.search-container
 		fieldset.searchfield
-			legend= Legend
-			input#query(placeholder='search')
-			input#searchbtn(type='submit')
-			input#minAsk(size='5', placeholder='min')
-			input#maxAsk(size='5', placeholder='max')
-			label Packing Type
+			//- legend= Legend
+			input#query(placeholder='search term')
+			input#minAsk(size='5', placeholder='min price')
+			input#maxAsk(size='5', placeholder='max price')
 			select.type-selector(name="answer")
-				option(value="select-type") Select Type
+				option(value="select-type") Select Packaging Type
 				option(value="Bottler") Bottler
 				option(value="Canner") Canner
-			input#maxDist(type='number', placeholder='100')
-			button#closeToBtn() Products close to me
+			input.distance#maxDist(type='number', placeholder='100')
+			button.distance#closeToBtn() miles from me
+			input#searchbtn(type='submit')
 
 	//- div#map-near-me-canvas
 
 	table.main-table
 		thead
-			tr
-				th Name
-				th Description
-				th Location
-				th Price
+			tr.row
+				th.col-lg-2 Name
+				th.col-lg-6 Description
+				th.col-lg-2 Location
+				th.col-lg-2 Price
 		tbody.tbody-orig
 	div.appended_rows
 
@@ -49,15 +48,15 @@ block content
 			div.added_div(data-index='{{index}}')
 				table.hidden_shadow
 					tr.added_rows
-						td
+						td.col-lg-2
 							img.thumbnail(src='{{image}}')
-						td
+						td.col-lg-6
 							a(href='/individual_product/' + '{{_id}}' )  
 								h4 {{product}}
 							p {{product_description}}
-						td.location {{location.city}}, {{location.state}}
+						td.location.col-lg-2 {{location.city}}, {{location.state}}
 							button(type='button') Map
-						td ${{price}}
+						td.col-lg-2 ${{price}}
 
 
 
