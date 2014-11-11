@@ -133,32 +133,36 @@ header h1{
 	background-color: white;
 }
 
-.tanks-container {
+.darkness {
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transition: .5s;
+}
+
+.darkness-container:hover .darkness {
+	background-color: rgba(3, 3, 5, .45);
+}
+
+.content {
 	position: relative;
+	z-index: 10;
+}
+.tanks-container {
+	/*position: relative;*/
 	background-image: url('/images/ferment_tanks2.jpg');
-}
-
-.tanks {
-	/*background-position: right;
-	background-image: -webkit-linear-gradient(top, 
-    rgba(0,0,0,0.9) 0%, 
-    rgba(0,0,0,0) 20%,
-    rgba(0,0,0,0) 80%,
-    rgba(0,0,0,0.9) 100%
-  ),
-  -webkit-linear-gradient(left, 
-    rgba(0,0,0,0.9) 0%, 
-    rgba(0,0,0,0) 20%,
-    rgba(0,0,0,0) 80%,
-    rgba(0,0,0,0.9) 100%
-  ), url("ferment_tanks.jpg");
-	background-repeat: no-repeat;*/
 	height: 200px;
-	/*width: 100%;*/
+	transition: .5s;
+}
+
+.tanks-container:hover {
+	background-color: rgba(0,0,0,0.7) 100% ), url('/images/ferment_tanks2.jpg');
 }
 
 
-.tanks h3 {
+.tanks-container h3 {
 	margin: 5% 0%;
 	text-align: center;
 	color: white;
@@ -167,27 +171,19 @@ header h1{
 }
 
 .tanks-hidden.noBShidden p {
-	position: absolute;
 	top: 30;
 	color: burlywood;	
 }
 
-.tanks-hidden.noBShidden img {
-	position: absolute;
-	color: white;
-	top: 30;
-	height: 200px;
-	width: 200px;
-}
 
 .packaging-container {
 	position: relative;
 	background-image: url('/images/canning_machine.jpg');
 	background-size: cover;
+	min-height: 200px;
 }
 
 .packaging {
-	height: 200px;
 }
 
 .packaging h3 {
@@ -212,6 +208,7 @@ header h1{
 .scientific-container {
 	position: relative;
 	background-image: url('/images/yeast_starter.jpg');
+	height: 200px;
 }
 
 .scientific {
@@ -243,6 +240,7 @@ header h1{
 	position: relative;
 	background-image: url('/images/wine_barrels.jpg');
 	background-size: cover;
+	height: 200px;
 }
 
 .accessories {
