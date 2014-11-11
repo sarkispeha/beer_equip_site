@@ -93,6 +93,16 @@ table {
 	margin: 5%;
 	width: 90%;
 }
+.fixed-table {
+	margin: 1em 1em 0em 1em;
+}
+
+.individual_row {
+	margin-bottom: 2em;
+	border: 1px solid rgb(150, 150, 150);
+	background-color: white;
+	margin: 3em 1em 0em 1em;
+}
 
 .hidden_shadow {
 	transition: box-shadow .5s;
@@ -100,19 +110,15 @@ table {
 }
 
 .hidden_shadow:hover {
-	box-shadow: 10px 10px 5px rgba(3, 3, 5, .25);
+	box-shadow: 10px 10px 5px rgba(3, 3, 5, .35);
 }
 
-tbody td{
-	padding: .5em;
+.added_div {
+	margin: 1em;
 }
 
 .tbody-orig a {
 	color: black;
-}
-
-.added_rows {
-
 }
 
 .thumbnail {
@@ -149,4 +155,8 @@ tbody td{
 	left: 0;
 	width: 400px;
 	height: 400px;
+}
+
+.empty-footer {
+	height: 3em;
 }

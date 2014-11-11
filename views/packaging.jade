@@ -21,16 +21,15 @@ block content
 			input#searchbtn(type='submit')
 
 	//- div#map-near-me-canvas
-
-	table.main-table
-		thead
-			tr.row
-				th.col-lg-2 Name
-				th.col-lg-6 Description
-				th.col-lg-2 Location
-				th.col-lg-2 Price
-		tbody.tbody-orig
+	div.row.fixed-table
+		div.main-table
+			
+				div.col-sm-2 Name
+				div.col-sm-6 Description
+				div.col-sm-2 Location
+				div.col-sm-2 Price
 	div.appended_rows
+	footer.empty-footer
 
 	div.map-lightbox
 		div#map-canvas
@@ -45,19 +44,32 @@ block content
 		//- TEMPLATE for packaging table data
 	script#startDataTable(type='text-handlebars-template')
 
-			div.added_div(data-index='{{index}}')
-				table.hidden_shadow
-					tr.added_rows
-						td.col-lg-2
-							img.thumbnail(src='{{image}}')
-						td.col-lg-6
-							a(href='/individual_product/' + '{{_id}}' )  
-								h4 {{product}}
-							p {{product_description}}
-						td.location.col-lg-2 {{location.city}}, {{location.state}}
-							button(type='button') Map
-						td.col-lg-2 ${{price}}
-
+			//- div.added_div(data-index='{{index}}')
+			//- 	table.hidden_shadow
+			//- 		tr.added_rows
+			//- 			td.col-lg-2
+			//- 				img.thumbnail(src='{{image}}')
+			//- 			td.col-lg-6
+			//- 				a(href='/individual_product/' + '{{_id}}' )  
+			//- 					h4 {{product}}
+			//- 				p {{product_description}}
+			//- 			td.location.col-lg-2 {{location.city}}, {{location.state}}
+			//- 				button(type='button') Map
+			//- 			td.col-lg-2 ${{price}}
+			
+			div.row.individual_row.hidden_shadow(data-index='{{index}}')
+				div.added_div
+					div.col-sm-2
+						img.thumbnail(src='{{image}}')
+					div.col-sm-6
+						a(href='/individual_product/' + '{{_id}}' ) 
+							h4 {{product}}
+						p {{product_description}}
+					div#location.col-sm-2
+						p {{location.city}}, {{location.state}}
+						button(type='button') Map
+					div.col-sm-1
+						p ${{price}}
 
 
 

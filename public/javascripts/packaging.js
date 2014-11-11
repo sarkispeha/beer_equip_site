@@ -126,8 +126,8 @@ var codeAddress = function(addy) {
 //Show map handler//
 ////////////////////
 //googleMap event handler for location of product
-$(document).on('click', '.location button', function() {
-  var currentRow = responseData[$(this).closest('div').data('index')];
+$(document).on('click', '#location button', function() {
+  var currentRow = responseData[$(this).closest('.individual_row').data('index')];
  
   var searchAddress = currentRow.location.address + ' ' + currentRow.location.city + ', ' + currentRow.location.state;
   $('.map-lightbox').show(200);
