@@ -9,7 +9,97 @@ block content
 				h3 #{product.product}
 			div.col-sm-6.col-xs-12
 				p #{product.product_description}
-				form.form-horizontal.shipCalcAddress(role='form')
+				div.panel.panel-default.brewery-specs
+					div.panel-heading
+						h5.panel-title Brewery
+					div.panel-body
+						| #{product.name}
+					div.panel-heading
+						h5.panel-title Location
+					div.panel-body
+						p #{product.location.city}, #{product.location.state}
+					div.panel-heading
+						h5.panel-title Verification Level
+					div.panel-body
+						p Verified
+				//- form.form-horizontal.shipCalcAddress(role='form')
+				//- 	div.form-group
+				//- 		label.col-sm-2.control-label Street
+				//- 		div.col-sm-10
+				//- 			input.form-control#streetInput(type='text', placholder='55 Sesame Street', name='street', required)
+				//- 	div.form-group
+				//- 		label.col-sm-2.control-label City
+				//- 		div.col-sm-10
+				//- 			input.form-control#cityInput(type='text', placholder='Gotham', name='city', required)
+				//- 	div.form-group
+				//- 		label.col-sm-2.control-label State
+				//- 		div.col-sm-3
+				//- 			select.form-control.state_selector
+				//- 				option(value="AL") AL
+				//- 				option(value="AK") AK
+				//- 				option(value="AZ") AZ
+				//- 				option(value="AR") AR
+				//- 				option(value="CA") CA
+				//- 				option(value="CO") CO
+				//- 				option(value="CT") CT
+				//- 				option(value="DE") DE
+				//- 				option(value="DC") DC
+				//- 				option(value="FL") FL
+				//- 				option(value="GA") GA
+				//- 				option(value="HI") HI
+				//- 				option(value="ID") ID
+				//- 				option(value="IL") IL
+				//- 				option(value="IN") IN
+				//- 				option(value="IA") IA
+				//- 				option(value="KS") KS
+				//- 				option(value="KY") KY
+				//- 				option(value="LA") LA
+				//- 				option(value="ME") ME
+				//- 				option(value="MD") MD
+				//- 				option(value="MA") MA
+				//- 				option(value="MI") MI
+				//- 				option(value="MN") MN
+				//- 				option(value="MS") MS
+				//- 				option(value="MO") MO
+				//- 				option(value="MT") MT
+				//- 				option(value="NE") NE
+				//- 				option(value="NV") NV
+				//- 				option(value="NH") NH
+				//- 				option(value="NJ") NJ
+				//- 				option(value="NM") NM
+				//- 				option(value="NY") NY
+				//- 				option(value="NC") NC
+				//- 				option(value="ND") ND
+				//- 				option(value="OH") OH
+				//- 				option(value="OK") OK
+				//- 				option(value="OR") OR
+				//- 				option(value="PA") PA
+				//- 				option(value="RI") RI
+				//- 				option(value="SC") SC
+				//- 				option(value="SD") SD
+				//- 				option(value="TN") TN
+				//- 				option(value="TX") TX
+				//- 				option(value="UT") UT
+				//- 				option(value="VT") VT
+				//- 				option(value="VA") VA
+				//- 				option(value="WA") WA
+				//- 				option(value="WV") WV
+				//- 				option(value="WI") WI
+				//- 				option(value="WY") WY
+				//- 		label.col-sm-1.control-label Zip
+				//- 		div.col-sm-4
+				//- 			input.form-control#zipInput(type='text', placholder='80302', name='zip', required)
+				//- 	div.form-group
+				//- 		div.col-sm-offset-2.col-sm-10
+				//- 			button.btn.btn-default.shippingBtn(type='submit') Calculate Shipping
+				//- 			img#ups-freight(src='/images/ups-freight.jpg')
+				//- 	div.priceCalculated
+				//- 		p $ #{product.price}
+			div.col-sm-6.col-xs-12
+				img(src='#{product.image}')
+	div.row.seller
+		div.col-sm-6.col-xs-12.seller-specs
+			form.form-horizontal.shipCalcAddress(role='form')
 					div.form-group
 						label.col-sm-2.control-label Street
 						div.col-sm-10
@@ -82,23 +172,19 @@ block content
 							img#ups-freight(src='/images/ups-freight.jpg')
 					div.priceCalculated
 						p $ #{product.price}
-			div.col-sm-6.col-xs-12
-				img(src='#{product.image}')
-	div.row.seller
-		div.col-sm-6.col-xs-12.seller-specs
-			div.panel.panel-default.brewery-specs
-				div.panel-heading
-					h5.panel-title Brewery
-				div.panel-body
-					| #{product.name}
-				div.panel-heading
-					h5.panel-title Location
-				div.panel-body
-					p #{product.location.city}, #{product.location.state}
-				div.panel-heading
-					h5.panel-title Verification Level
-				div.panel-body
-					p Verified
+			//- div.panel.panel-default.brewery-specs
+			//- 	div.panel-heading
+			//- 		h5.panel-title Brewery
+			//- 	div.panel-body
+			//- 		| #{product.name}
+			//- 	div.panel-heading
+			//- 		h5.panel-title Location
+			//- 	div.panel-body
+			//- 		p #{product.location.city}, #{product.location.state}
+			//- 	div.panel-heading
+			//- 		h5.panel-title Verification Level
+			//- 	div.panel-body
+			//- 		p Verified
 		div.col-sm-6.col-xs-12.seller-contact-container
 			div.seller-contact
 				p Click here to contact seller
