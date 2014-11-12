@@ -229,6 +229,7 @@ header h1{
 }
 
 .packaging-container h3 {
+	margin: 5% 0%;
 	text-align: center;
 	color: white;
 	font-family: "Raleway";
@@ -254,6 +255,7 @@ header h1{
 }
 
 .scientific-container h3 {
+	margin: 5% 0%;
 	text-align: center;
 	color: white;
 	font-family: "Raleway";
@@ -266,14 +268,6 @@ header h1{
 	top: 30;
 }
 
-.scientific-hidden.noBShidden img {
-	position: absolute;
-	color: white;
-	top: 30;
-	height: 200px;
-	width: 200px;
-}
-
 .accessories-container {
 	position: relative;
 	background-image: url('/images/wine_barrels.jpg');
@@ -282,6 +276,7 @@ header h1{
 }
 
 .accessories-container h3 {
+	margin: 5% 0%;
 	text-align: center;
 	color: white;
 	font-family: "Raleway";

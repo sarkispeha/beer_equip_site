@@ -193,7 +193,9 @@ var longitude = 40;
 
 //anchor for sending info to individual_product
 $(document).on('click', '.individual_row', function() {
-  window.location = "'/individual_product/' + '{{_id}}'";
+  var routeRef = $(this).find('.product-link').attr('href');
+  console.log(routeRef);
+  window.location = routeRef;
 });
 
 });//end of jQuery
