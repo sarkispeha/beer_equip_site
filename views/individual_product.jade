@@ -2,9 +2,11 @@ extends individual_product-layout
 
 block content
 	header
-		img(src='/images/Drawing1.png')
 		a.backToPack(href='/packaging')
+			i.fa.fa-arrow-left
 			p back to packaging
+		a(href='/')
+			img(src='/images/Drawing1.png')
 	div.container
 		div.row.specifications
 			div.product_title
@@ -19,11 +21,13 @@ block content
 					div.panel-heading
 						h5.panel-title Location
 					div.panel-body
-						p #{product.location.city}, #{product.location.state}
+						p #{product.location.address} 
+						|#{product.location.city}, #{product.location.state}
 					div.panel-heading
 						h5.panel-title Verification Level
 					div.panel-body
-						p Verified
+						p.verified Verified
+						i.fa.fa-check
 				//- form.form-horizontal.shipCalcAddress(role='form')
 				//- 	div.form-group
 				//- 		label.col-sm-2.control-label Street
@@ -172,8 +176,8 @@ block content
 						div.col-sm-offset-2.col-sm-10
 							button.btn.btn-default.shippingBtn(type='submit') Calculate Shipping
 							img#ups-freight(src='/images/ups-freight.jpg')
-					div.priceCalculated
-						p $ #{product.price}
+							div.priceCalculated
+								p $ #{product.price}
 			//- div.panel.panel-default.brewery-specs
 			//- 	div.panel-heading
 			//- 		h5.panel-title Brewery

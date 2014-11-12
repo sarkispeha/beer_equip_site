@@ -98,8 +98,6 @@ $(document).on('click', '.seller-hidden button', function(){
  	function initialize() {
 	 	var latitude = product.location.geo.coordinates[1];
 	 	var longitude = product.location.geo.coordinates[0];
-	 	console.log(latitude);
-	 	console.log(longitude);
 
         var mapCanvas = document.getElementById('map-canvas');
         var mapOptions = {

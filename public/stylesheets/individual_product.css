@@ -27,6 +27,18 @@ header img {
 
 }
 
+.verified {
+	display: inline;
+}
+
+.verified.fa-check {
+	display: inline;
+}
+
+.fa-check {
+	color: green;
+}
+
 .state_selector {
 	width: 55px;
 }
@@ -44,14 +56,14 @@ header img {
 }
 
 #ups-freight {
-	display: inline;
+	display: block;
+	padding: 5px;
 	height: 55px;
 	width: 100px;
 	margin-left: 10px;
 }
 
 .seller {
-	margin-top: 10%;
 }
 
 .brewery-specs {
@@ -68,6 +80,11 @@ header img {
 	text-align: center;
 	border: 1px solid gray;
 	border-radius: 2px;
+}
+
+.seller-contact p{
+	margin: 0;
+	background-color: #E8E8E8;
 }
 
 .seller-hidden {
