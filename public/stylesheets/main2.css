@@ -181,17 +181,24 @@ header h1{
 }
 
 .darkness-container:hover .darkness {
-	background-color: rgba(3, 3, 5, .45);
+	background-color: rgba(3, 3, 5, .55);
 }
 
 .content {
 	position: relative;
 	z-index: 10;
 }
+
+.small-content {
+	color: white;
+	opacity: 0.7;
+}
+
+
 .tanks-container {
 	/*position: relative;*/
 	background-image: url('/images/ferment_tanks2.jpg');
-	height: 200px;
+	height: 25em;
 	transition: .5s;
 }
 
@@ -218,13 +225,10 @@ header h1{
 	position: relative;
 	background-image: url('/images/canning_machine.jpg');
 	background-size: cover;
-	min-height: 200px;
+	min-height: 25em;
 }
 
-.packaging {
-}
-
-.packaging h3 {
+.packaging-container h3 {
 	text-align: center;
 	color: white;
 	font-family: "Raleway";
@@ -246,14 +250,10 @@ header h1{
 .scientific-container {
 	position: relative;
 	background-image: url('/images/yeast_starter.jpg');
-	height: 200px;
+	height: 25em;
 }
 
-.scientific {
-  	height: 200px;
-}
-
-.scientific h3 {
+.scientific-container h3 {
 	text-align: center;
 	color: white;
 	font-family: "Raleway";
@@ -278,14 +278,10 @@ header h1{
 	position: relative;
 	background-image: url('/images/wine_barrels.jpg');
 	background-size: cover;
-	height: 200px;
+	height: 25em;
 }
 
-.accessories {
-  	height: 200px;
-}
-
-.accessories h3 {
+.accessories-container h3 {
 	text-align: center;
 	color: white;
 	font-family: "Raleway";
