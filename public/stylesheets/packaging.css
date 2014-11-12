@@ -116,6 +116,11 @@ table {
 	}
 }*/
 
+.distance-selector {
+	font-size: 14px;
+	margin: 0;
+}
+
 .individual_row {
 	margin-bottom: 2em;
 	border: 1px solid rgb(150, 150, 150);
