@@ -49,6 +49,10 @@ $(document).on('click', '.shippingBtn', function(e) {
 		}
 		};
 
+	if (to_address_line_1 === '' || to_city === '' || to_state_code === '' ) {
+		alert('Have you been drinking? We need an address to calculate shipping!');
+	}
+
 	var weight = weightScaler(product.weight);
 	var length = product.length;
 	var width = product.width;

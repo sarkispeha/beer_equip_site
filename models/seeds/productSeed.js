@@ -120,3 +120,33 @@ var Brewery = require('../brewery_register_model.js');
 		price: 4950
 	});
 	brewceWillisBrew.save();
+
+	var williamCanWallace = new Brewery({
+		_id: mongoose.Types.ObjectId("5463c4f7f0105ade4f19cbe1"),
+		name: "William Can Wallace",
+		email: "williamCan@email.com",
+		image: '/images/canner2.jpg',
+		product: "William Can's canner",
+		productType: {
+			isPackaging: true,
+			packingType: 'Canner',
+			isTank: false,
+			tankType: ''
+		},
+		height: 5,
+		length: 5,
+		width: 5,
+		weight: 400,
+		product_description: "This is a really really really good mash tun. It extracts the sugars from the grains. Woa! How cool is that? Pretty damn cool if you ask me. Normally you'd have to get an army of gnome slaves to get this kind of productivity. Technology man, woooooweeee!",
+		location: {
+			address: "800 E Lincoln Ave",
+			city: "Fort Collins",
+			state: "CO",
+			zip: 80524,
+			geo: {
+				coordinates: [-105.063229, 40.589476]
+			}
+		},
+		price: 8950
+	});
+	williamCanWallace.save();
