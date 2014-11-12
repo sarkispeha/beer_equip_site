@@ -37,7 +37,7 @@ app.post('/api/productNear', apiController.productNear);
 // });
 // console.log(thing);
 
-
-var server = app.listen(7554, function() {
+var port = process.env.PORT || 7554;
+var server = app.listen(port, function() {
 	console.log('Express server listening on port ' + server.address().port);
 });
