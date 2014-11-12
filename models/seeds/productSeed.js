@@ -137,7 +137,7 @@ var Brewery = require('../brewery_register_model.js');
 		length: 5,
 		width: 5,
 		weight: 400,
-		product_description: "This is a really really really good mash tun. It extracts the sugars from the grains. Woa! How cool is that? Pretty damn cool if you ask me. Normally you'd have to get an army of gnome slaves to get this kind of productivity. Technology man, woooooweeee!",
+		product_description: "This is a really really really good canner. It puts beers in cans. Woa! How cool is that? Pretty damn cool if you ask me. Normally you'd have to get an army of gnome slaves to get this kind of productivity. Technology man, woooooweeee!",
 		location: {
 			address: "800 E Lincoln Ave",
 			city: "Fort Collins",

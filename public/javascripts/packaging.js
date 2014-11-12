@@ -177,7 +177,7 @@ var longitude = 40;
   $.post('/api/productNear', {
       lng: -105,
       lat: 40,
-      maxDist: maxDist*1000,
+      maxDist: maxDist*632,
       isPackaging: true
       }, function(geoResponse){
         console.log(geoResponse);
