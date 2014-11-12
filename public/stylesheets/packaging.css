@@ -54,6 +54,10 @@ header img {
 
 #minAsk {
 	margin: 1% 5%;
+	width: 69px;
+}
+#maxAsk {
+	width: 69px;
 }
 .type-selector {
 	display: block;
@@ -136,41 +140,24 @@ table {
 	color: black;
 }
 
-.thumbnail {
-	height: auto;
-	width: 100px;
-	height: 100px;
+.productTitle {
+	-webkit-margin-before: 0;
 }
 
-.map-lightbox{
-	display: none;
-	position: fixed;
+.thumbnail {
 	width: 100%;
 	height: 100%;
-	top: 0;
-	left: 0;
-	background: rgba(0,0,0,0.7);
+	margin: 0;
+	padding: 0;
+	border: none;
 }
 
-.map-lightbox button{
-	left: 25%;
-	top: 22%;
-	position: fixed;
+.location-price {
+	position: relative;
+	margin-top: 2em;
 }
 
-#map-canvas {
-	top: 25%;
-	left: 25%;
-	width: 400px;
-	height: 400px;
-}
 
-#map-near-me-canvas {
-	top: 0;
-	left: 0;
-	width: 400px;
-	height: 400px;
-}
 
 .empty-footer {
 	height: 3em;

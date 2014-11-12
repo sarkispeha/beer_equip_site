@@ -43,7 +43,7 @@ $(document).on('click','.dropdown-menu a', function() {
 $(document).on('click', '#searchbtn', function(){
   
   //remove table elements
-  $('.added_div').remove();
+  $('.individual_row').remove();
 
   //grab info from form
   var searchValue = $('#query').val();
@@ -143,13 +143,14 @@ $('.map-lightbox').on('click', 'button', function() {
 //////////////////////
 //Close to me filter//
 //////////////////////
-$(document).on('click', '#closeToBtn', function(){
+$(document).on('change', '.distance-selector', function(){
+  console.log('works');
 var map;
 var latitude = -105;
 var longitude = 40;
 
   //remove table elements
-  $('.added_div').remove();
+  $('.individual_row').remove();
 
     // Try HTML5 geolocation
     if(navigator.geolocation) {
@@ -169,8 +170,8 @@ var longitude = 40;
 
   console.log(latitude);
   console.log(longitude);
-  console.log(parseInt($('#maxDist').val()));
-  var maxDist = parseInt($('#maxDist').val());
+  var maxDist = parseInt($('.distance-selector').val());
+  console.log(maxDist);
 
 //ajax request
   $.post('/api/productNear', {
@@ -190,10 +191,6 @@ var longitude = 40;
     });
 });//end of close to me search
 
-//place current position on map
-// $(document).on('click', '#closeToBtn', function(){
-//   initialize();
-// });//end of closeToBtn
 
 
 });//end of jQuery

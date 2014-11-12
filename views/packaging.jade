@@ -21,15 +21,23 @@ block content
 						option(value="Bottler") Bottler
 						option(value="Canner") Canner
 					input#searchbtn.btn.btn-info(type='submit')
-					input.distance#maxDist(type='number', placeholder='100')
-					button.distance#closeToBtn() miles from me
+					//- input.distance#maxDist(type='number', placeholder='100')
+					//- button.distance#closeToBtn() miles from me
+					select.distance-selector
+						option(value="miles from me") Miles from me
+						option(value=50) 50
+						option(value=100) 100
+						option(value=250) 250
+						option(value=500) 500
+						option(value=10000) 500+
+
 		div.col-sm-3.col-xs-3
 
 			//- div#map-near-me-canvas
 	div.row.fixed-table
 		div.main-table
 			
-				div.col-sm-2.col-xs-2.main-title Name
+				div.col-sm-2.col-xs-2.main-title Picture
 				div.col-sm-6.col-xs-6.main-title Description
 				div.col-sm-2.col-xs-2.main-title Location
 				div.col-sm-2.col-xs-2.main-title Price
@@ -66,14 +74,14 @@ block content
 				div.added_div
 					div.col-sm-2
 						img.thumbnail(src='{{image}}')
-					div.col-sm-6
+					div.col-sm-6.productTitle
 						a(href='/individual_product/' + '{{_id}}' ) 
 							h4 {{product}}
 						p {{product_description}}
-					div#location.col-sm-2
+					div#location.col-sm-2.location-price
 						p {{location.city}}, {{location.state}}
 						//- button(type='button') Map
-					div.col-sm-1
+					div.col-sm-1.location-price
 						p ${{price}}
 
 

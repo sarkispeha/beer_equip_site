@@ -1,21 +1,21 @@
 body {
-	background-image: url("../images/beer_kegs.jpg");
+	background-image: url("../images/beer_kegs2.jpg");
 	/*background-size: cover;*/
 	/*background-color: rgba(0,0,0,0.5);*/
 	color: wheat;
-	background-repeat: no-repeat;
+	background-repeat: cover;
 	/*background-attachment: fixed;*/
 
 }
 
 h2 {
-	padding: 5% 0% 0% 15%;
+	padding: 5% 0% 0% 10%;
 	font-family: 'Arvo';
 }
 
 .form-container {
 	width: 50%;
-	margin: 15% 25% 0 25%;
+	margin: 2em 25% 0 25%;
 	background-color: rgba(0,0,0,0.5);
 	padding: 20px;
 	border-radius: 30px;
