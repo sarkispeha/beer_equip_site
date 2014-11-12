@@ -7,7 +7,7 @@ var indexController = require('./controllers/index.js');
 var apiController = require('./controllers/api.js');
 
 //connect to database
-mongoose.connect('mongodb://localhost/brewEquipdb');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/brewEquipdb');
 
 //seed data
 require('./models/seeds/productSeed.js');
