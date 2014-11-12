@@ -141,7 +141,7 @@ var api = {
 						{type: "Point", coordinates: [geoData.lng, geoData.lat]},
 						$minDistance: 0, $maxDistance: geoData.maxDist
 					}			
-				}
+				} , 'productType.isPackaging': true
 			}
 			, function(err, results){
 				console.log(results);
