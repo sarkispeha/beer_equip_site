@@ -1,23 +1,26 @@
 header {
 	background-color: #E8E8E8;
 	border-bottom: 1px solid darkgrey;
-	height: 2em;
+	height: 3em;
+	width: 100%;
 }
 
-header i {
-	color:black;
+.backToPack p{
+	display: inline;
+	color: darkgrey;
+	border: 1px solid darkgrey;
+	width: 125px;
 }
 
-header i:hover{
-	transition: transform 0.2s;
-	transform: scale(2);
+header img {
+	display: inline;
+	height: 50px;
+	width: 55px;
+
 }
 
-header h3 {
-	background-color: #DFDDDD;
-	-webkit-margin-before: 0;
-	-webkit-margin-after: 0;
-	padding: 1% 3%;
+.product_title {
+	padding: 1em;
 }
 
 .shipCalcAddress {
