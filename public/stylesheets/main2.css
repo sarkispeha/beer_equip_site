@@ -17,7 +17,39 @@ header h1{
 	-webkit-margin-after: 0;
 	padding: 15% 5% 0%;
 	font-family: "Raleway";
+	color: black;
+}
 
+.main-subtitle-container {
+	/*width: 100%;*/
+	/*padding: 2em 20em 0 20em;*/
+	color: black;
+	font-family: "Raleway";
+}
+
+.sellStuff-container {
+	margin: 21% 0 0 0;
+}
+
+.signup {
+	margin: 0;
+	padding: 9px 12px;
+	text-align: center;
+	color: burlywood;
+	font-family: "Raleway";
+	border: 2px solid white;
+	border-radius: 0px;
+	transition: .5s;
+}
+
+.signup:hover {
+	background-color: white;
+}
+.fa-angle-double-down{
+	font-size: 10em;
+	color: burlywood;
+	margin-top: 15%;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .ben-quote{
@@ -304,17 +336,6 @@ header h1{
 	top: 30;
 }
 
-.signup {
-	background: black;
-}
-
-.signup h3 {
-	margin: 0;
-	padding: 7% 0 7% 0;
-	text-align: center;
-	color: burlywood;
-	font-family: "Raleway";
-}
 
 
 

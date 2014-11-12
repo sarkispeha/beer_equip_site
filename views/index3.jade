@@ -6,11 +6,28 @@ head
 	link(rel='stylesheet', type='text/css', href='http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css')
 	link(href='http://fonts.googleapis.com/css?family=Raleway', rel='stylesheet', type='text/css')
 	link(href='http://fonts.googleapis.com/css?family=Arvo', rel='stylesheet', type='text/css')
+	link(href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css", rel="stylesheet")
 	link(rel='stylesheet', type='text/css', href='stylesheets/main2.css')
 body
 	div.main-block
 		header.parallax
-			h1.text-right.main-title The Brewery Equipment Recycler
+			h1.text-center.main-title The Brewery Equipment Recycler
+			div.row
+				div.col-sm-3
+				div.col-sm-6.main-subtitle-container
+					h4.text-center Connecting up-and-coming breweries with products they need at prices they can afford.
+				div.col-sm-3
+			div.row
+				div.col-sm-3
+				div.col-sm-6.text-center.sellStuff-container
+					a.btn.btn-light.signup(href='/signup')
+						| Sell your brewery's old stuff!
+				div.col-sm-3
+			div.row
+				div.col-sm-3
+				div.col-sm-6.text-center
+					i.fa.fa-angle-double-down
+				div.col-sm-3
 			blockquote.ben-quote
 				p Beer is proof that God loves us and wants us to be happy.
 				small Benjamin Franklin
@@ -72,9 +89,6 @@ body
 			//- 		div.inspection-hidden.noBShidden.half-block
 			//- 			p
 			//- 				a.btn.btn-light.half-block-buttons(href='/inspection') CONTINUE
-	div.signup.fadeInUp
-		a(href='/signup')
-			h3 Sell your brewery's old stuff!
 
 	script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js')
 	script(src='scroll.js')
