@@ -177,7 +177,7 @@ block content
 							input.form-control#zipInput(type='text', placholder='80302', name='zip', required)
 					div.form-group
 						div.col-sm-offset-2.col-sm-10
-							button.btn.btn-default.shippingBtn(type='submit') Calculate Shipping
+							button.btn.btn-info.shippingBtn(type='submit') Calculate Shipping
 							img#ups-freight(src='/images/ups-freight.jpg')
 							div.priceCalculated
 								p $ #{product.price}
@@ -208,7 +208,7 @@ block content
 					label Message
 					textarea#text_contact.form-control(type='text')
 				div.form-group#send-btn
-					button.btn.btn-default(type='submit') Send
+					button.btn.btn-info(type='submit') Send
 			div#map-canvas
 		div.col-sm-1.col-lg-2
 		div.message_sent

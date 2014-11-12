@@ -80,7 +80,7 @@ $(document).on('click', '.shippingBtn', function(e) {
 $(document).on('click', '.seller-contact', function() {
 	$(this).remove().addClass('seller-hidden');
 	$('#map-canvas').hide(500);
-	$('.seller-hidden').show(500);
+	$('.seller-hidden').show(800);
 	});
 
 //message sent
