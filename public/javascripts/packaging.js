@@ -136,9 +136,9 @@ $(document).on('click', '#location button', function() {
 });
 
 //close button for map lightbox
-$('.map-lightbox').on('click', 'button', function() {
-	$('.map-lightbox').hide();
-});
+// $('.map-lightbox').on('click', 'button', function() {
+// 	$('.map-lightbox').hide();
+// });
 
 //////////////////////
 //Close to me filter//
@@ -191,6 +191,9 @@ var longitude = 40;
     });
 });//end of close to me search
 
-
+//anchor for sending info to individual_product
+$(document).on('click', '.individual_row', function() {
+  window.location = "'/individual_product/' + '{{_id}}'";
+});
 
 });//end of jQuery
