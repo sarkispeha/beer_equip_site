@@ -11,7 +11,8 @@ block content
 		div.row.specifications
 			div.product_title
 				h3 #{product.product}
-			div.col-sm-6.col-xs-12
+			div.col-sm-1.col-lg-2
+			div.col-sm-5.col-lg-4.col-xs-12
 				p #{product.product_description}
 				div.panel.panel-default.brewery-specs
 					div.panel-heading
@@ -101,10 +102,12 @@ block content
 				//- 			img#ups-freight(src='/images/ups-freight.jpg')
 				//- 	div.priceCalculated
 				//- 		p $ #{product.price}
-			div.col-sm-6.col-xs-12
+			div.col-sm-5.col-xs-12
 				img(src='#{product.image}')
+			div.col-sm-1
 	div.row.seller
-		div.col-sm-6.col-xs-12.seller-specs
+		div.col-sm-1.col-lg-2
+		div.col-sm-5.col-lg-4.col-xs-12.seller-specs
 			form.form-horizontal.shipCalcAddress(role='form')
 					div.form-group
 						label.col-sm-2.control-label Street
@@ -191,7 +194,7 @@ block content
 			//- 		h5.panel-title Verification Level
 			//- 	div.panel-body
 			//- 		p Verified
-		div.col-sm-6.col-xs-12.seller-contact-container
+		div.col-sm-5.col-lg-4.col-xs-12.seller-contact-container
 			div.seller-contact
 				p Click here to contact seller
 			div.form.seller-hidden
@@ -206,7 +209,8 @@ block content
 					textarea#text_contact.form-control(type='text')
 				div.form-group#send-btn
 					button.btn.btn-default(type='submit') Send
-		div#map-canvas
+			div#map-canvas
+		div.col-sm-1.col-lg-2
 		div.message_sent
 			h3 Message Sent!
 
