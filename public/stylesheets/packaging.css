@@ -5,7 +5,21 @@ body {
 header {
 	background-color: #E8E8E8;
 	border-bottom: 1px solid darkgrey;
-	height: 2em;
+	height: 3em;
+	width: 100%;
+}
+
+.backToHome p{
+	display: inline;
+	color: darkgrey;
+	border: 1px solid darkgrey;
+	width: 125px;
+}
+
+header img {
+	display: inline;
+	height: 50px;
+	width: 55px;
 }
 
 .fa {
@@ -14,27 +28,14 @@ header {
 	color: black;
 }
 
-header i:hover{
-	transition: transform 0.2s;
-	transform: scale(2);
-}
-
-header h3 {
-	/*background-color: #DFDDDD;*/
-	-webkit-margin-before: 0;
-	-webkit-margin-after: 0;
-	padding: 1% 3%;
-	display: inline-block;
-	/*border-bottom: 1px solid darkgrey;*/
-}
 .search-container {
-	background-image: url("../main_imgs/copper.jpg");
+	/*background-image: url("../main_imgs/beer_head1.jpg");*/
 	width: 100%;
 	height: 100%;
 	padding-top: 1%;
 	position: relative;
-	border-bottom: 3px solid burlywood;
-	box-shadow: 0px 10px 5px rgba(3, 3, 5, .35);
+	border: 1px solid #777;
+	background: #aaa;
 }
 
 .searchfield {
@@ -42,7 +43,7 @@ header h3 {
 	background-color: white;
 	display: block;
 	margin: 10%;
-	border: 3px solid burlywood;
+	border: 2px solid #1A96C3;
 }
 
 #query {
@@ -57,30 +58,20 @@ header h3 {
 .type-selector {
 	display: block;
 	margin: 1% 5%;
-	background-color: rgba(216, 123, 16, 0.71);
-	border-radius: 5px;
+	border-radius: 2px;
 }
 
 #searchbtn {
-	position: relative;
-	display: block;
-	height: 100%;
-	width: 8em;
-	left: 60%;
 	margin: 2%;
-	background-color: rgba(216, 123, 16, 0.71);
-	border-radius: 5px;
 }
 
 .main-title {
-	text-align: center;
-	text-align: center;
+	text-align: left;
 	font-size: 2em;
 	color: #1A96C3;
 	font-family: Raleway;
 	text-shadow: 0px 4px 4px rgba(3, 3, 5, .35);
 }
-
 
 
 
@@ -113,6 +104,13 @@ table {
 .fixed-table {
 	margin: 1em 1em 0em 1em;
 }
+
+/*@media screen and (min-width: 0px) and (max-width: 1150px) {
+	.fixed-table {
+		display: none;
+		margin: 0;
+	}
+}*/
 
 .individual_row {
 	margin-bottom: 2em;

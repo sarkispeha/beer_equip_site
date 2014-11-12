@@ -2,32 +2,37 @@ extends tabular-layout
 
 block content
 	header
-		a(href='index2.html')
-			i.fa.fa-hand-o-left
-		h3= Packaging
+		a.backToHome(href='/')
+			i.fa.fa-arrow-left
+			p back to home
+		a(href='/')
+			img(src='/images/Drawing1.png')
+	div.row
+		div.col-sm-3.col-xs-3
+		div.col-sm-6.col-xs-6
+			div.search-container
+				fieldset.searchfield
+					//- legend= Legend
+					input#query(placeholder='search term')
+					input#minAsk(size='5', placeholder='min price')
+					input#maxAsk(size='5', placeholder='max price')
+					select.type-selector(name="answer")
+						option(value="select-type") Select Packaging Type
+						option(value="Bottler") Bottler
+						option(value="Canner") Canner
+					input#searchbtn.btn.btn-info(type='submit')
+					input.distance#maxDist(type='number', placeholder='100')
+					button.distance#closeToBtn() miles from me
+		div.col-sm-3.col-xs-3
 
-	div.search-container
-		fieldset.searchfield
-			//- legend= Legend
-			input#query(placeholder='search term')
-			input#minAsk(size='5', placeholder='min price')
-			input#maxAsk(size='5', placeholder='max price')
-			select.type-selector(name="answer")
-				option(value="select-type") Select Packaging Type
-				option(value="Bottler") Bottler
-				option(value="Canner") Canner
-			input.distance#maxDist(type='number', placeholder='100')
-			button.distance#closeToBtn() miles from me
-			input#searchbtn(type='submit')
-
-	//- div#map-near-me-canvas
+			//- div#map-near-me-canvas
 	div.row.fixed-table
 		div.main-table
 			
-				div.col-sm-2.main-title Name
-				div.col-sm-6.main-title Description
-				div.col-sm-2.main-title Location
-				div.col-sm-2.main-title Price
+				div.col-sm-2.col-xs-2.main-title Name
+				div.col-sm-6.col-xs-6.main-title Description
+				div.col-sm-2.col-xs-2.main-title Location
+				div.col-sm-2.col-xs-2.main-title Price
 	div.appended_rows
 	footer.empty-footer
 
@@ -67,7 +72,7 @@ block content
 						p {{product_description}}
 					div#location.col-sm-2
 						p {{location.city}}, {{location.state}}
-						button(type='button') Map
+						//- button(type='button') Map
 					div.col-sm-1
 						p ${{price}}
 

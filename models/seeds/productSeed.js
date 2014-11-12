@@ -49,12 +49,12 @@ var Brewery = require('../brewery_register_model.js');
 		weight: 700,
 		product_description: "This is a really really really good canner. It puts beer in a can. Woa! How cool is that? Pretty damn cool if you ask me. Normally you'd have to get an army of gnome slaves to get this kind of productivity. Technology man, woooooweeee!",
 		location: {
-			address: "1221 E Pike St",
-			city: "Seattle",
-			state: "WA",
-			zip: 98101,
+			address: "925 W 9th Ave",
+			city: "Denver",
+			state: "CO",
+			zip: 80204,
 			geo: {
-				coordinates: [-122.3159648, 47.6139451]
+				coordinates: [-104.9991947, 39.7305225]
 			}
 		},
 		price: 12950
@@ -109,12 +109,12 @@ var Brewery = require('../brewery_register_model.js');
 		weight: 400,
 		product_description: "This is a really really really good mash tun. It extracts the sugars from the grains. Woa! How cool is that? Pretty damn cool if you ask me. Normally you'd have to get an army of gnome slaves to get this kind of productivity. Technology man, woooooweeee!",
 		location: {
-			address: "925 W 9th Ave",
-			city: "Denver",
-			state: "CO",
-			zip: 80204,
+			address: "1221 E Pike St",
+			city: "Seattle",
+			state: "WA",
+			zip: 98101,
 			geo: {
-				coordinates: [-104.9991947, 39.7305225]
+				coordinates: [-122.3159648, 47.6139451]
 			}
 		},
 		price: 4950
