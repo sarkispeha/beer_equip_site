@@ -179,6 +179,7 @@ block content
 						div.col-sm-offset-2.col-sm-10
 							button.btn.btn-info.shippingBtn(type='submit') Calculate Shipping
 							img#ups-freight(src='/images/ups-freight.jpg')
+							p Shipping Cost
 							div.priceCalculated
 								p $ #{product.price}
 			//- div.panel.panel-default.brewery-specs
@@ -200,13 +201,13 @@ block content
 			div.form.seller-hidden
 				div.form-group#email_contact
 					label Email address
-					input.form-control(type='email', placholder='yourname@email.com')
+					input.form-control(type='email', placholder='yourname@email.com', value='maily@email.com')
 				div.form-group#subject_contact
 					label Subject
-					input.form-control(type='text', placholder='Re: Brewery Product for Sale')
+					input.form-control(type='text', placholder='Re: Brewery Product for Sale', value='Howdy there, cool brewery')
 				div.form-group#message_contact
 					label Message
-					textarea#text_contact.form-control(type='text')
+					textarea#text_contact.form-control(type='text', value='Hi there, I\'m interested in your product')
 				div.form-group#send-btn
 					button.btn.btn-info(type='submit') Send
 			div#map-canvas

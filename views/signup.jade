@@ -11,13 +11,13 @@ body
 	form.form-container(role='form')
 		div.form-group.singleInput.breweryName
 			label Brewery Name
-			input.form-control(type='text', placeholder='ex:Quaffable Quaff Brewing')
+			input.form-control(type='text', placeholder='ex:Quaffable Quaff Brewing', value='Brewce Juice Brewery')
 		div.form-group.singleInput.emailAddy
 			label Email Address
-			input.form-control(type='email', placeholder='emaily@email.com')
+			input.form-control(type='email', placeholder='emaily@email.com', value='email@email.com')
 		div.form-group.singleInput.productName
 			label Product Name
-			input.form-control(type='text', placeholder='LB2 bottler')
+			input.form-control(type='text', placeholder='LB2 bottler', value='MaxBottler bottle filler')
 		div.radioz
 			div.radio.radio1#toggler
 				input#pack(type='radio', name='packOrTank', value='packaging')
@@ -39,35 +39,35 @@ body
 		div.row
 			div.form-group.col-md-3.productName
 				label Height
-				input.form-control#height(type='number', placeholder='feet')
+				input.form-control#height(type='number', placeholder='feet', value=5)
 			div.form-group.col-md-3.productName
 				label Length
-				input.form-control#length(type='number', placeholder='feet')
+				input.form-control#length(type='number', placeholder='feet', value=6)
 			div.form-group.col-md-3.productName
 				label Width
-				input.form-control#width(type='number', placeholder='feet')
+				input.form-control#width(type='number', placeholder='feet', value=7)
 			div.form-group.col-md-3.productName
 				label Weight
-				input.form-control#weight(type='number', placeholder='pounds')
+				input.form-control#weight(type='number', placeholder='pounds', value=123)
 		div.form-group.productDescription
 			label Product Description
-			textarea.form-control(rows='3')
+			textarea.form-control(rows='3', value='This is a super cool product')
 		div.form-group.singleInput.location Location
 		div.form-group.singleInput.streetAddress
 			label Street Address
-			input.form-control(type='text', placeholder='101 1st Street')
+			input.form-control(type='text', placeholder='101 1st Street', value='520 24th Place')
 		div.form-group.singleInput.cityID
 			label City
-			input.form-control(type='text', placeholder='Boulder')
+			input.form-control(type='text', placeholder='Boulder', value='Hermosa Beach')
 		div.form-group.singleInput.stateID
 			label State
-			input.form-control(type='text', placeholder='CO')
+			input.form-control(type='text', placeholder='CO', value='CA')
 		div.form-group.singleInput.zipID
 			label ZIP code
-			input.form-control(type='number', placeholder='80302')
+			input.form-control(type='number', placeholder='80302', value=90254)
 		div.form-group.singleInput.price
 			label Price
-			input.form-control(type='number', placeholder='10000')
+			input.form-control(type='number', placeholder='10000', value=15000)
 		input.btn.btn-default(type='submit')
 	script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js')
 	script(src='javascripts/signup-page.js')
