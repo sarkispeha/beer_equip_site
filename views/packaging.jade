@@ -5,8 +5,10 @@ block content
 		a.backToHome(href='/')
 			i.fa.fa-arrow-left
 			p back to home
-		a(href='/')
-			img(src='/images/Drawing1.png')
+		div.logo-container
+			a(href='/')
+				img(src='/images/logo.jpeg')
+				p The Brewery Recycler
 	div.row
 		div.col-sm-3.col-xs-3
 		div.col-sm-6.col-xs-6
@@ -20,7 +22,7 @@ block content
 						option(value="select-type") Select Packaging Type
 						option(value="Bottler") Bottler
 						option(value="Canner") Canner
-					input#searchbtn.btn.btn-info(type='submit')
+					input#searchbtn.btn.btn-info(type='submit', value='Search') 
 					//- input.distance#maxDist(type='number', placeholder='100')
 					//- button.distance#closeToBtn() miles from me
 			
