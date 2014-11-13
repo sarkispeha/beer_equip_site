@@ -150,3 +150,33 @@ var Brewery = require('../brewery_register_model.js');
 		price: 8950
 	});
 	williamCanWallace.save();
+
+	var bobbottler = new Brewery({
+		_id: mongoose.Types.ObjectId("5463f62ff0105ade4f19cbe2"),
+		name: "Bob Bottler",
+		email: "bob@email.com",
+		image: '/images/bottler3.jpg',
+		product: "Bobttler",
+		productType: {
+			isPackaging: true,
+			packingType: 'Bottler',
+			isTank: false,
+			tankType: ''
+		},
+		height: 2,
+		length: 3,
+		width: 3,
+		weight: 300,
+		product_description: "This is a really really really good bottler. It puts beers in bottles. Woa! How cool is that? Pretty damn cool if you ask me. Normally you'd have to get an army of gnome slaves to get this kind of productivity. Technology man, woooooweeee!",
+		location: {
+			address: "101 W Broadway St",
+			city: "Philipsburg",
+			state: "MT",
+			zip: 59858,
+			geo: {
+				coordinates: [-113.294453, 46.332378]
+			}
+		},
+		price: 1950
+	});
+	bobbottler.save();
