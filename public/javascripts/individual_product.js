@@ -98,7 +98,6 @@ $(document).on('click', '.seller-hidden button', function(){
 //googleMap product map//
 /////////////////////////
 
-
  	function initialize() {
 	 	var latitude = product.location.geo.coordinates[1];
 	 	var longitude = product.location.geo.coordinates[0];

@@ -1,16 +1,5 @@
 $(document).on('ready',function (){
 
-//base classes
-
-// var Brewery = function(name, email, password, location){
-// 	name = name;
-// 	email = email;
-// 	password = password;
-// 	location = location;
-// }
-
-
-
 //alert if there is an input field that is empty
 // $(document).on('click', '.btn', function(e){
 // 	e.preventDefault();
@@ -34,7 +23,7 @@ $('#toggler input[value="tank"]').on('click', function(){
 		// ('<div class="subTank"><label>Fermenter<input type="radio" name="fermentOrMash" id="ferment" value="ferment"></label><label>Mash Tank<input type="radio" name="fermentOrMash" id="mash" value="mash"></label></div>');
 });
 
-//store values in localStorage
+//store values in database
 $(document).on('click', '.btn', function(e){
 	e.preventDefault();
 
@@ -174,6 +163,7 @@ $(document).on('click', '.btn', function(e){
 		// dataType: 'json',
 		success: function(response){
 			console.log(response);
+			window.location.assign("/");
 		}
 	});
 

@@ -5,15 +5,11 @@ var geocoder = require('geocoder');
 var api = {
 	addBrewery: function(req, res){
 		var breweryData = req.body;
-		// console.log('req.body: ', breweryData);
-		// console.log(breweryData.productType);
 		var address = breweryData.location.address;
 		var city = breweryData.location.city;
 		var state = breweryData.location.state;
 		var placeInfo = address + ' ' + city + ' ' + state;
-		// app.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + address + ' ' + city + ' ' + state, function(req, res){
-		// 	var object = res.body;
-		// }
+
 		geocoder.geocode(placeInfo,function(err, data){
 			// console.log('this is the geocode err: ', err);
 			// console.log('this is the callback data: ', data);
@@ -39,8 +35,6 @@ var api = {
 				res.send(result);
 			});//end brewery.save function
 		});//end geocoder function
-
-
 	},
 	packagingController: function(req, res){
 		Brewery.find({'productType.isPackaging': true}
