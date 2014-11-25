@@ -37,21 +37,25 @@ body
 					input#mash(type='radio', name='subset', value='mash')
 					label Mash Tank
 		div.row
-			div.form-group.col-md-3.productName
+			div.form-group.col-md-3.col-sm-3.col-xs-3.productName
 				label Height
 				input.form-control#height(type='number', placeholder='feet', value=5)
-			div.form-group.col-md-3.productName
+			div.form-group.col-md-3.col-sm-3.col-xs-3.productName
 				label Length
 				input.form-control#length(type='number', placeholder='feet', value=6)
-			div.form-group.col-md-3.productName
+			div.form-group.col-md-3.col-sm-3.col-xs-3.productName
 				label Width
 				input.form-control#width(type='number', placeholder='feet', value=7)
-			div.form-group.col-md-3.productName
+			div.form-group.col-md-3.col-sm-3.col-xs-3.productName
 				label Weight
 				input.form-control#weight(type='number', placeholder='pounds', value=123)
 		div.form-group.productDescription
 			label Product Description
 			textarea.form-control(rows='3', value='This is a super cool product')
+		div.row
+			div.form-group.price.col-md-3.col-sm-3
+				label Price
+				input.form-control(type='number', placeholder='10000', value=15000)
 		div.form-group.singleInput.location Location
 		div.form-group.singleInput.streetAddress
 			label Street Address
@@ -59,15 +63,66 @@ body
 		div.form-group.singleInput.cityID
 			label City
 			input.form-control(type='text', placeholder='Boulder', value='Bozeman')
-		div.form-group.singleInput.stateID
-			label State
-			input.form-control(type='text', placeholder='CO', value='MT')
-		div.form-group.singleInput.zipID
-			label ZIP code
-			input.form-control(type='number', placeholder='80302', value=59715)
-		div.form-group.singleInput.price
-			label Price
-			input.form-control(type='number', placeholder='10000', value=15000)
-		input.btn.btn-default(type='submit')
+		div.row
+			div.form-group.stateID.col-md-3.col-sm-3
+				label State
+				select.form-control.state_selector
+								option(value="AL") AL
+								option(value="AK") AK
+								option(value="AZ") AZ
+								option(value="AR") AR
+								option(value="CA") CA
+								option(value="CO") CO
+								option(value="CT") CT
+								option(value="DE") DE
+								option(value="DC") DC
+								option(value="FL") FL
+								option(value="GA") GA
+								option(value="HI") HI
+								option(value="ID") ID
+								option(value="IL") IL
+								option(value="IN") IN
+								option(value="IA") IA
+								option(value="KS") KS
+								option(value="KY") KY
+								option(value="LA") LA
+								option(value="ME") ME
+								option(value="MD") MD
+								option(value="MA") MA
+								option(value="MI") MI
+								option(value="MN") MN
+								option(value="MS") MS
+								option(value="MO") MO
+								option(value="MT") MT
+								option(value="NE") NE
+								option(value="NV") NV
+								option(value="NH") NH
+								option(value="NJ") NJ
+								option(value="NM") NM
+								option(value="NY") NY
+								option(value="NC") NC
+								option(value="ND") ND
+								option(value="OH") OH
+								option(value="OK") OK
+								option(value="OR") OR
+								option(value="PA") PA
+								option(value="RI") RI
+								option(value="SC") SC
+								option(value="SD") SD
+								option(value="TN") TN
+								option(value="TX") TX
+								option(value="UT") UT
+								option(value="VT") VT
+								option(value="VA") VA
+								option(value="WA") WA
+								option(value="WV") WV
+						
+								option(value="WI") WI
+								option(value="WY") WY
+			div.form-group.zipID.col-md-3.col-sm-3
+				label ZIP code
+				input.form-control(type='number', placeholder='80302', value=59715)
+			div.form-group.col-md-2.col-sm-2
+			input.btn.btn-default.col-md-3.col-sm-3#submitbtn(type='submit')
 	script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js')
 	script(src='javascripts/signup-page.js')
