@@ -114,11 +114,11 @@ block content
 					div.form-group
 						label.col-sm-2.control-label Street
 						div.col-sm-10
-							input.form-control#streetInput(type='text', placholder='55 Sesame Street', name='street', value='2100 22nd Street', required)
+							input.form-control#streetInput(type='text', placholder='55 Sesame Street', name='street', required)
 					div.form-group
 						label.col-sm-2.control-label City
 						div.col-sm-10
-							input.form-control#cityInput(type='text', placholder='Gotham', name='city', value='Boulder', required)
+							input.form-control#cityInput(type='text', placholder='Gotham', name='city', required)
 					div.form-group
 						label.col-sm-2.control-label State
 						div.col-sm-3
@@ -176,14 +176,15 @@ block content
 								option(value="WY") WY
 						label.col-sm-1.control-label Zip
 						div.col-sm-4
-							input.form-control#zipInput(type='text', placholder='80302', name='zip', value='80302', required)
+							input.form-control#zipInput(type='text', placholder='80302', name='zip', required)
 					div.form-group
 						div.col-sm-offset-2.col-sm-10
 							button.btn.btn-info.shippingBtn(type='submit') Calculate Shipping
 							img#ups-freight(src='/images/ups-freight.jpg')
-							p Shipping Cost
-							div.priceCalculated
-								p $ #{product.price}
+							div.row
+								p.col-sm-5 Shipping Cost:
+								div.priceCalculated.col-sm-5
+									p $ #{product.price}
 			//- div.panel.panel-default.brewery-specs
 			//- 	div.panel-heading
 			//- 		h5.panel-title Brewery
