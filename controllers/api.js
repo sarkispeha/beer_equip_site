@@ -44,7 +44,7 @@ var api = {
 	},
 	shipCost: function(req, res){
 		var shipData = req.body;
-		console.log(shipData);
+		// console.log(shipData);
 
 		var ups = new upsAPI({
 			environment: 'sandbox',
@@ -91,8 +91,8 @@ var api = {
 		  }//end of data
 
 		ups.rates(data, function(err, result) {
-			console.log(err);
-			console.log(result);
+			console.log('Error: ', err);
+			console.log('Result: ', result);
 			res.send(result);
 			
 		});//end of ups.rates

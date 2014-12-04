@@ -72,9 +72,14 @@ $(document).on('click', '.shippingBtn', function(e) {
 							height: height
 							},
 							function(resultData){
-		var UPSprice = resultData.RatedShipment[4].TotalCharges.MonetaryValue + 800;
-		UPSprice = parseInt(UPSprice);
-		$('.priceCalculated').text('$'+UPSprice).show();
+								console.log(resultData);
+								if(resultData === ''){
+									alert("We're sorry, your address can't be found.")
+								} else {
+									var UPSprice = resultData.RatedShipment[4].TotalCharges.MonetaryValue + 800;
+									UPSprice = parseInt(UPSprice);
+									$('.priceCalculated').text('$'+UPSprice).show();
+								}
 	});
 	
 	
