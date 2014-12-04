@@ -193,7 +193,10 @@ header h1{
 	color: white;
 	opacity: 0.7;
 }
-
+ .row {
+ 	margin-right: 0;
+ 	margin-left: 0;
+ }
 
 .tanks-container {
 	/*position: relative;*/
@@ -327,8 +330,14 @@ header h1{
 	top: 30;
 }
 
+.contact-info {
+	background-color: black;
+	color: white;
+}
 
-
+.contact-info p{
+	-webkit-margin-after: 0;
+}
 
 
 
