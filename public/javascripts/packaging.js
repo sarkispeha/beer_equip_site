@@ -1,4 +1,5 @@
-var responseData = {}; // set this globally so that we can access object(s) for other functionality, namely googlemap ref
+var responseData = {}; // set this globally so that we can renew
+                       // list for every search request
 
 $(document).on('ready',function(){
 
@@ -94,46 +95,46 @@ $(document).on('click', '#searchbtn', function(){
 /////////////////////////////
 //googleMap product locator//
 /////////////////////////////
-var geocoder;
-var map;
+// var geocoder;
+// var map;
 
- var initialize = function () {
-    var latlng = new google.maps.LatLng(40.05, -113.64);
-    var mapOptions = {
-      zoom: 8,
-      center: latlng
-    }
-    map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-  }
+//  var initialize = function () {
+//     var latlng = new google.maps.LatLng(40.05, -113.64);
+//     var mapOptions = {
+//       zoom: 8,
+//       center: latlng
+//     }
+//     map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+//   }
 
-var codeAddress = function(addy) {
-    geocoder = new google.maps.Geocoder();
-    var address = addy; //$("#addy").text();
-    geocoder.geocode( { 'address': address}, function(results, status) {
-      if (status == google.maps.GeocoderStatus.OK) {
-        map.setCenter(results[0].geometry.location);
-        var marker = new google.maps.Marker({
-            map: map,
-            position: results[0].geometry.location
-        });
-      } else {
-        alert("Geocode was not successful for the following reason: " + status);
-      }
-    });
-  }
+// var codeAddress = function(addy) {
+//     geocoder = new google.maps.Geocoder();
+//     var address = addy; //$("#addy").text();
+//     geocoder.geocode( { 'address': address}, function(results, status) {
+//       if (status == google.maps.GeocoderStatus.OK) {
+//         map.setCenter(results[0].geometry.location);
+//         var marker = new google.maps.Marker({
+//             map: map,
+//             position: results[0].geometry.location
+//         });
+//       } else {
+//         alert("Geocode was not successful for the following reason: " + status);
+//       }
+//     });
+//   }
 
 ////////////////////
 //Show map handler//
 ////////////////////
 //googleMap event handler for location of product
-$(document).on('click', '#location button', function() {
-  var currentRow = responseData[$(this).closest('.individual_row').data('index')];
+// $(document).on('click', '#location button', function() {
+//   var currentRow = responseData[$(this).closest('.individual_row').data('index')];
  
-  var searchAddress = currentRow.location.address + ' ' + currentRow.location.city + ', ' + currentRow.location.state;
-  $('.map-lightbox').show(200);
-  initialize();
-  codeAddress(searchAddress);//the parameter will go to the codeAddress function
-});
+//   var searchAddress = currentRow.location.address + ' ' + currentRow.location.city + ', ' + currentRow.location.state;
+//   $('.map-lightbox').show(200);
+//   initialize();
+//   codeAddress(searchAddress);//the parameter will go to the codeAddress function
+// });
 
 //close button for map lightbox
 // $('.map-lightbox').on('click', 'button', function() {
